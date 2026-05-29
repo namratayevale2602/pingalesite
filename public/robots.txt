@@ -1,0 +1,46 @@
+# robots.txt — Rich System Solutions Pvt Ltd
+# https://richsol.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap
+Sitemap: https://richsol.com/sitemap.xml
+
+# Host
+Host: https://richsol.com
+
+# Googlebot — no crawl delay, allow everything
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 5
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 10
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 10

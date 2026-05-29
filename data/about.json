@@ -1,0 +1,21 @@
+{
+  "team": [
+    { "n": "Aarav Pingale", "r": "Managing Partner · CFP®",       "b": "Third generation. Joined 2009. Leads investment advisory.",       "img": "/team/aarav.jpg"   },
+    { "n": "Sonali Joshi",  "r": "Head, Insurance Advisory · ARN", "b": "16 years. Settled ₹120 Cr in claims since 2015.",                 "img": "/team/sonali.jpg"  },
+    { "n": "Karan Mehta",   "r": "Head, Tax & Estate · CA",        "b": "Built our estate-planning desk in 2018.",                         "img": "/team/karan.jpg"   },
+    { "n": "Meera Iyer",    "r": "Head, NRI & UHNI",               "b": "Joined from Standard Chartered Private in 2021.",                 "img": "/team/meera.jpg"   }
+  ],
+  "convictions": [
+    { "t": "Advise the family",          "d": "We sell no product. We are paid on disclosed commissions and retainers, with full audit trails." },
+    { "t": "Write the plan",             "d": "Every relationship begins with a written plan. Reviewed quarterly. Updated annually." },
+    { "t": "Protect first, grow second", "d": "Term + health cover precedes any equity allocation. Without exception." },
+    { "t": "Boring beats brilliant",     "d": "Index, large-cap and balanced funds form 70% of most portfolios. Always have." },
+    { "t": "Tax is design",              "d": "Tax-efficiency is an architectural decision, not an annual scramble." },
+    { "t": "Three-generation thinking",  "d": "We plan across yours, your children's, and their children's horizons." }
+  ],
+  "stats": [
+    { "v": "30+",      "l": "Years in practice" },
+    { "v": "8,400",    "l": "Families served" },
+    { "v": "₹4,200 Cr","l": "Wealth advised" }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "keyBenefits": [
+    { "icon": "🛡️", "t": "Income replacement",    "d": "Your term plan replaces your annual income for dependants if you're no longer around. Cover is sized at 15–20× your annual income." },
+    { "icon": "💰", "t": "Tax savings",            "d": "Premiums qualify for deduction under Section 80C (up to ₹1.5L/year). Maturity proceeds are tax-free under Section 10(10D) subject to conditions." },
+    { "icon": "🏥", "t": "Critical illness cover", "d": "Diagnosed with cancer or cardiac event? A standalone CI rider pays a lump sum immediately — independent of treatment cost — so you can focus on recovery." },
+    { "icon": "🏠", "t": "Loan & liability cover", "d": "Your outstanding home loan, car loan and credit card balances become a burden for your family if you pass away. Term cover ensures they don't." }
+  ],
+  "planTypes": [
+    { "t": "Term Insurance",    "d": "Pure protection — the cheapest, cleanest way to replace your income for dependants. No maturity payout, no investment component. Just cover." },
+    { "t": "Child Plans",       "d": "Future-cost-indexed cover with milestone payouts for school, college and post-graduation. Waiver of premium if parent passes away mid-term." },
+    { "t": "Retirement Annuity","d": "Immediate and deferred annuity plans for 25+ years of post-retirement income. Covers longevity risk that market-linked instruments cannot." },
+    { "t": "ULIPs",             "d": "Unit-linked plans combining insurance and market-linked investment in one wrapper. Suitable for a narrow set of long-horizon, high-tax-bracket investors." },
+    { "t": "Endowment Plans",   "d": "Traditional savings + protection plans with guaranteed maturity benefits. Lower returns than mutual funds but suitable for disciplined savers." },
+    { "t": "Critical Illness",  "d": "Lump-sum payout on diagnosis of 36 named conditions — cancer, cardiac events, kidney failure. Covers treatment costs and lost income simultaneously." }
+  ],
+  "coverEstimates": [
+    { "label": "Annual income ₹6L",  "cover": "₹90L – ₹1.2 Cr",    "tag": "15–20× rule" },
+    { "label": "Annual income ₹12L", "cover": "₹1.8 Cr – ₹2.4 Cr", "tag": "15–20× rule" },
+    { "label": "Annual income ₹24L", "cover": "₹3.6 Cr – ₹4.8 Cr", "tag": "15–20× rule" },
+    { "label": "Annual income ₹50L", "cover": "₹7.5 Cr – ₹10 Cr",  "tag": "15–20× rule" }
+  ],
+  "stats": [
+    { "v": "14+",    "l": "Insurers compared" },
+    { "v": "96.4%",  "l": "Avg. claim settlement (assisted)" },
+    { "v": "₹120 Cr+","l": "Claims settled since 2019" },
+    { "v": "8,400+", "l": "Families covered" }
+  ],
+  "processSteps": [
+    { "n": "01", "t": "Audit existing cover",    "d": "We review all existing policies, riders and liabilities. Most clients are either underinsured or holding the wrong product." },
+    { "n": "02", "t": "Quote from 14 insurers",  "d": "You see a side-by-side comparison from all 14 insurers — premium, claim settlement ratio, exclusions and solvency margin." },
+    { "n": "03", "t": "Application & medicals",  "d": "We handle the proposal form, arrange medicals if required, and manage underwriting queries on your behalf." },
+    { "n": "04", "t": "Claim support",            "d": "If the worst happens, our dedicated claims desk takes over entirely. Last 5 years: 96.4% of assisted claims settled at first submission." }
+  ],
+  "faqs": [
+    { "q": "How much term cover should I really buy?",             "a": "Start with 15× your annual income plus all outstanding loans, plus ₹5L per dependant. Our goal calculator above does this automatically. We then refine it in conversation — accounting for existing assets, spouse's income and expected lifestyle inflation." },
+    { "q": "Is term insurance enough or do I need ULIPs too?",     "a": "For most people, a pure term plan + a separate SIP-based investment portfolio outperforms a ULIP on cost, flexibility and transparency. ULIPs make sense for a narrow set of long-horizon, high-tax-bracket investors who want forced savings discipline with insurance. We will tell you which camp you're in." },
+    { "q": "What happens if I miss a premium payment?",            "a": "Most policies have a 30-day grace period. After the grace period, the policy lapses. You can revive within 5 years (2 years for some plans) with a fresh medical and arrears. We track renewal dates for all our clients and remind you 45 days in advance." },
+    { "q": "Do you help with claims?",                             "a": "Yes — and it's arguably the most important thing we do. We have a dedicated claims desk. The family calls us, not the insurer. We handle all paperwork, follow-ups and escalations. Our 96.4% first-submission settlement rate reflects that." },
+    { "q": "Can I buy critical illness cover separately?",         "a": "Yes. A standalone critical illness plan gives you a tax-free lump sum on diagnosis of conditions like cancer, heart attack, stroke, kidney failure, major organ transplant and 30+ others. We recommend it as a separate policy rather than a rider for maximum coverage." },
+    { "q": "Does the insurer check medical history?",              "a": "Yes — always. Most insurers pull your past claims from the insurance information bureau (IIB). Blood tests and medicals are arranged for high-cover amounts (typically ₹50L+). Disclosing pre-existing conditions is not just ethical — it protects your claim." }
+  ]
+}

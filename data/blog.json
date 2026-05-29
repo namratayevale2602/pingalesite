@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "c": "Investing",
+      "t": "The boring case for SIPs over lumpsum, in three charts.",
+      "a": "Aarav Pingale",
+      "d": "8 min read",
+      "date": "Apr 2026",
+      "slug": "sip-vs-lumpsum",
+      "img": "/blog/sip-vs-lumpsum.jpg",
+      "excerpt": "Lumpsum may win on a spreadsheet over 20 years — but most people don't behave like spreadsheets. Here's the case for the patience tax that SIPs pay."
+    },
+    {
+      "c": "Insurance",
+      "t": "Why your term cover is probably half of what it should be.",
+      "a": "Sonali Joshi",
+      "d": "5 min read",
+      "date": "Mar 2026",
+      "slug": "term-cover-sizing",
+      "img": "/blog/term-cover-sizing.jpg",
+      "excerpt": "Most Indians are underinsured by a factor of two. Here's how to calculate the number your family actually needs."
+    },
+    {
+      "c": "Tax",
+      "t": "FY26 tax changes — the three that actually matter.",
+      "a": "Karan Mehta",
+      "d": "6 min read",
+      "date": "Mar 2026",
+      "slug": "fy26-tax-changes",
+      "img": "/blog/fy26-tax-changes.jpg",
+      "excerpt": "Out of eleven budget proposals, three will materially change how you invest and file. Here's what they are."
+    },
+    {
+      "c": "Retirement",
+      "t": "The 4% rule, the 25× corpus, and why both are wrong for India.",
+      "a": "Aarav Pingale",
+      "d": "9 min read",
+      "date": "Feb 2026",
+      "slug": "retirement-corpus",
+      "img": "/blog/retirement-corpus.jpg",
+      "excerpt": "American retirement math doesn't translate to Indian inflation, Indian healthcare costs or Indian family structures."
+    },
+    {
+      "c": "Investing",
+      "t": "On the surprising boredom of getting rich slowly.",
+      "a": "Sonali Joshi",
+      "d": "7 min read",
+      "date": "Feb 2026",
+      "slug": "boredom-of-getting-rich",
+      "img": "/blog/boredom-of-getting-rich.jpg",
+      "excerpt": "The most effective wealth-building strategy requires you to do almost nothing. That's why so few people follow it."
+    },
+    {
+      "c": "Behaviour",
+      "t": "Why your portfolio's worst enemy is the news app on your phone.",
+      "a": "Aarav Pingale",
+      "d": "10 min read",
+      "date": "Jan 2026",
+      "slug": "news-app-portfolio",
+      "img": "/blog/news-app-portfolio.jpg",
+      "excerpt": "Every push notification that makes you feel anxious about your investments is costing you money. Here's the evidence."
+    },
+    {
+      "c": "Estate",
+      "t": "A will, a nominee, a trust — which one does what?",
+      "a": "Karan Mehta",
+      "d": "8 min read",
+      "date": "Jan 2026",
+      "slug": "will-nominee-trust",
+      "img": "/blog/will-nominee-trust.jpg",
+      "excerpt": "These three instruments are often confused. Confusing them can leave your family with years of legal work."
+    }
+  ]
+}

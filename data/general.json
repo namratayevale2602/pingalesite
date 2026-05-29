@@ -1,0 +1,66 @@
+{
+  "insuranceTypes": [
+    {
+      "n": "01", "t": "Health Insurance",
+      "tag": "Family · Individual · Top-up",
+      "d": "Individual, family floater, senior citizen, OPD, super top-up and critical illness plans. Cover from ₹5L to ₹2 Cr. We compare 18 health insurers on claim ratio, hospital network, waiting periods and restoration benefits.",
+      "highlights": ["No-claim bonus up to 100%", "Cashless at 10,000+ hospitals", "Pre-existing cover after waiting period", "Day-care procedures covered"]
+    },
+    {
+      "n": "02", "t": "Motor Insurance",
+      "tag": "Car · Two-wheeler · Commercial",
+      "d": "Comprehensive, third-party, zero-depreciation, engine protection, return-to-invoice and roadside assistance add-ons. We issue policies within 10 minutes for most vehicles.",
+      "highlights": ["Zero-dep add-on available", "24/7 roadside assistance", "Cashless garages across India", "NCB protection rider"]
+    },
+    {
+      "n": "03", "t": "Travel Insurance",
+      "tag": "Domestic · International · Student",
+      "d": "Single-trip, multi-trip annual, student study-abroad, senior citizen travel and group travel plans. Covers trip cancellation, medical emergencies, lost baggage and passport loss.",
+      "highlights": ["Emergency medical evacuation", "Trip cancellation up to ₹5L", "Lost baggage & passport cover", "24/7 international helpline"]
+    },
+    {
+      "n": "04", "t": "Home Insurance",
+      "tag": "Structure · Contents · Gadgets",
+      "d": "Structure damage (fire, flood, earthquake), contents (furniture, appliances, jewellery), burglary and alternate accommodation cover. Premiums start at ₹2,500/year.",
+      "highlights": ["Fire & natural calamity cover", "Jewellery & valuables cover", "Burglary & theft protection", "Alternate accommodation cover"]
+    },
+    {
+      "n": "05", "t": "Personal Accident",
+      "tag": "Individual · Group · Family",
+      "d": "Accidental death, permanent total/partial disability, temporary total disability with weekly income benefit. Covers education fund for children if the policyholder is permanently disabled.",
+      "highlights": ["Accidental death benefit", "Permanent disability cover", "Weekly income during recovery", "Education fund for children"]
+    },
+    {
+      "n": "06", "t": "Business & Commercial",
+      "tag": "SME · Fire · Liability · Cyber",
+      "d": "Fire insurance, marine cargo, professional indemnity, public liability, group health for employees and cyber risk cover for SMEs and family businesses. Tailored to your industry.",
+      "highlights": ["Fire & burglary for premises", "Group health for employees", "Professional indemnity", "Cyber risk cover"]
+    }
+  ],
+  "motorTypes": [
+    { "t": "Third-party (mandatory)", "d": "Covers damage to the other party's vehicle, property and injury. Mandatory by law. Does NOT cover your own vehicle." },
+    { "t": "Comprehensive",           "d": "Covers third-party liability + own vehicle damage from accident, fire, flood, theft and natural calamities." },
+    { "t": "Zero-depreciation add-on","d": "Pays full replacement cost without depreciation deduction on parts. Strongly recommended for cars under 5 years old." },
+    { "t": "Return-to-invoice (RTI)", "d": "Pays the original on-road price (not depreciated IDV) if your vehicle is stolen or declared a total loss." }
+  ],
+  "stats": [
+    { "v": "20+",      "l": "Insurers on our panel" },
+    { "v": "6",        "l": "Insurance categories" },
+    { "v": "Same day", "l": "Policy issuance" },
+    { "v": "7 days",   "l": "Claims desk availability" }
+  ],
+  "processSteps": [
+    { "n": "01", "t": "Understand your risk", "d": "We map your assets, liabilities, family profile and city to identify exactly which covers you need — and which you don't." },
+    { "n": "02", "t": "Compare 20+ insurers",  "d": "Side-by-side comparison of premium, exclusions, claim settlement ratio, hospital network (health) and cashless garages (motor)." },
+    { "n": "03", "t": "Same-day issuance",     "d": "Most health and motor policies are issued digitally within hours. Hard-copy documents couriered within 5 working days." },
+    { "n": "04", "t": "Renewal & claims",      "d": "Reminders 30 days before renewal. Re-pricing every 2 years. Claims desk available 7 days a week. No fine print surprises." }
+  ],
+  "faqs": [
+    { "q": "What is the difference between a floater and individual health policy?",  "a": "A family floater policy covers all members under a single sum insured (e.g., ₹10L shared by 4 members). An individual policy gives each member their own sum insured. Floaters are cheaper but risky if multiple members claim in the same year. We recommend individual policies for families with elderly members or known chronic conditions." },
+    { "q": "Should I buy a top-up plan over my employer's group health cover?",       "a": "Yes — almost always. Employer group health cover typically provides ₹3–5L and ceases when you leave the company. A personal super top-up plan (kicks in after a threshold) gives you ₹20–50L additional cover at ₹3,000–8,000/year. One of the best-value insurance buys available." },
+    { "q": "Is zero-depreciation worth it for motor insurance?",                      "a": "For vehicles under 5 years old, yes. Without zero-dep, insurers deduct depreciation on rubber, plastic and glass parts (up to 50%) during claim settlement. Zero-dep eliminates this deduction. The add-on costs ₹2,000–6,000/year but saves ₹15,000–40,000 in a mid-size accident claim." },
+    { "q": "How does cashless hospitalisation work?",                                  "a": "Cashless means the insurer pays the hospital directly — you pay nothing except non-covered items. You must use a network hospital. At admission, show your health card and Aadhaar. The TPA authorises the claim (usually within 2–4 hours). Our team handles escalations if authorisation is delayed." },
+    { "q": "Do I need travel insurance for domestic trips?",                           "a": "It's cheaper than you think (₹150–400 for a 7-day domestic trip) and covers trip cancellation, flight delays, emergency hospitalisation and lost baggage. Given the rise in cancellations post-Covid, domestic travel insurance is increasingly worth it." },
+    { "q": "Can I port my existing health policy to another insurer?",                 "a": "Yes — IRDAI allows portability without losing waiting-period credits. You must apply for porting at least 45 days before renewal. We handle the entire porting process, compare new insurer options and ensure you don't lose accumulated no-claim bonuses." }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "fundTypes": [
+    { "t": "Equity Funds",        "d": "Invest primarily in stocks. Best suited for long-term goals (5+ years). Carry higher risk but deliver inflation-beating returns over time." },
+    { "t": "Debt Funds",          "d": "Invest in bonds, treasury bills and other fixed-income instruments. Lower risk, steady returns — ideal for short to medium horizons." },
+    { "t": "Hybrid Funds",        "d": "Blend of equity and debt. Balanced Advantage and Aggressive Hybrid funds adjust allocation dynamically to manage market risk." },
+    { "t": "ELSS Funds",          "d": "Equity Linked Saving Schemes with a 3-year lock-in. Save up to ₹1.5L under Section 80C while building long-term equity wealth." },
+    { "t": "Index Funds & ETFs",  "d": "Passively track Nifty 50, Sensex, Nifty 500 or sectoral indices. Lowest expense ratios. Ideal for cost-conscious long-term investors." },
+    { "t": "Sectoral & Thematic", "d": "Concentrated bets on sectors like banking, IT, pharma or themes like ESG, infrastructure. High risk — suitable for experienced investors only." },
+    { "t": "Liquid & Overnight",  "d": "Park idle cash for days to weeks. Near-zero risk, better post-tax returns than savings accounts. Used for emergency funds and sweep accounts." },
+    { "t": "Gold & Real Assets",  "d": "Gold ETFs, sovereign gold bonds and REIT/InvIT units. Portfolio diversifiers that hold value through equity downturns." }
+  ],
+  "riskProfiles": [
+    { "level": "Conservative", "color": "#22c55e", "desc": "Capital preservation first. Debt and liquid funds, with small hybrid allocation. For goals < 3 years." },
+    { "level": "Moderate",     "color": "#eab308", "desc": "Balanced growth. Hybrid and large-cap equity funds. For goals 3–7 years away." },
+    { "level": "Aggressive",   "color": "#f97316", "desc": "Maximum compounding. Multi-cap and mid/small-cap equity. For goals 7+ years away." }
+  ],
+  "guidelines": [
+    { "t": "KYC Mandatory",          "d": "All mutual fund investors must be KYC-compliant. You need PAN, Aadhaar and bank details. We assist with KYC completion at no charge." },
+    { "t": "Direct vs Regular Plans","d": "Direct plans have lower expense ratios (no distributor commission). Regular plans include a trail fee. We offer both — with full disclosure of what we earn." },
+    { "t": "Exit Load",              "d": "Most equity funds charge 1% exit load if redeemed within 1 year. Liquid and overnight funds typically have no exit load. Always check the SID." },
+    { "t": "Expense Ratio",          "d": "The annual cost deducted from the fund's NAV. SEBI has capped this at 1.05% for direct plans and 1.55% for regular plans (equity, > ₹50K Cr AUM)." },
+    { "t": "Nomination",             "d": "SEBI mandates nomination for all folios. You can add up to 3 nominees with defined percentages. Unnominated folios may face redemption delays." },
+    { "t": "Tax Treatment",          "d": "LTCG on equity funds > ₹1.25L per year taxed at 12.5%. STCG at 20%. Debt funds taxed as per income slab. ELSS units locked for 3 years." }
+  ],
+  "faqs": [
+    { "q": "Direct vs regular plans — what should I choose?",          "a": "Direct plans have lower expense ratios (0.1–0.5% cheaper per year) because there's no distributor commission. Over 20 years, that difference is significant. We offer both — regular plans where the convenience of advisory is worth the fee, and direct plans on our flat-fee advisory model. We disclose exactly what we earn, always." },
+    { "q": "What's a realistic SIP amount to start with?",             "a": "If you're in your 20s or 30s, target 20–25% of monthly take-home toward long-term goals. If that's not possible, start with ₹1,000/month and step it up 10% every year. Consistency and the step-up matter far more than the starting amount." },
+    { "q": "Can I pause or stop my SIP?",                              "a": "Yes — anytime, with 30 days' notice to the AMC. We strongly recommend against pausing during market falls. That's precisely when SIPs accumulate more units at lower prices — the fundamental mechanism that makes rupee-cost averaging work." },
+    { "q": "How do I know my money is safe?",                          "a": "Mutual fund assets are held in a trust structure regulated by SEBI. Your money is held by an independent custodian and trustee company — not by the AMC, not by us. Even if a distributor or AMC shuts down, your units remain in your folio with the registrar (CAMS/KFintech)." },
+    { "q": "What taxes apply to mutual fund gains?",                   "a": "Equity funds: LTCG (after 1 year) above ₹1.25L taxed at 12.5%; STCG (within 1 year) at 20%. Debt funds (after April 2023): all gains taxed as per your income slab, irrespective of holding period. ELSS: 3-year lock-in; gains treated as LTCG." },
+    { "q": "What is an expense ratio and does it matter?",             "a": "The expense ratio is the annual fee the fund deducts from NAV to cover fund management costs. A 1% expense ratio means ₹1,000 per ₹1,00,000 invested per year. Over 20 years, a 0.5% difference in expense ratio can reduce your final corpus by 8–12%. It matters enormously for long-term investing." }
+  ],
+  "processSteps": [
+    { "n": "01", "t": "Goal map",      "d": "Every goal — house, child's education, retirement — mapped to a corpus, horizon and monthly SIP." },
+    { "n": "02", "t": "Fund selection","d": "We shortlist funds from 38 AMCs based on rolling returns, risk-adjusted performance, AUM and fund manager track record." },
+    { "n": "03", "t": "Automate",      "d": "SIP mandates set up across selected funds. Step-up mandate (5–10% annual increase) set by default." },
+    { "n": "04", "t": "Review",        "d": "Quarterly portfolio review. Annual rebalancing. Tax-loss harvesting where applicable. Goal tracking every 6 months." }
+  ]
+}
