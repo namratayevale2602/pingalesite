@@ -1,9 +1,9 @@
 {
   "team": [
-    { "n": "Aarav Pingale", "r": "Managing Partner · CFP®",       "b": "Third generation. Joined 2009. Leads investment advisory.",       "img": "/team/team.jpg"   },
-    { "n": "Sonali Joshi",  "r": "Head, Insurance Advisory · ARN", "b": "16 years. Settled ₹120 Cr in claims since 2015.",                 "img": "/team/team.jpg"  },
-    { "n": "Karan Mehta",   "r": "Head, Tax & Estate · CA",        "b": "Built our estate-planning desk in 2018.",                         "img": "/team/team.jpg"   },
-    { "n": "Meera Iyer",    "r": "Head, NRI & UHNI",               "b": "Joined from Standard Chartered Private in 2021.",                 "img": "/team/team.jpg"   }
+    { "n": "Aarav Pingale", "r": "Managing Partner · CFP®",       "b": "Third generation. Joined 2009. Leads investment advisory.",       "img": "/team/team.webp"   },
+    { "n": "Sonali Joshi",  "r": "Head, Insurance Advisory · ARN", "b": "16 years. Settled ₹120 Cr in claims since 2015.",                 "img": "/team/team.webp"  },
+    { "n": "Karan Mehta",   "r": "Head, Tax & Estate · CA",        "b": "Built our estate-planning desk in 2018.",                         "img": "/team/team.webp"   },
+    { "n": "Meera Iyer",    "r": "Head, NRI & UHNI",               "b": "Joined from Standard Chartered Private in 2021.",                 "img": "/team/team.webp"   }
   ],
   "convictions": [
     { "t": "Advise the family",          "d": "We sell no product. We are paid on disclosed commissions and retainers, with full audit trails." },

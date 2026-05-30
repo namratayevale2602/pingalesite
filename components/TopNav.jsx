@@ -8,8 +8,8 @@ import Image from "next/image";
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/life", label: "Life Insurance" },
-  { href: "/general", label: "General Insurance" },
+  { href: "/life-insurance", label: "Life Insurance" },
+  { href: "/general-insurance", label: "General Insurance" },
   { href: "/sip", label: "SIP & Investments" },
   { href: "/calculators", label: "Calculators" },
   { href: "/blog", label: "Insights" },

@@ -27,7 +27,7 @@ export default function AboutPage() {
               {/* Founder image */}
               <div className="relative">
                 <img
-                  src="/images/aboutus.jpg"
+                  src="/images/aboutus.webp"
                   alt="Vasant Pingale — founder, 1993"
                   className="w-full rounded-2xl object-cover"
                   style={{ aspectRatio: "4/5", maxHeight: 580, background: "var(--paper-2)" }}

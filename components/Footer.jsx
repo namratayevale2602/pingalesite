@@ -50,8 +50,8 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4>Services</h4>
-            <Link href="/life">Life Insurance</Link>
-            <Link href="/general">General Insurance</Link>
+            <Link href="/life-insurance">Life Insurance</Link>
+            <Link href="/general-insurance">General Insurance</Link>
             <Link href="/sip">SIP &amp; Investments</Link>
             <Link href="/calculators">Calculators</Link>
           </div>

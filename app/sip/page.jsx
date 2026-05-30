@@ -65,7 +65,7 @@ export default function SIPPage() {
               {/* Image */}
               <div className="relative">
                 <img
-                  src="/services/mutualfunds.jpg"
+                  src="/services/mutualfunds.webp"
                   alt="Mutual fund investments"
                   className="w-full rounded-2xl object-cover"
                   style={{ aspectRatio: "4/3", maxHeight: 480 }}

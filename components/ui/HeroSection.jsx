@@ -7,8 +7,8 @@ import PopupForm from '../popup/PopupForm';
 const slides = [
   {
     id: 1,
-    image: "/banner/hero1.png",
-    mobileImage: "/banner/heromob1.png",
+    image: "/banner/hero1.webp",
+    mobileImage: "/banner/heromob1.webp",
     alt: "Family managing expenses",
     subtitle: "Earn not just to spend today, but to create memories, protect dreams, support generations, and leave kindness behind.",
     icon: ShoppingBag,
@@ -16,8 +16,8 @@ const slides = [
   },
   {
     id: 2,
-    image: "/banner/hero2.png",
-    mobileImage: "/banner/heromob2.png",
+    image: "/banner/hero2.webp",
+    mobileImage: "/banner/heromob2.webp",
     alt: "Wealth creation graph",
     subtitle: "The true value of wealth is not counted in numbers, but in the smiles, security, and futures it creates for the people you love.",
     icon: TrendingUp,
@@ -25,8 +25,8 @@ const slides = [
   },
   {
     id: 3,
-    image: "/banner/hero3.png",
-    mobileImage: "/banner/heromob3.png",
+    image: "/banner/hero3.webp",
+    mobileImage: "/banner/heromob3.webp",
     alt: "Family protection insurance",
     subtitle: "Build wealth that gives comfort to your parents, confidence to your children, peace to your future, and hope to society.",
     icon: Shield,
@@ -34,8 +34,8 @@ const slides = [
   },
   {
     id: 4,
-    image: "/banner/hero4.png",
-    mobileImage: "/banner/heromob3.png",
+    image: "/banner/hero4.webp",
+    mobileImage: "/banner/heromob3.webp",
     alt: "Legacy planning",
     subtitle: "A meaningful life is built when your money cares for your family today, strengthens their tomorrow, and touches lives beyond your own.",
     icon: Users,
@@ -43,8 +43,8 @@ const slides = [
   },
   {
     id: 5,
-    image: "/banner/hero5.png",
-    mobileImage: "/banner/heromob3.png",
+    image: "/banner/hero5.webp",
+    mobileImage: "/banner/heromob3.webp",
     alt: "Giving back to community",
     subtitle: "Money becomes truly powerful when it creates happiness at home, security for tomorrow, and meaningful change for others.",
     icon: Heart,

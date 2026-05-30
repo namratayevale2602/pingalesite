@@ -37,7 +37,7 @@ const CTASection = () => {
 
             <div className="relative z-10">
               <Image
-                src="/images/get-insurance.png"
+                src="/images/get-insurance.webp"
                 alt="Insurance Agent"
                 width={500}
                 height={650}

@@ -7,7 +7,7 @@ const cards = [
   {
     id: 1,
     title: "Mutual Fund",
-    image: "/services/mutualfunds.jpg",
+    image: "/services/mutualfunds.webp",
     description:
       "We distribute top-performing mutual fund products for short, medium and long-term goals. SIP from ₹500/month — equity, debt, hybrid and ELSS tax-saving funds.",
     link: "/services/mutual-funds",
@@ -15,7 +15,7 @@ const cards = [
   {
     id: 2,
     title: "Health Insurance",
-    image: "/services/healthinsurance.jpg",
+    image: "/services/healthinsurance.webp",
     description:
       "Secure your family's future with the right life insurance plan — term insurance, ULIP, endowment or child plans. Unbiased comparison across leading insurers.",
     link: "/health-insurance",
@@ -23,7 +23,7 @@ const cards = [
   {
     id: 3,
     title: "General Insurance",
-    image: "/services/genralinsurances.jpg",
+    image: "/services/genralinsurances.webp",
     description:
       "Complete protection for what matters — health insurance, motor insurance, home insurance and more. We compare plans so you get the best cover at the right premium.",
     link: "/general-insurance",

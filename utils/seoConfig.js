@@ -114,7 +114,7 @@ export const pageSEO = {
       "Protect your family's future with the right life insurance plan. Term insurance, ULIP, endowment and child plans — unbiased comparison and expert advice.",
     keywords:
       "life insurance Nashik, term insurance advisor Maharashtra, ULIP plan, best term plan India, family protection plan, LIC agent Nashik, private insurance advisor",
-    canonical: "/life",
+    canonical: "/life-insurance",
     ogImage:   "/og-life-insurance.jpg",
     h1: "Life Insurance Planning — Protect What Matters Most",
   },
@@ -126,7 +126,7 @@ export const pageSEO = {
       "Comprehensive general insurance solutions — health insurance, motor insurance, home insurance and more. Compare plans and get the best cover at the right premium.",
     keywords:
       "general insurance Nashik, health insurance advisor Maharashtra, motor insurance Nashik, car insurance, home insurance, mediclaim policy, Nashik insurance agent",
-    canonical: "/general",
+    canonical: "/general-insurance",
     ogImage:   "/og-general-insurance.jpg",
     h1: "General Insurance — Complete Protection for Every Need",
   },

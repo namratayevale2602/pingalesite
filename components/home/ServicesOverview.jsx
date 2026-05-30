@@ -3,8 +3,8 @@ import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 
 const SERVICES = [
-  { id: "/life", title: "Life Insurance", desc: "Term, child, retirement, ULIP and family protection plans sized to your life.", items: ["Term plans", "Child plans", "Retirement", "ULIPs"] },
-  { id: "/general", title: "General Insurance", desc: "Health, motor, travel, home and business cover with end-to-end claim support.", items: ["Health", "Motor", "Travel", "Home"] },
+  { id: "/life-insurance", title: "Life Insurance", desc: "Term, child, retirement, ULIP and family protection plans sized to your life.", items: ["Term plans", "Child plans", "Retirement", "ULIPs"] },
+  { id: "/general-insurance", title: "General Insurance", desc: "Health, motor, travel, home and business cover with end-to-end claim support.", items: ["Health", "Motor", "Travel", "Home"] },
   { id: "/sip", title: "SIP & Investments", desc: "Goal-mapped SIPs, mutual funds, tax-saving plans and wealth management.", items: ["SIP planning", "Mutual funds", "Tax saving", "Wealth mgmt"] },
   { id: "/calculators", title: "Planning Tools", desc: "SIP, EMI, retirement, education and term-cover calculators — free, no signup.", items: ["SIP", "EMI", "Retirement", "Education"] },
 ];

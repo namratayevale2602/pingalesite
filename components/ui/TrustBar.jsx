@@ -81,7 +81,7 @@ export default function TrustBar() {
   return (
     <section ref={ref} className="py-16 bg-[#125178] relative overflow-hidden py-20 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/bg/bg.png')",
+        backgroundImage: "url('/bg/bg.webp')",
       }}
       >
       {/* Background decoration */}

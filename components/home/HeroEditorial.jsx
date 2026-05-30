@@ -41,8 +41,8 @@ const SLIDES = [
     accent: "beneath the surface",
     subline: "of opportunity.",
     body: "True wealth is built with discipline, patience, and the right strategy. We help you identify meaningful investment opportunities while creating a strong foundation for long-term financial growth.",
-    primaryCta: { label: "Check my cover", href: "/life" },
-    secondaryCta: { label: "General insurance", href: "/general" },
+    primaryCta: { label: "Check my cover", href: "/life-insurance" },
+    secondaryCta: { label: "General insurance", href: "/general-insurance" },
   },
   {
     id: 4,
@@ -59,23 +59,36 @@ const SLIDES = [
   },
 ];
 
-/* ── Image with fallback placeholder (no inline style) ── */
-function SlideImage({ src, alt, fallbackLabel, visible }) {
+/* ── Image with fallback placeholder and responsive srcset ── */
+function SlideImage({ src, srcMobile, alt, fallbackLabel, visible }) {
   const [failed, setFailed] = useState(false);
 
   /* Reset error state when slide changes */
-  useEffect(() => { setFailed(false); }, [src]);
+  useEffect(() => { setFailed(false); }, [src, srcMobile]);
 
   return (
     <div className={`absolute inset-0 transition-opacity duration-300 ${visible ? "opacity-100" : "opacity-0"}`}>
       {!failed ? (
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover"
-          onError={() => setFailed(true)}
-        />
+        <picture>
+          {/* Mobile image */}
+          <source 
+            media="(max-width: 768px)" 
+            srcSet={srcMobile || src} 
+          />
+          {/* Desktop image */}
+          <source 
+            media="(min-width: 769px)" 
+            srcSet={src} 
+          />
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover"
+            onError={() => setFailed(true)}
+            priority
+          />
+        </picture>
       ) : (
         /* Fallback shown when image file doesn't exist yet */
         <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-[var(--paper-2)]">
@@ -125,19 +138,19 @@ export default function HeroEditorial() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[88vh] lg:min-h-[80vh]">
 
           {/* ── LEFT: Text content ── */}
-          <div className="flex flex-col justify-center py-16 lg:py-24 lg:pr-16">
+          <div className="flex flex-col justify-center py-12 md:py-16 lg:py-24 lg:pr-16 order-2 lg:order-1">
 
             {/* Tag */}
-            <div className={`inline-flex items-center gap-2 mb-6 transition-all duration-300 ${fading ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}`}>
+            <div className={`inline-flex items-center gap-2 mb-4 md:mb-6 transition-all duration-300 ${fading ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}`}>
               <span className="w-5 h-px bg-[var(--brand-2)]" />
-              <span className="font-[var(--font-mono)] text-[11px] tracking-[0.2em] uppercase text-[var(--brand-2)]">
+              <span className="font-[var(--font-mono)] text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-[var(--brand-2)]">
                 {s.tag}
               </span>
             </div>
 
             {/* Headline */}
             <h1
-              className={`text-4xl sm:text-5xl md:text-6xl lg:text-6xl leading-[1.1] tracking-[-0.02em] pb-5 transition-all duration-300 ${fading ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"}`}
+              className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-0.02em] pb-4 md:pb-5 transition-all duration-300 ${fading ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"}`}
             >
               {s.headline}{" "}
               <span className="italic text-[var(--brand-2)]">{s.accent}</span>
@@ -146,14 +159,12 @@ export default function HeroEditorial() {
             </h1>
 
             {/* Body */}
-            <p className={`text-[17px] text-[var(--fg-muted)] leading-[1.7] pb-5 max-w-[500px] transition-all duration-300 delay-75 ${fading ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}`}>
+            <p className={`text-[15px] md:text-[17px] text-[var(--fg-muted)] leading-[1.6] md:leading-[1.7] pb-4 md:pb-5 max-w-[500px] transition-all duration-300 delay-75 ${fading ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}`}>
               {s.body}
             </p>
 
-      
-
             {/* CTAs */}
-            <div className={`flex gap-3 flex-wrap mb-10 transition-all duration-300 delay-100 ${fading ? "opacity-0" : "opacity-100"}`}>
+            <div className={`flex gap-3 flex-wrap mb-6 md:mb-10 transition-all duration-300 delay-100 ${fading ? "opacity-0" : "opacity-100"}`}>
               <Link href={s.primaryCta.href} className="btn btn-primary">
                 {s.primaryCta.label} <span>→</span>
               </Link>
@@ -161,13 +172,10 @@ export default function HeroEditorial() {
                 {s.secondaryCta.label}
               </Link>
             </div>
-
-         
           </div>
 
-          {/* ── RIGHT: Image + controls ── */}
-          <div className="relative hidden lg:flex flex-col justify-center py-12 lg:pl-8">
-
+          {/* ── RIGHT: Image + controls (Desktop) ── */}
+          <div className="relative hidden lg:flex flex-col justify-center py-12 lg:pl-8 order-1 lg:order-2">
             {/* Image frame */}
             <div className="relative overflow-hidden rounded-2xl bg-[var(--paper-2)] aspect-[4/3]">
               <SlideImage
@@ -213,22 +221,37 @@ export default function HeroEditorial() {
               </div>
             </div>
           </div>
+
+          {/* ── Mobile Image (shown below text) ── */}
+          <div className="relative lg:hidden w-full mt-6 mb-8 order-3">
+            <div className="relative overflow-hidden rounded-2xl bg-[var(--paper-2)] aspect-[4/3]">
+              <SlideImage
+                src={s.image}
+                alt={s.imageAlt}
+                fallbackLabel={s.imageFallbackLabel}
+                visible={!fading}
+              />
+              
+              {/* Slide counter on mobile */}
+              <div className="absolute bottom-4 right-4 font-[var(--font-mono)] text-[11px] tracking-[0.1em] bg-black/40 text-white px-3 py-1.5 rounded-full backdrop-blur-sm">
+                {String(idx + 1).padStart(2, "0")} / {String(SLIDES.length).padStart(2, "0")}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile dot nav */}
+          <div className="flex justify-center gap-2 py-4 lg:hidden order-4">
+            {SLIDES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goTo(i)}
+                aria-label={`Slide ${i + 1}`}
+                className={`h-1 rounded-full border-0 cursor-pointer transition-all duration-300 ${i === idx ? "w-8 bg-[var(--brand)]" : "w-4 bg-[var(--rule)]"}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* ── Mobile dot nav ── */}
-      <div className="flex justify-center gap-2 py-4 lg:hidden">
-        {SLIDES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            aria-label={`Slide ${i + 1}`}
-            className={`h-1 rounded-full border-0 cursor-pointer transition-all duration-300 ${i === idx ? "w-8 bg-[var(--brand)]" : "w-4 bg-[var(--rule)]"}`}
-          />
-        ))}
-      </div>
-
-
     </section>
   );
 }
