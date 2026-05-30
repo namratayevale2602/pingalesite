@@ -1,9 +1,25 @@
+"use client"
+
+import { FaWhatsapp } from "react-icons/fa";
+
 export default function WhatsAppFab() {
+  const handleClick = () => {
+    window.open("https://wa.me/919876543210", "_blank");
+  };
+
   return (
-    <button className="fab fab-whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-18a8 8 0 0 0-6.8 12.2L4 22l4-1.2A8 8 0 1 0 12 4z" />
-      </svg>
+    <button
+      onClick={handleClick}
+      className="fab fab-whatsapp"
+      aria-label="WhatsApp"
+      title="Chat on WhatsApp"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <FaWhatsapp size={26} />
     </button>
   );
 }

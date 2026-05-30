@@ -38,13 +38,6 @@ const TESTIMONIALS = [
   },
 ];
 
-const SERVICE_COLORS = {
-  "Life Insurance": "var(--sky-400)",
-  "Retirement Planning": "var(--gold)",
-  "SIP & Mutual Funds": "var(--brand-2)",
-  "Financial Planning": "var(--sky-500)",
-};
-
 export default function TestimonialsCarousel() {
   const [idx, setIdx] = useState(0);
   const [fading, setFading] = useState(false);
@@ -60,7 +53,6 @@ export default function TestimonialsCarousel() {
   }, [idx]);
 
   const cur = TESTIMONIALS[idx];
-  const accent = SERVICE_COLORS[cur.service] || "var(--sky-400)";
 
   return (
     <section className="section" style={{ background: "var(--navy-900)" }}>
@@ -70,15 +62,15 @@ export default function TestimonialsCarousel() {
           {/* Left: Label + nav */}
           <div className="lg:pt-2">
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-5 h-px" style={{ background: accent }} />
-              <span className="font-[var(--font-mono)] text-[11px] tracking-[0.2em] uppercase" style={{ color: accent }}>
+              <span className="w-5 h-px bg-[var(--sky-400)]" />
+              <span className="font-[var(--font-mono)] text-[11px] tracking-[0.2em] uppercase text-[var(--sky-400)]">
                 Client stories
               </span>
             </div>
 
             <h2 className="text-[clamp(32px,4vw,52px)] leading-[1.1] pb-6 font-[var(--font-display)]" style={{ color: "#dbf0f8" }}>
               Results matter.<br />
-              <span className="italic" style={{ color: accent }}>People remember results.</span>
+              <span className="italic text-[var(--sky-400)]">People remember results.</span>
             </h2>
 
             <p className="text-sm leading-[1.7] mb-8 max-w-[320px]" style={{ color: "#4a8aaa" }}>
@@ -90,13 +82,11 @@ export default function TestimonialsCarousel() {
           {/* Right: Story card */}
           <div className={`transition-all duration-250 ${fading ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}`}>
             {/* Result headline */}
-            <div className="inline-block font-[var(--font-mono)] text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-full mb-6 border"
-              style={{ color: accent, borderColor: accent + "40", background: accent + "10" }}>
+            <div className="inline-block font-[var(--font-mono)] text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-full mb-6 border text-[var(--sky-400)] border-[var(--sky-400)] bg-[var(--sky-400)]/40">
               {cur.service}
             </div>
 
-            <div className="font-[var(--font-display)] text-[clamp(24px,3.5vw,40px)] leading-[1.15] italic mb-6"
-              style={{ color: accent }}>
+            <div className="font-[var(--font-display)] text-[clamp(24px,3.5vw,40px)] leading-[1.15] italic mb-6 text-[var(--sky-400)]">
               &ldquo;{cur.result}&rdquo;
             </div>
 
@@ -106,8 +96,7 @@ export default function TestimonialsCarousel() {
 
             {/* Author */}
             <div className="flex items-center gap-4 pt-6 border-t" style={{ borderColor: "#0b3245" }}>
-              <div className="w-11 h-11 rounded-full flex items-center justify-center font-[var(--font-display)] text-[20px]"
-                style={{ background: accent, color: "var(--navy-900)" }}>
+              <div className="w-11 h-11 rounded-full flex items-center justify-center font-[var(--font-display)] text-[20px] bg-[var(--sky-400)] text-[var(--navy-900)]">
                 {cur.name[0]}
               </div>
               <div>
@@ -121,8 +110,12 @@ export default function TestimonialsCarousel() {
             {/* Progress bar */}
             <div className="flex gap-1.5 mt-8">
               {TESTIMONIALS.map((_, i) => (
-                <div key={i} className="h-0.5 flex-1 rounded-full transition-colors duration-300"
-                  style={{ background: i === idx ? accent : "#0b3245" }} />
+                <div 
+                  key={i} 
+                  className={`h-0.5 flex-1 rounded-full transition-colors duration-300 ${
+                    i === idx ? "bg-[var(--sky-400)]" : "bg-[#0b3245]"
+                  }`}
+                />
               ))}
             </div>
           </div>

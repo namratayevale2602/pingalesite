@@ -5,62 +5,62 @@ import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 
 const FIVE_C = [
-  {
-    key      : "consumption",
-    label    : "Consumption",
-    num      : "01",
-    title    : "Spending tells the truth.",
-    body     : "Before wealth can grow, money has to be seen. Track what leaves you each month and turn invisible drift into deliberate flow.",
-    pills    : ["Cashflow audit", "Budget framework", "Lifestyle review"],
-    /* Photo: Indian family sitting together reviewing monthly household budget on laptop */
-    image    : "/images/fivec-consumption.jpg",
-    imageAlt : "Family reviewing monthly budget and spending",
-  },
-  {
-    key      : "creation",
-    label    : "Creation",
-    num      : "02",
-    title    : "Wealth is patience, compounded.",
-    body     : "Once consumption is tamed, the surplus has somewhere to go. Systematic investing turns monthly savings into a generational asset base.",
-    pills    : ["Goal-mapped SIPs", "Mutual funds", "Tax-efficient portfolios"],
-    /* Photo: Young professional checking investment app on phone, upward trending chart visible */
-    image    : "/images/fivec-creation.jpg",
-    imageAlt : "Young investor building wealth through systematic investment",
-  },
-  {
-    key      : "conservation",
-    label    : "Conservation",
-    num      : "03",
-    title    : "Protect the upside before chasing more.",
-    body     : "Term life, health and general insurance are the load-bearing walls beneath the wealth you build. We size cover to your actual life.",
-    pills    : ["Term + health audit", "Loan & liability cover", "Claim assistance"],
-    /* Photo: Secure Indian family at home — parents with children, warm protective feeling */
-    image    : "/images/fivec-conservation.jpg",
-    imageAlt : "Protected family secure at home with right insurance coverage",
-  },
-  {
-    key      : "continuation",
-    label    : "Continuation",
-    num      : "04",
-    title    : "Future you, met halfway.",
-    body     : "Retirement, child education, pension corpus. Continuation is designing for a self you haven't met yet — and making sure that self is comfortable.",
-    pills    : ["Retirement planning", "Child education", "Pension design"],
-    /* Photo: Middle-aged couple planning retirement with advisor, reviewing documents */
-    image    : "/images/fivec-continuation.jpg",
-    imageAlt : "Couple planning for retirement and future financial goals",
-  },
-  {
-    key      : "contribution",
-    label    : "Contribution",
-    num      : "05",
-    title    : "What you leave behind, you give.",
-    body     : "Legacy planning, wills, trusts and charitable giving. The final chapter of wealth is its transfer — to the people and causes that matter most.",
-    pills    : ["Estate & succession", "Wills & trusts", "Philanthropic giving"],
-    /* Photo: Three generations of family together — grandparents, parents, grandchildren */
-    image    : "/images/fivec-contribution.jpg",
-    imageAlt : "Three generations of family representing legacy and wealth transfer",
-  },
+{
+key      : "consumption",
+label    : "Consumption",
+num      : "01",
+title    : "Every rupee has a direction.",
+body     : "Most people don't lose money in one big mistake — they lose it silently, every single month. We help you understand where your money goes, what truly matters, and how mindful spending creates room for bigger dreams.",
+pills    : ["Cashflow clarity", "Smart budgeting", "Lifestyle planning"],
+image    : "/images/cimg1.webp",
+imageAlt : "Family reviewing monthly budget and spending",
+},
+
+{
+key      : "creation",
+label    : "Creation",
+num      : "02",
+title    : "Small investments. Life-changing outcomes.",
+body     : "Wealth rarely arrives overnight. It grows quietly through discipline, consistency, and time. A simple SIP started today can become the freedom your future self thanks you for.",
+pills    : ["Goal-based SIPs", "Wealth creation", "Long-term investing"],
+image    : "/images/cimg2.webp",
+imageAlt : "Young investor building wealth through systematic investment",
+},
+
+{
+key      : "conservation",
+label    : "Conservation",
+num      : "03",
+title    : "Protect the people behind the plan.",
+body     : "One unexpected moment shouldn't destroy years of hard work. Insurance isn't about fear — it's about making sure your family stays financially strong no matter what life brings.",
+pills    : ["Life protection", "Health security", "Claim support"],
+image    : "/images/cimg3.webp",
+imageAlt : "Protected family secure at home with right insurance coverage",
+},
+
+{
+key      : "continuation",
+label    : "Continuation",
+num      : "04",
+title    : "Plan for the life still waiting ahead.",
+body     : "The future isn't just retirement. It's peaceful mornings, your child's education, family vacations, and living without financial stress. We help you prepare for the years you've not yet lived.",
+pills    : ["Retirement goals", "Child future planning", "Pension strategies"],
+image    : "/images/cimg4.webp",
+imageAlt : "Couple planning for retirement and future financial goals",
+},
+
+{
+key      : "contribution",
+label    : "Contribution",
+num      : "05",
+title    : "True wealth lives beyond your lifetime.",
+body     : "The final purpose of wealth is impact — supporting family, creating opportunities, and leaving behind values that last for generations. Because legacy is more than money.",
+pills    : ["Legacy planning", "Estate protection", "Family wealth transfer"],
+image    : "/images/cimg5.webp",
+imageAlt : "Three generations of family representing legacy and wealth transfer",
+},
 ];
+
 
 /* Image with graceful fallback when file doesn't exist yet */
 function CImage({ src, alt }) {

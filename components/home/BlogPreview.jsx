@@ -14,9 +14,9 @@ export default function BlogPreview() {
         <SectionHeader
           eyebrow="Insights"
           title={<>Read. <span className="italic-serif">Disagree.</span> Discuss.</>}
-          intro="A small library of long-form essays — no headlines, no hot takes, no fear-mongering."
+          intro="A small library of long-form blogs — no headlines, no hot takes, no fear-mongering."
           align="split"
-          actions={<Link href="/blog" className="btn btn-secondary">All essays <span>→</span></Link>}
+          actions={<Link href="/blog" className="btn btn-secondary">All blogs <span>→</span></Link>}
         />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
           <Reveal>
@@ -38,7 +38,7 @@ export default function BlogPreview() {
                 </span>
                 <h3 className="mb-4 text-[36px]">{BLOG_POSTS[0].t}</h3>
                 <div className="text-[var(--fg-muted)] text-sm mt-auto">
-                  {BLOG_POSTS[0].a} · {BLOG_POSTS[0].d}
+                  {BLOG_POSTS[0].d}
                 </div>
               </article>
             </Link>
@@ -50,7 +50,7 @@ export default function BlogPreview() {
                   {p.c.toUpperCase()} · {p.date}
                 </span>
                 <h4 className="mb-4 flex-1 text-[22px]">{p.t}</h4>
-                <div className="text-[var(--fg-muted)] text-[12px]">{p.a} · {p.d}</div>
+                <div className="text-[var(--fg-muted)] text-[12px]">{p.d}</div>
               </article>
             </Reveal>
           ))}

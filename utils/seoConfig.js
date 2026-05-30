@@ -107,6 +107,54 @@ export const pageSEO = {
     h1: "Free Financial Calculators — Plan Your Future",
   },
 
+  // ─── LIFE INSURANCE PAGE ─────────────────────────────────────────────────
+  life: {
+    title:       "Life Insurance Planning | Term & ULIP | Pingale Wealth",
+    description:
+      "Protect your family's future with the right life insurance plan. Term insurance, ULIP, endowment and child plans — unbiased comparison and expert advice.",
+    keywords:
+      "life insurance Nashik, term insurance advisor Maharashtra, ULIP plan, best term plan India, family protection plan, LIC agent Nashik, private insurance advisor",
+    canonical: "/life",
+    ogImage:   "/og-life-insurance.jpg",
+    h1: "Life Insurance Planning — Protect What Matters Most",
+  },
+
+  // ─── GENERAL INSURANCE PAGE ──────────────────────────────────────────────
+  general: {
+    title:       "General Insurance | Health & Motor Insurance | Pingale Wealth",
+    description:
+      "Comprehensive general insurance solutions — health insurance, motor insurance, home insurance and more. Compare plans and get the best cover at the right premium.",
+    keywords:
+      "general insurance Nashik, health insurance advisor Maharashtra, motor insurance Nashik, car insurance, home insurance, mediclaim policy, Nashik insurance agent",
+    canonical: "/general",
+    ogImage:   "/og-general-insurance.jpg",
+    h1: "General Insurance — Complete Protection for Every Need",
+  },
+
+  // ─── SIP & MUTUAL FUNDS ──────────────────────────────────────────────────
+  sip: {
+    title:       "SIP & Mutual Fund Investment | Pingale Wealth",
+    description:
+      "Goal-based SIP planning across 38 AMCs. Expert guidance for equity, debt, hybrid and ELSS funds. Start building wealth systematically from ₹500/month.",
+    keywords:
+      "SIP investment Nashik, mutual fund advisor Maharashtra, ELSS tax saving fund, best SIP 2025, AMFI registered distributor, goal based investment, mutual fund advisor Nashik",
+    canonical: "/sip",
+    ogImage:   "/og-sip.jpg",
+    h1: "SIP & Mutual Fund Investment — Grow Your Wealth Systematically",
+  },
+
+  // ─── BLOG ────────────────────────────────────────────────────────────────
+  blog: {
+    title:       "Financial Insights & Blog | Pingale Wealth",
+    description:
+      "Long-form articles on mutual funds, insurance, tax planning, retirement and personal finance. Unbiased advice, no clickbait — straight from the Pingale desk.",
+    keywords:
+      "financial planning blog, mutual fund insights, insurance advice, SIP tips, retirement planning India, tax saving tips, Pingale Wealth blog",
+    canonical: "/blog",
+    ogImage:   "/og-blog.jpg",
+    h1: "The Pingale Journal — Long-form on Money & Meaning",
+  },
+
   // ─── CONTACT ─────────────────────────────────────────────────────────────
   contact: {
     title:       "Contact Us | Book Free Advisory | Pingale Wealth",

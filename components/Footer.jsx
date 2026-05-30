@@ -1,4 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+
+const SOCIAL_LINKS = [
+  { name: "Instagram", icon: FaInstagram, url: "https://instagram.com/pingale.financial" },
+  { name: "LinkedIn", icon: FaLinkedin, url: "https://linkedin.com/company/pingale-financial" },
+  { name: "Facebook", icon: FaFacebook, url: "https://facebook.com/pingale.financial" },
+  { name: "Twitter", icon: FaTwitter, url: "https://twitter.com/pingale_finserve" },
+  { name: "Whatsapp", icon: FaWhatsapp, url: "https://wa.me/919876543210" },
+  { name: "Email", icon: FaEnvelope, url: "mailto:hello@pingale.in" },
+];
 
 export default function Footer() {
   return (
@@ -14,14 +26,23 @@ export default function Footer() {
                 className="object-contain"
                 style={{ width: 150, height: 150, borderRadius: 8 }}
               />
-              
             </div>
-            <p className="max-w-[340px] text-sm leading-[1.7] mb-6 text-[#7abcce]">
+            <p className="max-w-[340px] text-sm leading-[1.7] pb-6 text-[#7abcce]">
               Three decades of helping Indian families consume thoughtfully, create wealth deliberately, and conserve what matters.
             </p>
-            <div className="flex gap-2">
-              {["in", "tw", "yt", "ig"].map((s) => (
-                <a key={s} className="w-9 h-9 rounded-full inline-flex items-center justify-center font-[var(--font-mono)] text-[11px] cursor-pointer border border-[#0b3245] text-[#7abcce]">{s}</a>
+            <div className="flex gap-3 flex-wrap">
+              {SOCIAL_LINKS.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full inline-flex items-center justify-center transition-all duration-200 hover:scale-110 border border-[#0b3245] text-[#7abcce] hover:text-white hover:border-[#7abcce] hover:bg-[#0b3245]"
+                  aria-label={social.name}
+                  style={{ display: "inline-flex", alignItems: "center", justifyContent: "center" }}
+                >
+                  <social.icon size={16} style={{ display: "block" }} />
+                </a>
               ))}
             </div>
           </div>
@@ -56,9 +77,9 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4>Reach Us</h4>
-            <a>+91 98765 43210</a>
-            <a>hello@pingale.in</a>
-            <a className="mt-2">Pune · Mumbai · Bengaluru</a>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+            <a href="mailto:hello@pingale.in">hello@pingale.in</a>
+            <a className="mt-2 block">Pune · Mumbai · Bengaluru</a>
           </div>
         </div>
 
@@ -70,10 +91,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Disclaimer */}
-        <div className="mt-8 pt-6 border-t text-[11px] leading-[1.6] italic border-[#0b3245] text-[#2a5a6e]">
-          Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. Insurance is the subject matter of solicitation.
-        </div>
+      
       </div>
     </footer>
   );

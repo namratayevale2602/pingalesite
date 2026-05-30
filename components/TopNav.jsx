@@ -53,7 +53,7 @@ export default function TopNav() {
               <div className="relative w-40 h-40 overflow-hidden rounded-xl flex items-center justify-center">
                 {!logoError ? (
                   <Image
-                    src="/logo/pinglelogo.jpeg"
+                    src={theme === "dark" ? "/logo/pingalewhite.png" : "/logo/pinglelogo.jpeg"}
                     alt="Pingale Financial Services"
                     width={70}
                     height={70}
@@ -114,7 +114,7 @@ export default function TopNav() {
 
               <Link
                 href="/contact"
-                className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors shadow-sm"
+                className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg btn-primary text-white text-sm font-medium shadow-sm"
               >
                 Get Consultation
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,7 +172,7 @@ export default function TopNav() {
                 <Link
                   href="/contact"
                   onClick={closeMobileMenu}
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-lg btn-primary text-white text-sm font-medium transition-colors"
                 >
                   Get Consultation
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

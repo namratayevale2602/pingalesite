@@ -1,9 +1,9 @@
 {
   "keyBenefits": [
-    { "icon": "🛡️", "t": "Income replacement",    "d": "Your term plan replaces your annual income for dependants if you're no longer around. Cover is sized at 15–20× your annual income." },
-    { "icon": "💰", "t": "Tax savings",            "d": "Premiums qualify for deduction under Section 80C (up to ₹1.5L/year). Maturity proceeds are tax-free under Section 10(10D) subject to conditions." },
-    { "icon": "🏥", "t": "Critical illness cover", "d": "Diagnosed with cancer or cardiac event? A standalone CI rider pays a lump sum immediately — independent of treatment cost — so you can focus on recovery." },
-    { "icon": "🏠", "t": "Loan & liability cover", "d": "Your outstanding home loan, car loan and credit card balances become a burden for your family if you pass away. Term cover ensures they don't." }
+    { "icon": "FaShield", "t": "Income replacement",    "d": "Your term plan replaces your annual income for dependants if you're no longer around. Cover is sized at 15–20× your annual income." },
+    { "icon": "FaDollarSign", "t": "Tax savings",            "d": "Premiums qualify for deduction under Section 80C (up to ₹1.5L/year). Maturity proceeds are tax-free under Section 10(10D) subject to conditions." },
+    { "icon": "FaHospital", "t": "Critical illness cover", "d": "Diagnosed with cancer or cardiac event? A standalone CI rider pays a lump sum immediately — independent of treatment cost — so you can focus on recovery." },
+    { "icon": "FaHouse", "t": "Loan & liability cover", "d": "Your outstanding home loan, car loan and credit card balances become a burden for your family if you pass away. Term cover ensures they don't." }
   ],
   "planTypes": [
     { "t": "Term Insurance",    "d": "Pure protection — the cheapest, cleanest way to replace your income for dependants. No maturity payout, no investment component. Just cover." },
