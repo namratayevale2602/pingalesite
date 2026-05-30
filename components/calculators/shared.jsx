@@ -3,11 +3,11 @@ import { INR } from "@/lib/format";
 export function SliderInput({ label, value, onChange, min, max, step = 1, format = (v) => v, suffix }) {
   return (
     <div className="field mb-5">
-      <div className="flex justify-between items-baseline">
-        <label>{label}</label>
-        <span className="font-[var(--font-display)] text-[24px] text-[var(--fg)]">
+      <div className="flex justify-between items-baseline gap-2">
+        <label className="text-[13px] leading-snug">{label}</label>
+        <span className="font-[var(--font-display)] text-[18px] sm:text-[22px] text-[var(--fg)] shrink-0">
           {format(value)}
-          {suffix && <span className="text-sm text-[var(--fg-muted)] font-[var(--font-sans)] ml-1">{suffix}</span>}
+          {suffix && <span className="text-xs text-[var(--fg-muted)] font-[var(--font-sans)] ml-1">{suffix}</span>}
         </span>
       </div>
       <input type="range" className="slider" min={min} max={max} step={step} value={value}
@@ -21,18 +21,18 @@ export function SliderInput({ label, value, onChange, min, max, step = 1, format
 
 export function BigStat({ label, value }) {
   return (
-    <div className="p-5 border border-[var(--rule)] rounded-xl bg-[var(--bg-elev)]">
-      <div className="text-[11px] text-[var(--fg-muted)] tracking-[0.12em] uppercase mb-1.5">{label}</div>
-      <div className="font-[var(--font-display)] text-[30px] leading-[1.1]">{value}</div>
+    <div className="p-4 sm:p-5 border border-[var(--rule)] rounded-xl bg-[var(--bg-elev)]">
+      <div className="text-[11px] text-[var(--fg-muted)] tracking-[0.12em] uppercase mb-1.5 leading-snug">{label}</div>
+      <div className="font-[var(--font-display)] text-[clamp(18px,4vw,28px)] leading-[1.1]">{value}</div>
     </div>
   );
 }
 
 export function StatRow({ label, value, big }) {
   return (
-    <div className="flex justify-between items-baseline py-1.5">
-      <span className="text-[13px] text-[var(--fg-muted)] tracking-[0.04em]">{label}</span>
-      <span className={`font-[var(--font-display)] ${big ? "text-[32px]" : "text-[22px]"}`}>{value}</span>
+    <div className="flex justify-between items-baseline py-1.5 gap-2">
+      <span className="text-[13px] text-[var(--fg-muted)] tracking-[0.04em] leading-snug">{label}</span>
+      <span className={`font-[var(--font-display)] shrink-0 ${big ? "text-[clamp(20px,4vw,30px)]" : "text-[20px]"}`}>{value}</span>
     </div>
   );
 }
@@ -40,10 +40,10 @@ export function StatRow({ label, value, big }) {
 export function Legend({ color, label, value }) {
   return (
     <div className="flex items-center gap-2.5">
-      <span className="w-2.5 h-2.5 rounded-sm" style={{ background: color }} />
-      <div className="flex flex-col">
+      <span className="w-2.5 h-2.5 rounded-sm shrink-0" style={{ background: color }} />
+      <div className="flex flex-col min-w-0">
         <span className="text-[11px] text-[var(--fg-muted)] uppercase tracking-[0.1em]">{label}</span>
-        <span className="font-[var(--font-display)] text-[20px]">{value}</span>
+        <span className="font-[var(--font-display)] text-[clamp(14px,3vw,20px)]">{value}</span>
       </div>
     </div>
   );
@@ -107,7 +107,7 @@ export function Donut({ invested, gains, size = 180 }) {
   const circumference = r4(2 * Math.PI * r);
   const investedLen = r4(investedPct * circumference);
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} style={{ minWidth: size }}>
       <circle cx={c} cy={c} r={r} fill="none" stroke="var(--brand-2)" strokeWidth="20" />
       <circle cx={c} cy={c} r={r} fill="none" stroke="var(--brand)" strokeWidth="20"
         strokeDasharray={`${investedLen} ${circumference}`} transform={`rotate(-90 ${c} ${c})`} />
