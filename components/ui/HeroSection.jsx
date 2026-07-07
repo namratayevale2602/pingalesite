@@ -126,10 +126,10 @@ export default function HeroSlider() {
                 } text-white`}>
                   
                   {/* Tag Badge with Icon */}
-                  <div className={`inline-flex items-center gap-2 bg-[#2aa4eb]/20 backdrop-blur-sm border border-[#2aa4eb]/30 rounded-full px-4 py-2 mb-4 ${
+                  <div className={`inline-flex items-center gap-2 bg-[#a68256]/20 backdrop-blur-sm border border-[#a68256]/30 rounded-full px-4 py-2 mb-4 ${
                     isMobile ? "mx-auto" : ""
                   }`}>
-                    <slide.icon className="w-4 h-4 text-[#2aa4eb]" />
+                    <slide.icon className="w-4 h-4 text-[#a68256]" />
                     <span className="text-sm font-medium text-white">{slide.tag}</span>
                   </div>
 
@@ -145,7 +145,7 @@ export default function HeroSlider() {
                   {/* CTA Button */}
                   <button 
                     onClick={openPopup} 
-                    className={`group bg-[#2aa4eb] hover:bg-[#1a8fd1] transition-all duration-300 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl flex items-center gap-2 hover:shadow-2xl hover:shadow-[#2aa4eb]/25 hover:-translate-y-0.5 ${
+                    className={`group bg-[#a68256] hover:bg-[#8a6a41] transition-all duration-300 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl flex items-center gap-2 hover:shadow-2xl hover:shadow-[#a68256]/25 hover:-translate-y-0.5 ${
                       isMobile ? "mx-auto" : ""
                     }`}
                   >
@@ -165,7 +165,7 @@ export default function HeroSlider() {
         <>
           <button
             onClick={prevSlide}
-            className="absolute top-1/2 left-6 -translate-y-1/2 z-30 bg-black/50 hover:bg-[#2aa4eb] text-white p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+            className="absolute top-1/2 left-6 -translate-y-1/2 z-30 bg-black/50 hover:bg-[#a68256] text-white p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
             aria-label="Previous slide"
           >
             <ChevronLeft size={24} />
@@ -173,7 +173,7 @@ export default function HeroSlider() {
 
           <button
             onClick={nextSlide}
-            className="absolute top-1/2 right-6 -translate-y-1/2 z-30 bg-black/50 hover:bg-[#2aa4eb] text-white p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
+            className="absolute top-1/2 right-6 -translate-y-1/2 z-30 bg-black/50 hover:bg-[#a68256] text-white p-3 rounded-full backdrop-blur-md transition-all duration-300 hover:scale-110"
             aria-label="Next slide"
           >
             <ChevronRight size={24} />
@@ -203,7 +203,7 @@ export default function HeroSlider() {
             onClick={() => setCurrent(index)}
             className={`transition-all duration-300 rounded-full ${
               current === index 
-                ? "w-6 sm:w-8 bg-[#2aa4eb] h-1.5 sm:h-2" 
+                ? "w-6 sm:w-8 bg-[#a68256] h-1.5 sm:h-2" 
                 : "w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white/50 hover:bg-white/80"
             }`}
             aria-label={`Go to slide ${index + 1}`}

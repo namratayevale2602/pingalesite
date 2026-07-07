@@ -244,7 +244,7 @@ const SIPtoSWPCalculator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Input Section */}
           <div className="lg:col-span-2 bg-gray-100 rounded-2xl shadow-xl p-6">
-            <h2 className="text-2xl font-bold text-[#074a6b] mb-6 flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-[#0F1A51] mb-6 flex items-center gap-2">
               Investment Parameters
             </h2>
             
@@ -272,7 +272,7 @@ const SIPtoSWPCalculator = () => {
                       }`}
                       placeholder="Amount"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formatDisplayValue(formData.monthlySIP, 'monthlySIP')}
                     </span>
                   </div>
@@ -287,7 +287,7 @@ const SIPtoSWPCalculator = () => {
                   step={500}
                   value={formData.monthlySIP}
                   onChange={(e) => handleSliderChange('monthlySIP', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>₹500</span>
@@ -312,7 +312,7 @@ const SIPtoSWPCalculator = () => {
                       }`}
                       placeholder="Years"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formData.sipPeriod} years
                     </span>
                   </div>
@@ -327,7 +327,7 @@ const SIPtoSWPCalculator = () => {
                   step={1}
                   value={formData.sipPeriod}
                   onChange={(e) => handleSliderChange('sipPeriod', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>1 Year</span>
@@ -352,7 +352,7 @@ const SIPtoSWPCalculator = () => {
                       }`}
                       placeholder="%"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formData.sipReturn}%
                     </span>
                   </div>
@@ -367,7 +367,7 @@ const SIPtoSWPCalculator = () => {
                   step={0.5}
                   value={formData.sipReturn}
                   onChange={(e) => handleSliderChange('sipReturn', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>4%</span>
@@ -400,7 +400,7 @@ const SIPtoSWPCalculator = () => {
                       }`}
                       placeholder="Years"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formData.withdrawalPeriod} years
                     </span>
                   </div>
@@ -415,7 +415,7 @@ const SIPtoSWPCalculator = () => {
                   step={1}
                   value={formData.withdrawalPeriod}
                   onChange={(e) => handleSliderChange('withdrawalPeriod', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>1 Year</span>
@@ -440,7 +440,7 @@ const SIPtoSWPCalculator = () => {
                       }`}
                       placeholder="%"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formData.swpReturn}%
                     </span>
                   </div>
@@ -455,7 +455,7 @@ const SIPtoSWPCalculator = () => {
                   step={0.5}
                   value={formData.swpReturn}
                   onChange={(e) => handleSliderChange('swpReturn', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>4%</span>
@@ -466,7 +466,7 @@ const SIPtoSWPCalculator = () => {
 
             <button
               onClick={handleReset}
-              className="w-full py-3 bg-[#1a729e] text-white font-semibold rounded-lg"
+              className="w-full py-3 bg-[#a68256] text-white font-semibold rounded-lg"
             >
               Reset to Default Values
             </button>
@@ -477,7 +477,7 @@ const SIPtoSWPCalculator = () => {
             {results ? (
               <>
                 {/* Total Corpus */}
-                <div className="bg-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg opacity-90 mb-2 flex items-center gap-2">
                     <Landmark className="w-5 h-5" />
                     Total Accumulated Corpus
@@ -487,7 +487,7 @@ const SIPtoSWPCalculator = () => {
                 </div>
 
                 {/* Monthly Withdrawal */}
-                <div className="bg-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg opacity-90 mb-2 flex items-center gap-2">
                     <Coins className="w-5 h-5" />
                     Monthly SWP Withdrawal

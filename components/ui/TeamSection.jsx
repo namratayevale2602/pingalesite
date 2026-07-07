@@ -35,7 +35,7 @@ const TEAM = [
   },
 ];
 
-const BG_COLORS = ["#125178", "#2aa4eb", "#125178", "#2aa4eb"];
+const BG_COLORS = ["#0F1A51", "#a68256", "#0F1A51", "#a68256"];
 
 export default function TeamSection() {
   return (
@@ -44,7 +44,7 @@ export default function TeamSection() {
 
         {/* Section header */}
         <div className="text-center mb-14">
-          <span className="text-xs font-bold text-[#2aa4eb] uppercase tracking-[0.2em]">
+          <span className="text-xs font-bold text-[#a68256] uppercase tracking-[0.2em]">
             Our Team
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
@@ -64,14 +64,14 @@ export default function TeamSection() {
             >
               {/* Avatar */}
               <div
-                className="w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 ring-4 ring-transparent group-hover:ring-[#2aa4eb]/20 transition-all duration-300"
+                className="w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 ring-4 ring-transparent group-hover:ring-[#a68256]/20 transition-all duration-300"
                 style={{ background: BG_COLORS[i] }}
               >
                 {member.initials}
               </div>
 
               <h3 className="text-base font-semibold text-gray-900">{member.name}</h3>
-              <p className="text-xs font-medium text-[#2aa4eb] mt-0.5 mb-3">{member.role}</p>
+              <p className="text-xs font-medium text-[#a68256] mt-0.5 mb-3">{member.role}</p>
               <p className="text-xs text-gray-500 leading-relaxed flex-grow">{member.bio}</p>
 
               {/* Social links */}
@@ -79,14 +79,14 @@ export default function TeamSection() {
                 <a
                   href={member.linkedin}
                   aria-label={`${member.name} LinkedIn`}
-                  className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#125178] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#0F1A51] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
                 <a
                   href={`mailto:${member.email}`}
                   aria-label={`Email ${member.name}`}
-                  className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#2aa4eb] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-8 h-8 rounded-full bg-gray-100 hover:bg-[#a68256] flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
                 >
                   <Mail className="w-3.5 h-3.5" />
                 </a>

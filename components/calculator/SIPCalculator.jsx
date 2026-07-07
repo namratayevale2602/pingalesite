@@ -201,7 +201,7 @@ const SIPCalculator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Input Section */}
           <div className="lg:col-span-2 bg-gray-100 rounded-2xl shadow-xl p-6">
-            <h2 className="text-2xl font-bold text-[#074a6b] mb-6 flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-[#0F1A51] mb-6 flex items-center gap-2">
               Investment Parameters
             </h2>
             
@@ -222,7 +222,7 @@ const SIPCalculator = () => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#074a6b] font-semibold w-20 text-right">
+                  <span className="text-[#0F1A51] font-semibold w-20 text-right">
                     {formatDisplayValue(formData.monthlySIP, 'monthlySIP')}
                   </span>
                 </div>
@@ -237,7 +237,7 @@ const SIPCalculator = () => {
                 step={500}
                 value={formData.monthlySIP}
                 onChange={(e) => handleSliderChange('monthlySIP', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>₹500</span>
@@ -262,7 +262,7 @@ const SIPCalculator = () => {
                     }`}
                     placeholder="Years"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.sipPeriod} years
                   </span>
                 </div>
@@ -277,7 +277,7 @@ const SIPCalculator = () => {
                 step={1}
                 value={formData.sipPeriod}
                 onChange={(e) => handleSliderChange('sipPeriod', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>1 Year</span>
@@ -302,7 +302,7 @@ const SIPCalculator = () => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.expectedReturn}%
                   </span>
                 </div>
@@ -317,7 +317,7 @@ const SIPCalculator = () => {
                 step={0.5}
                 value={formData.expectedReturn}
                 onChange={(e) => handleSliderChange('expectedReturn', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>6%</span>
@@ -327,7 +327,7 @@ const SIPCalculator = () => {
 
             <button
               onClick={handleReset}
-              className="w-full py-3 bg-[#1a729e] text-white font-semibold rounded-lg"
+              className="w-full py-3 bg-[#a68256] text-white font-semibold rounded-lg"
             >
               Reset to Default Values
             </button>
@@ -335,13 +335,13 @@ const SIPCalculator = () => {
 
           {/* Results Section */}
           <div className="space-y-6">
-            <div className="bg-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+            <div className="bg-[#a68256] rounded-2xl shadow-xl p-6 text-white">
               <h3 className="text-lg mb-2">Future Value After {formData.sipPeriod} Years</h3>
               <div className="text-3xl md:text-4xl font-bold mb-2">{formatCurrency(futureValue)}</div>
               <p className="text-sm">Total amount after {formData.sipPeriod} years of SIP</p>
             </div>
 
-            <div className="bg-[#1a729e] text-white rounded-2xl shadow-xl p-6">
+            <div className="bg-[#a68256] text-white rounded-2xl shadow-xl p-6">
               <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                 Total Amount Invested
               </h3>
@@ -349,7 +349,7 @@ const SIPCalculator = () => {
               <p className="text-sm">₹{formData.monthlySIP.toLocaleString('en-IN')} × {formData.sipPeriod * 12} months</p>
             </div>
 
-            <div className="bg-[#1a729e] text-white rounded-2xl shadow-xl p-6">
+            <div className="bg-[#a68256] text-white rounded-2xl shadow-xl p-6">
               <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
                 Wealth Gained
               </h3>

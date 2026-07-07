@@ -119,7 +119,7 @@ export default function BlogDetail() {
       {/* ── COVER IMAGE ── */}
       <div className="container py-8 lg:py-10">
         <div className="w-full rounded-2xl overflow-hidden relative"
-          style={{ aspectRatio: "21/9", background: "linear-gradient(135deg, #dbeafe 0%, #e0f2fe 60%, #f0f9ff 100%)" }}>
+          style={{ aspectRatio: "21/9", background: "linear-gradient(135deg, #f0e6d3 0%, #f5eee0 60%, #faf6ee 100%)" }}>
           {post.img && (
             <img src={post.img} alt={post.t} className="w-full h-full object-cover"
               onError={(e) => { e.currentTarget.style.display = "none"; }} />

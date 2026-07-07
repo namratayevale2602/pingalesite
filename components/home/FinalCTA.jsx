@@ -24,7 +24,7 @@ const CTASection = () => {
 
   return (
     <section className={`relative py-20 overflow-hidden transition-colors duration-300 ${
-      dark ? "bg-[gray-950]" : "bg-[#f6f7f9]"
+      dark ? "bg-[gray-950]" : "bg-[#F1EFEC]"
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -32,7 +32,7 @@ const CTASection = () => {
           {/* LEFT IMAGE SIDE */}
           <div className="relative flex justify-center items-end">
             <div className={`absolute w-[480px] h-[480px] rounded-full top-10 left-10 ${
-              dark ? "bg-gray-800" : "bg-[#edf1f6]"
+              dark ? "bg-gray-800" : "bg-[#F1EFEC]"
             }`}></div>
 
             <div className="relative z-10">
@@ -49,13 +49,13 @@ const CTASection = () => {
           {/* RIGHT FORM SIDE */}
           <div>
             <p className={`uppercase tracking-[4px] text-sm font-semibold pb-4 ${
-              dark ? "text-blue-400" : "text-[#074a6b]"
+              dark ? "text-blue-400" : "text-[#0F1A51]"
             }`}>
               Get A Free Estimate
             </p>
 
             <h2 className={`text-4xl lg:text-5xl leading-tight pb-8 ${
-              dark ? "text-gray-100" : "text-[#0d2240]"
+              dark ? "text-gray-100" : "text-[#0a1238]"
             }`}>
               Get an insurance quote to <br /> get started!
             </h2>

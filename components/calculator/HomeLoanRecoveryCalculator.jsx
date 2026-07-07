@@ -366,7 +366,7 @@ const HomeLoanRecoveryCalculator = () => {
 
         {/* Calculator Type Selector */}
         <div className="mb-8 bg-gray-100 rounded-2xl shadow-xl p-6">
-          <h2 className="text-xl font-bold text-[#074a6b] mb-4 flex items-center gap-2">
+          <h2 className="text-xl font-bold text-[#0F1A51] mb-4 flex items-center gap-2">
             Select What You Want to Recover
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -377,11 +377,11 @@ const HomeLoanRecoveryCalculator = () => {
               }}
               className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center justify-center gap-2 ${
                 calculatorType === "emi-loan" 
-                  ? "border-[#1a729e] bg-blue-50 shadow-md" 
+                  ? "border-[#a68256] bg-blue-50 shadow-md" 
                   : "border-gray-200 hover:border-blue-300 hover:bg-blue-50"
               }`}
             >
-              <CreditCard className={`w-6 h-6 ${calculatorType === "emi-loan" ? "text-[#1a729e]" : "text-gray-500"}`} />
+              <CreditCard className={`w-6 h-6 ${calculatorType === "emi-loan" ? "text-[#a68256]" : "text-gray-500"}`} />
               <span className="font-medium text-sm text-center">Total EMI (from Loan)</span>
             </button>
 
@@ -392,11 +392,11 @@ const HomeLoanRecoveryCalculator = () => {
               }}
               className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center justify-center gap-2 ${
                 calculatorType === "emi-monthly" 
-                 ? "border-[#1a729e] bg-blue-50 shadow-md" 
+                 ? "border-[#a68256] bg-blue-50 shadow-md" 
                   : "border-gray-200 hover:border-blue-300 hover:bg-blue-50"
               }`}
             >
-              <Wallet className={`w-6 h-6 ${calculatorType === "emi-monthly" ? "text-[#1a729e]" : "text-gray-500"}`} />
+              <Wallet className={`w-6 h-6 ${calculatorType === "emi-monthly" ? "text-[#a68256]" : "text-gray-500"}`} />
               <span className="font-medium text-sm text-center">Total EMI (from Monthly)</span>
             </button>
 
@@ -404,11 +404,11 @@ const HomeLoanRecoveryCalculator = () => {
               onClick={() => setCalculatorType("principal")}
               className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center justify-center gap-2 ${
                 calculatorType === "principal" 
-                 ? "border-[#1a729e] bg-blue-50 shadow-md" 
+                 ? "border-[#a68256] bg-blue-50 shadow-md" 
                   : "border-gray-200 hover:border-blue-300 hover:bg-blue-50"
               }`}
             >
-              <Building className={`w-6 h-6 ${calculatorType === "principal" ? "text-[#1a729e]" : "text-gray-500"}`} />
+              <Building className={`w-6 h-6 ${calculatorType === "principal" ? "text-[#a68256]" : "text-gray-500"}`} />
               <span className="font-medium text-sm text-center">Principal Only</span>
             </button>
 
@@ -416,11 +416,11 @@ const HomeLoanRecoveryCalculator = () => {
               onClick={() => setCalculatorType("interest")}
               className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center justify-center gap-2 ${
                 calculatorType === "interest" 
-                  ? "border-[#1a729e] bg-blue-50 shadow-md" 
+                  ? "border-[#a68256] bg-blue-50 shadow-md" 
                   : "border-gray-200 hover:border-blue-300 hover:bg-blue-50"
               }`}
             >
-              <TrendingUp className={`w-6 h-6 ${calculatorType === "interest" ? "text-[#1a729e]" : "text-gray-500"}`} />
+              <TrendingUp className={`w-6 h-6 ${calculatorType === "interest" ? "text-[#a68256]" : "text-gray-500"}`} />
               <span className="font-medium text-sm text-center">Interest Only</span>
             </button>
           </div>
@@ -429,7 +429,7 @@ const HomeLoanRecoveryCalculator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Input Section */}
           <div className="lg:col-span-2 bg-gray-100 rounded-2xl shadow-xl p-6">
-            <h2 className="text-2xl font-bold text-[#074a6b] mb-6 flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-[#0F1A51] mb-6 flex items-center gap-2">
               Loan & Investment Parameters
             </h2>
 
@@ -452,7 +452,7 @@ const HomeLoanRecoveryCalculator = () => {
                       }`}
                       placeholder="Amount"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formatDisplayValue(formData.loanAmount, 'loanAmount')}
                     </span>
                   </div>
@@ -467,7 +467,7 @@ const HomeLoanRecoveryCalculator = () => {
                   step={100000}
                   value={formData.loanAmount}
                   onChange={(e) => handleSliderChange('loanAmount', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>₹1 L</span>
@@ -494,7 +494,7 @@ const HomeLoanRecoveryCalculator = () => {
                       }`}
                       placeholder="%"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formData.interestRate}%
                     </span>
                   </div>
@@ -509,7 +509,7 @@ const HomeLoanRecoveryCalculator = () => {
                   step={0.1}
                   value={formData.interestRate}
                   onChange={(e) => handleSliderChange('interestRate', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>5%</span>
@@ -536,7 +536,7 @@ const HomeLoanRecoveryCalculator = () => {
                       }`}
                       placeholder="Amount"
                     />
-                    <span className="text-[#1a729e] font-semibold w-20 text-right">
+                    <span className="text-[#a68256] font-semibold w-20 text-right">
                       {formatDisplayValue(formData.monthlyEMI, 'monthlyEMI')}
                     </span>
                   </div>
@@ -551,7 +551,7 @@ const HomeLoanRecoveryCalculator = () => {
                   step={1000}
                   value={formData.monthlyEMI}
                   onChange={(e) => handleSliderChange('monthlyEMI', e.target.value)}
-                  className="w-full accent-[#1a729e]"
+                  className="w-full accent-[#a68256]"
                 />
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>₹1K</span>
@@ -577,7 +577,7 @@ const HomeLoanRecoveryCalculator = () => {
                     }`}
                     placeholder="Years"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.loanTenure} years
                   </span>
                 </div>
@@ -592,7 +592,7 @@ const HomeLoanRecoveryCalculator = () => {
                 step={1}
                 value={formData.loanTenure}
                 onChange={(e) => handleSliderChange('loanTenure', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>1 Year</span>
@@ -618,7 +618,7 @@ const HomeLoanRecoveryCalculator = () => {
                     placeholder="%"
                     disabled={calculatorType === "principal"}
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.investmentReturn}%
                     {calculatorType === "principal" && <Lock className="w-3 h-3 inline ml-1" />}
                   </span>
@@ -636,7 +636,7 @@ const HomeLoanRecoveryCalculator = () => {
                     step={0.5}
                     value={formData.investmentReturn}
                     onChange={(e) => handleSliderChange('investmentReturn', e.target.value)}
-                    className="w-full accent-[#1a729e]"
+                    className="w-full accent-[#a68256]"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>6%</span>
@@ -669,7 +669,7 @@ const HomeLoanRecoveryCalculator = () => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.annualIncrease}%
                   </span>
                 </div>
@@ -684,7 +684,7 @@ const HomeLoanRecoveryCalculator = () => {
                 step={1}
                 value={formData.annualIncrease}
                 onChange={(e) => handleSliderChange('annualIncrease', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>0%</span>
@@ -694,7 +694,7 @@ const HomeLoanRecoveryCalculator = () => {
 
             <button
               onClick={handleReset}
-              className="w-full py-3 bg-[#1a729e] text-white font-semibold rounded-lg"
+              className="w-full py-3 bg-[#a68256] text-white font-semibold rounded-lg"
             >
               Reset to Default Values
             </button>
@@ -705,7 +705,7 @@ const HomeLoanRecoveryCalculator = () => {
             {results ? (
               <>
                 {/* Main Result */}
-                <div className="bg-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg mb-2 flex items-center gap-2">
                     <Target className="w-5 h-5" />
                     {getTitle()}
@@ -715,7 +715,7 @@ const HomeLoanRecoveryCalculator = () => {
                 </div>
 
                 {/* Monthly Investment Required */}
-                <div className="bg-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg mb-2 flex items-center gap-2">
                     <ArrowUp className="w-5 h-5" />
                     Monthly Investment Required
@@ -728,7 +728,7 @@ const HomeLoanRecoveryCalculator = () => {
                 {(calculatorType === "emi-loan" || calculatorType === "interest") && results.emiDetails && (
                   <div className="bg-white rounded-2xl shadow-xl p-6">
                     <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                      <CreditCard className="w-5 h-5 text-[#1a729e]" />
+                      <CreditCard className="w-5 h-5 text-[#a68256]" />
                       Loan EMI Breakdown
                     </h3>
                     <div className="space-y-3">
@@ -740,7 +740,7 @@ const HomeLoanRecoveryCalculator = () => {
                       </div>
                       <div className="flex justify-between items-center pb-2 border-b border-gray-100">
                         <span className="text-gray-600">Total Payment</span>
-                        <span className="font-semibold text-[#1a729e]">
+                        <span className="font-semibold text-[#a68256]">
                           {formatCurrency(Math.round(results.emiDetails.totalPaid))}
                         </span>
                       </div>
@@ -757,7 +757,7 @@ const HomeLoanRecoveryCalculator = () => {
                 {/* Investment Strategy */}
                 <div className="bg-white rounded-2xl shadow-xl p-6">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-[#1a729e]" />
+                    <TrendingUp className="w-5 h-5 text-[#a68256]" />
                     Investment Strategy
                   </h3>
                   <div className="space-y-3">
@@ -769,7 +769,7 @@ const HomeLoanRecoveryCalculator = () => {
                     </div>
                     <div className="flex justify-between items-center pb-2 border-b border-gray-100">
                       <span className="text-gray-600">Annual Increase</span>
-                      <span className="font-semibold text-[#1a729e]">
+                      <span className="font-semibold text-[#a68256]">
                         {formData.annualIncrease}%
                       </span>
                     </div>

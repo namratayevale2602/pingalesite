@@ -48,12 +48,12 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-lg bg-[#125178] flex items-center justify-center">
+            <div className="w-9 h-9 rounded-lg bg-[#0F1A51] flex items-center justify-center">
               <TrendingUp className="w-5 h-5 text-white" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-lg font-bold text-[#125178] tracking-tight">Pingale</span>
-              <span className="text-[10px] font-semibold text-[#2aa4eb] tracking-[0.18em] uppercase">Wealth</span>
+              <span className="text-lg font-bold text-[#0F1A51] tracking-tight">Pingale</span>
+              <span className="text-[10px] font-semibold text-[#a68256] tracking-[0.18em] uppercase">Wealth</span>
             </div>
           </Link>
 
@@ -67,7 +67,7 @@ export default function Header() {
                   onMouseEnter={() => setDropdownOpen(true)}
                   onMouseLeave={() => setDropdownOpen(false)}
                 >
-                  <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#125178] rounded-md transition-colors">
+                  <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#0F1A51] rounded-md transition-colors">
                     {link.label}
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
                   </button>
@@ -78,14 +78,14 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#125178]/5 group transition-colors"
+                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-[#0F1A51]/5 group transition-colors"
                           onClick={() => setDropdownOpen(false)}
                         >
-                          <div className="w-9 h-9 rounded-lg bg-[#2aa4eb]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#2aa4eb]/20 transition-colors">
-                            <child.icon className="w-5 h-5 text-[#2aa4eb]" />
+                          <div className="w-9 h-9 rounded-lg bg-[#a68256]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#a68256]/20 transition-colors">
+                            <child.icon className="w-5 h-5 text-[#a68256]" />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold text-gray-800 group-hover:text-[#125178]">{child.label}</p>
+                            <p className="text-sm font-semibold text-gray-800 group-hover:text-[#0F1A51]">{child.label}</p>
                             <p className="text-xs text-gray-500 mt-0.5">{child.desc}</p>
                           </div>
                         </Link>
@@ -97,7 +97,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#125178] rounded-md transition-colors"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#0F1A51] rounded-md transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -109,14 +109,14 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:+91XXXXXXXXXX"
-              className="flex items-center gap-1.5 text-sm font-medium text-[#125178] hover:text-[#2aa4eb] transition-colors"
+              className="flex items-center gap-1.5 text-sm font-medium text-[#0F1A51] hover:text-[#a68256] transition-colors"
             >
               <Phone className="w-4 h-4" />
               Call Us
             </a>
             <Link
               href="/contact"
-              className="bg-[#2aa4eb] hover:bg-[#1a8fd1] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#2aa4eb]/30"
+              className="bg-[#a68256] hover:bg-[#8a6a41] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#a68256]/30"
             >
               Book Free Consultation
             </Link>
@@ -153,10 +153,10 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="flex items-center gap-3 px-4 py-3 text-sm text-gray-600 hover:text-[#125178] hover:bg-[#125178]/5 rounded-xl"
+                          className="flex items-center gap-3 px-4 py-3 text-sm text-gray-600 hover:text-[#0F1A51] hover:bg-[#0F1A51]/5 rounded-xl"
                           onClick={() => setMobileOpen(false)}
                         >
-                          <child.icon className="w-4 h-4 text-[#2aa4eb]" />
+                          <child.icon className="w-4 h-4 text-[#a68256]" />
                           {child.label}
                         </Link>
                       ))}
@@ -167,7 +167,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#125178] hover:bg-gray-50 rounded-xl"
+                  className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-[#0F1A51] hover:bg-gray-50 rounded-xl"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
@@ -177,7 +177,7 @@ export default function Header() {
             <div className="pt-4 border-t border-gray-100">
               <Link
                 href="/contact"
-                className="block w-full text-center bg-[#2aa4eb] hover:bg-[#1a8fd1] text-white font-semibold px-6 py-3 rounded-full transition-colors"
+                className="block w-full text-center bg-[#a68256] hover:bg-[#8a6a41] text-white font-semibold px-6 py-3 rounded-full transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 Book Free Consultation

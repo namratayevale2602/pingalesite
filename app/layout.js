@@ -78,7 +78,7 @@ export const metadata = {
   },
   manifest: "/site.webmanifest",
   other: {
-    "theme-color":                   "#125178",
+    "theme-color":                   "#0F1A51",
     "apple-mobile-web-app-title":    siteSEO.siteName,
     "apple-mobile-web-app-capable":  "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",

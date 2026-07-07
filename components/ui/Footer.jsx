@@ -61,7 +61,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0d3a57] text-white">
+    <footer className="bg-[#0F1A51] text-white">
 
       {/* Main footer body */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
@@ -71,12 +71,12 @@ export default function Footer() {
           <div className="lg:col-span-1">
             {/* Logo */}
             <Link href="/" className="inline-flex items-center gap-2.5 mb-5">
-              <div className="w-9 h-9 rounded-lg bg-[#2aa4eb] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-lg bg-[#a68256] flex items-center justify-center">
                 <TrendingUp className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-lg font-bold text-white tracking-tight">Pingale</span>
-                <span className="text-[10px] font-semibold text-[#2aa4eb] tracking-[0.18em] uppercase">Wealth</span>
+                <span className="text-[10px] font-semibold text-[#a68256] tracking-[0.18em] uppercase">Wealth</span>
               </div>
             </Link>
 
@@ -91,7 +91,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#2aa4eb] flex items-center justify-center transition-colors duration-200"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#a68256] flex items-center justify-center transition-colors duration-200"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -144,17 +144,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#2aa4eb] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#a68256] flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-white/60">Nashik, Maharashtra, India</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#2aa4eb] flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#a68256] flex-shrink-0" />
                 <a href="tel:+91XXXXXXXXXX" className="text-sm text-white/60 hover:text-white transition-colors">
                   +91 XXXXX XXXXX
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#2aa4eb] flex-shrink-0" />
+                <Mail className="w-4 h-4 text-[#a68256] flex-shrink-0" />
                 <a href="mailto:info@pingalewealth.com" className="text-sm text-white/60 hover:text-white transition-colors">
                   info@pingalewealth.com
                 </a>

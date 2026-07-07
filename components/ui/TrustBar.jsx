@@ -44,14 +44,14 @@ function StatCard({ stat, active }) {
     <div className="text-center py-6 px-4 transition-all duration-300 hover:scale-105">
       <div className="flex items-baseline justify-center gap-1">
         {stat.prefix && (
-          <span className="text-2xl font-bold text-[#165178]">{stat.prefix}</span>
+          <span className="text-2xl font-bold text-[#0F1A51]">{stat.prefix}</span>
         )}
-        <span className="text-4xl md:text-5xl font-bold text-[#165178] tabular-nums">
+        <span className="text-4xl md:text-5xl font-bold text-[#0F1A51] tabular-nums">
           {count.toLocaleString("en-IN")}
         </span>
-        <span className="text-xl font-semibold text-[#165178]">{stat.suffix}</span>
+        <span className="text-xl font-semibold text-[#0F1A51]">{stat.suffix}</span>
       </div>
-      <p className="text-sm text-[#165178] mt-2 font-medium">{stat.label}</p>
+      <p className="text-sm text-[#0F1A51] mt-2 font-medium">{stat.label}</p>
     </div>
   );
 }
@@ -79,13 +79,13 @@ export default function TrustBar() {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 bg-[#125178] relative overflow-hidden py-20 bg-cover bg-center bg-no-repeat"
+    <section ref={ref} className="py-16 bg-[#0F1A51] relative overflow-hidden py-20 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/bg/bg.webp')",
       }}
       >
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[#2aa4eb]/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-[#a68256]/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-60 h-60 bg-white/5 rounded-full -translate-x-1/2 translate-y-1/2 blur-3xl pointer-events-none" />
       
       {/* Subtle grid pattern */}

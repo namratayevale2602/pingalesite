@@ -68,12 +68,12 @@ export default function TestimonialsCarousel() {
               </span>
             </div>
 
-            <h2 className="text-[clamp(32px,4vw,52px)] leading-[1.1] pb-6 font-[var(--font-display)]" style={{ color: "#dbf0f8" }}>
+            <h2 className="text-[clamp(32px,4vw,52px)] leading-[1.1] pb-6 font-[var(--font-display)]" style={{ color: "#EDE6DA" }}>
               Results matter.<br />
               <span className="italic text-[var(--sky-400)]">People remember results.</span>
             </h2>
 
-            <p className="text-sm leading-[1.7] mb-8 max-w-[320px]" style={{ color: "#4a8aaa" }}>
+            <p className="text-sm leading-[1.7] mb-8 max-w-[320px]" style={{ color: "#a08a68" }}>
               Every story below is a real outcome from a real client. No composite examples. No hypothetical returns.
             </p>
 
@@ -90,18 +90,18 @@ export default function TestimonialsCarousel() {
               &ldquo;{cur.result}&rdquo;
             </div>
 
-            <p className="text-[16px] leading-[1.8] pb-8" style={{ color: "#a8cce0" }}>
+            <p className="text-[16px] leading-[1.8] pb-8" style={{ color: "#d9c4a3" }}>
               {cur.story}
             </p>
 
             {/* Author */}
-            <div className="flex items-center gap-4 pt-6 border-t" style={{ borderColor: "#0b3245" }}>
+            <div className="flex items-center gap-4 pt-6 border-t" style={{ borderColor: "#26325a" }}>
               <div className="w-11 h-11 rounded-full flex items-center justify-center font-[var(--font-display)] text-[20px] bg-[var(--sky-400)] text-[var(--navy-900)]">
                 {cur.name[0]}
               </div>
               <div>
-                <div className="text-[15px] font-medium" style={{ color: "#dbf0f8" }}>{cur.name}</div>
-                <div className="text-[12px] font-[var(--font-mono)] tracking-[0.06em]" style={{ color: "#4a8aaa" }}>
+                <div className="text-[15px] font-medium" style={{ color: "#EDE6DA" }}>{cur.name}</div>
+                <div className="text-[12px] font-[var(--font-mono)] tracking-[0.06em]" style={{ color: "#a08a68" }}>
                   {cur.role} · {cur.since}
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function TestimonialsCarousel() {
                 <div 
                   key={i} 
                   className={`h-0.5 flex-1 rounded-full transition-colors duration-300 ${
-                    i === idx ? "bg-[var(--sky-400)]" : "bg-[#0b3245]"
+                    i === idx ? "bg-[var(--sky-400)]" : "bg-[#26325a]"
                   }`}
                 />
               ))}

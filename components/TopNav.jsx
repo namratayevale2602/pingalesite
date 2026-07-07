@@ -47,26 +47,27 @@ export default function TopNav() {
           : "bg-white/95 border-gray-200"
       } backdrop-blur-md border-b`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             {/* Logo - Bigger size */}
             <Link href="/" className="flex items-center gap-3 group" onClick={closeMobileMenu}>
-              <div className="relative w-40 h-40 overflow-hidden rounded-xl flex items-center justify-center">
-                {!logoError ? (
+              {!logoError ? (
+                <div className="relative w-44 h-16 sm:w-52 sm:h-20 shrink-0">
                   <Image
-                    src={theme === "dark" ? "/logo/pingalewhite.png" : "/logo/pinglelogo.jpeg"}
+                    src={theme === "dark" ? "/logo/pingalelogowhite.png" : "/logo/pingalelogorb.png"}
                     alt="Pingale Financial Services"
-                    width={70}
-                    height={70}
-                    className="object-cover"
+                    fill
+                    sizes="(max-width: 640px) 176px, 208px"
+                    className="object-contain"
                     priority
                     onError={() => setLogoError(true)}
                   />
-                ) : (
-                  /* Fallback icon if logo doesn't load */
+                </div>
+              ) : (
+                /* Fallback icon if logo doesn't load */
+                <div className="w-14 h-14 rounded-xl bg-[var(--brand)] flex items-center justify-center">
                   <span className="text-white font-bold text-2xl">P</span>
-                )}
-              </div>
-             
+                </div>
+              )}
             </Link>
 
             {/* Desktop Navigation */}
@@ -186,7 +187,7 @@ export default function TopNav() {
       </header>
 
       {/* Spacer to prevent content from hiding under fixed header - increased to match taller header */}
-      <div className="h-20" />
+      <div className="h-24" />
     </>
   );
 }

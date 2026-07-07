@@ -29,17 +29,17 @@ const TESTIMONIALS = [
 
 export default function TestimonialSection() {
   return (
-    <section className="py-20 bg-[#125178] relative overflow-hidden">
+    <section className="py-20 bg-[#0F1A51] relative overflow-hidden">
 
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#2aa4eb]/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#a68256]/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 translate-y-1/2 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
         <div className="text-center mb-14">
-          <span className="text-xs font-bold text-[#2aa4eb] uppercase tracking-[0.2em]">
+          <span className="text-xs font-bold text-[#a68256] uppercase tracking-[0.2em]">
             Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4">
@@ -65,7 +65,7 @@ export default function TestimonialSection() {
               </div>
 
               {/* Quote icon */}
-              <Quote className="w-7 h-7 text-[#2aa4eb] mb-3 flex-shrink-0" />
+              <Quote className="w-7 h-7 text-[#a68256] mb-3 flex-shrink-0" />
 
               {/* Quote text */}
               <p className="text-white/80 text-sm leading-relaxed italic flex-grow">
@@ -74,7 +74,7 @@ export default function TestimonialSection() {
 
               {/* Author */}
               <div className="flex items-center gap-3 mt-6 pt-5 border-t border-white/10">
-                <div className="w-10 h-10 rounded-full bg-[#2aa4eb] flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#a68256] flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
                   {t.initials}
                 </div>
                 <div>

@@ -48,7 +48,7 @@ export default function InsuranceCards() {
         
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl text-[#074a6b]">
+          <h2 className="text-3xl md:text-4xl text-[#0F1A51]">
             Our Insurance Services
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
@@ -83,7 +83,7 @@ export default function InsuranceCards() {
 
                 {/* Text */}
                 <div className="p-6 transition-colors duration-500 group-hover:text-white">
-                  <h3 className="md:text-2xl text-xl mb-3 text-[#074a6b] group-hover:text-white transition-colors duration-500">
+                  <h3 className="md:text-2xl text-xl mb-3 text-[#0F1A51] group-hover:text-white transition-colors duration-500">
                     {card.title}
                   </h3>
 

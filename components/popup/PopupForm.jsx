@@ -93,7 +93,7 @@ const PopupForm = ({ isOpen, onClose }) => {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="relative bg-gradient-to-r from-[#074a6b] to-[#1281bd] rounded-t-2xl p-6 text-white">
+          <div className="relative bg-gradient-to-r from-[#0F1A51] to-[#8a6a41] rounded-t-2xl p-6 text-white">
             <button
               onClick={onClose}
               className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
@@ -121,7 +121,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1281bd] focus:border-transparent transition"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8a6a41] focus:border-transparent transition"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -140,7 +140,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1281bd] focus:border-transparent transition"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8a6a41] focus:border-transparent transition"
                   placeholder="your@email.com"
                 />
               </div>
@@ -159,7 +159,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1281bd] focus:border-transparent transition"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8a6a41] focus:border-transparent transition"
                   placeholder="+91 98765 43210"
                 />
               </div>
@@ -175,7 +175,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                   name="lifeStage"
                   value={formData.lifeStage}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1281bd] focus:border-transparent transition bg-white"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8a6a41] focus:border-transparent transition bg-white"
                 >
                   <option>Select your life stage</option>
                     <option>Just starting out (20-30)</option>
@@ -197,7 +197,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1281bd] focus:border-transparent transition bg-white"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8a6a41] focus:border-transparent transition bg-white"
                 >
                   <option value="">Select preferred time</option>
                   <option value="morning">Morning (9 AM - 12 PM)</option>
@@ -222,7 +222,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="3"
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1281bd] focus:border-transparent transition resize-none"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8a6a41] focus:border-transparent transition resize-none"
                   placeholder="Tell us about your insurance needs..."
                 />
               </div>
@@ -245,7 +245,7 @@ const PopupForm = ({ isOpen, onClose }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-[#074a6b] to-[#1281bd] text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-gradient-to-r from-[#0F1A51] to-[#8a6a41] text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>

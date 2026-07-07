@@ -45,7 +45,7 @@ export default function FAQAccordion({ faqs = DEFAULT_FAQS }) {
 
         {/* Section header */}
         <div className="text-center mb-12">
-          <span className="text-xs font-bold text-[#2aa4eb] uppercase tracking-[0.2em]">FAQ</span>
+          <span className="text-xs font-bold text-[#a68256] uppercase tracking-[0.2em]">FAQ</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
             Frequently Asked Questions
           </h2>
@@ -62,7 +62,7 @@ export default function FAQAccordion({ faqs = DEFAULT_FAQS }) {
               <div
                 key={i}
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                  isOpen ? "border-[#2aa4eb]/40 shadow-sm" : "border-gray-100"
+                  isOpen ? "border-[#a68256]/40 shadow-sm" : "border-gray-100"
                 }`}
               >
                 <button
@@ -72,14 +72,14 @@ export default function FAQAccordion({ faqs = DEFAULT_FAQS }) {
                 >
                   <span
                     className={`text-sm font-semibold leading-snug transition-colors ${
-                      isOpen ? "text-[#125178]" : "text-gray-800 group-hover:text-[#125178]"
+                      isOpen ? "text-[#0F1A51]" : "text-gray-800 group-hover:text-[#0F1A51]"
                     }`}
                   >
                     {faq.question}
                   </span>
                   <span
                     className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200 ${
-                      isOpen ? "bg-[#125178] text-white rotate-180" : "bg-gray-100 text-gray-400"
+                      isOpen ? "bg-[#0F1A51] text-white rotate-180" : "bg-gray-100 text-gray-400"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />

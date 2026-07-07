@@ -200,7 +200,7 @@ const FutureWealthCalculator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Input Section */}
           <div className="lg:col-span-2 bg-gray-100 rounded-2xl shadow-xl p-6">
-            <h2 className="text-2xl font-bold text-[#074a6b] mb-6">Investment Parameters</h2>
+            <h2 className="text-2xl font-bold text-[#0F1A51] mb-6">Investment Parameters</h2>
             
             {/* Current Portfolio */}
             <div className="mb-6">
@@ -217,7 +217,7 @@ const FutureWealthCalculator = () => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formatDisplayValue(formData.currentPortfolio, 'currentPortfolio')}
                   </span>
                 </div>
@@ -232,7 +232,7 @@ const FutureWealthCalculator = () => {
                 step={100000}
                 value={formData.currentPortfolio}
                 onChange={(e) => handleSliderChange('currentPortfolio', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
             </div>
 
@@ -251,7 +251,7 @@ const FutureWealthCalculator = () => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formatDisplayValue(formData.lumpSum, 'lumpSum')}
                   </span>
                 </div>
@@ -266,7 +266,7 @@ const FutureWealthCalculator = () => {
                 step={50000}
                 value={formData.lumpSum}
                 onChange={(e) => handleSliderChange('lumpSum', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
             </div>
 
@@ -285,7 +285,7 @@ const FutureWealthCalculator = () => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formatDisplayValue(formData.monthlySIP, 'monthlySIP')}
                   </span>
                 </div>
@@ -300,7 +300,7 @@ const FutureWealthCalculator = () => {
                 step={10000}
                 value={formData.monthlySIP}
                 onChange={(e) => handleSliderChange('monthlySIP', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
             </div>
 
@@ -319,7 +319,7 @@ const FutureWealthCalculator = () => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.portfolioReturn}%
                   </span>
                 </div>
@@ -334,7 +334,7 @@ const FutureWealthCalculator = () => {
                 step={0.5}
                 value={formData.portfolioReturn}
                 onChange={(e) => handleSliderChange('portfolioReturn', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
             </div>
 
@@ -353,7 +353,7 @@ const FutureWealthCalculator = () => {
                     }`}
                     placeholder="Years"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.years} years
                   </span>
                 </div>
@@ -368,13 +368,13 @@ const FutureWealthCalculator = () => {
                 step={1}
                 value={formData.years}
                 onChange={(e) => handleSliderChange('years', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
             </div>
 
             <button
               onClick={handleReset}
-              className="w-full py-3 bg-[#1a729e] text-white font-semibold rounded-lg "
+              className="w-full py-3 bg-[#a68256] text-white font-semibold rounded-lg "
             >
               Reset to Default Values
             </button>
@@ -382,19 +382,19 @@ const FutureWealthCalculator = () => {
 
           {/* Results Section */}
           <div className="space-y-6">
-            <div className="bg-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+            <div className="bg-[#a68256] rounded-2xl shadow-xl p-6 text-white">
               <h3 className="text-lg opacity-90 mb-2">Future Value After {formData.years} Years</h3>
               <div className="text-3xl md:text-4xl font-bold mb-2">{formatCurrency(futureValue)}</div>
               <p className="opacity-90 text-sm">Total amount after {formData.years} years</p>
             </div>
 
-            <div className="bg-[#1a729e] rounded-2xl text-white shadow-xl p-6">
+            <div className="bg-[#a68256] rounded-2xl text-white shadow-xl p-6">
               <h3 className="text-lg font-semibold mb-2">Total Amount Invested</h3>
               <div className="text-3xl md:text-4xl font-bold mb-2">{formatCurrency(totalInvested)}</div>
               <p className="text-sm">Sum of all your contributions</p>
             </div>
 
-            <div className="bg-[#1a729e] text-white rounded-2xl shadow-xl p-6">
+            <div className="bg-[#a68256] text-white rounded-2xl shadow-xl p-6">
               <h3 className="text-lg font-semibold mb-2">Wealth Gained</h3>
               <div className="text-3xl md:text-4xl font-bold mb-2">{formatCurrency(wealthGained)}</div>
               <p className="text-sm">Returns through compounding</p>

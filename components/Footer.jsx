@@ -21,13 +21,13 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <img
-                src="/logo/pingalewhite.png"
+                src="/logo/pingalelogowhite.png"
                 alt="Pingale Financial Services"
                 className="object-contain"
                 style={{ width: 150, height: 150, borderRadius: 8 }}
               />
             </div>
-            <p className="max-w-[340px] text-sm leading-[1.7] pb-6 text-[#7abcce]">
+            <p className="max-w-[340px] text-sm leading-[1.7] pb-6 text-[#c9ad82]">
               Three decades of helping Indian families consume thoughtfully, create wealth deliberately, and conserve what matters.
             </p>
             <div className="flex gap-3 flex-wrap">
@@ -37,7 +37,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full inline-flex items-center justify-center transition-all duration-200 hover:scale-110 border border-[#0b3245] text-[#7abcce] hover:text-white hover:border-[#7abcce] hover:bg-[#0b3245]"
+                  className="w-9 h-9 rounded-full inline-flex items-center justify-center transition-all duration-200 hover:scale-110 border border-[#26325a] text-[#c9ad82] hover:text-white hover:border-[#c9ad82] hover:bg-[#26325a]"
                   aria-label={social.name}
                   style={{ display: "inline-flex", alignItems: "center", justifyContent: "center" }}
                 >
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t pt-6 flex justify-between items-center flex-wrap gap-4 text-[12px] border-[#0b3245] text-[#4a8aaa]">
+        <div className="border-t pt-6 flex justify-between items-center flex-wrap gap-4 text-[12px] border-[#26325a] text-[#a08a68]">
           <div>© 2026 Pingale Financial Services Pvt. Ltd. · IRDAI Reg. No. PG/1993/IN · AMFI ARN-XXXXXX</div>
           <div className="flex gap-6">
             <a>Privacy</a><a>Terms</a><a>Disclosures</a>

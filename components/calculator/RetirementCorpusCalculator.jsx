@@ -342,15 +342,15 @@ const calculateRetirement = (data) => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#074a6b] mb-2">Retirement Corpus Calculator</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#0F1A51] mb-2">Retirement Corpus Calculator</h1>
           <p className="text-gray-600">Plan your retirement with precision using advanced calculations</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Input Section */}
           <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
-            <h2 className="text-2xl font-bold text-[#074a6b] mb-6 flex items-center gap-2">
-              <Calculator className="w-6 h-6 text-[#1a729e]" />
+            <h2 className="text-2xl font-bold text-[#0F1A51] mb-6 flex items-center gap-2">
+              <Calculator className="w-6 h-6 text-[#a68256]" />
               Retirement Parameters
             </h2>
             
@@ -358,7 +358,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <IndianRupee className="w-4 h-4 text-[#1a729e]" />
+                  <IndianRupee className="w-4 h-4 text-[#a68256]" />
                   Current Monthly Expense (₹)
                 </label>
                 <div className="flex items-center gap-3">
@@ -372,7 +372,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {formatDisplayValue(formData.currentMonthlyExpense, 'currentMonthlyExpense')}
                   </span>
                 </div>
@@ -387,7 +387,7 @@ const calculateRetirement = (data) => {
                 step={1000}
                 value={formData.currentMonthlyExpense}
                 onChange={(e) => handleSliderChange('currentMonthlyExpense', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>₹10,000</span>
@@ -399,7 +399,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <Percent className="w-4 h-4 text-[#1a729e]" />
+                  <Percent className="w-4 h-4 text-[#a68256]" />
                   Future Inflation Assumed (%)
                 </label>
                 <div className="flex items-center gap-3">
@@ -413,7 +413,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {(formData.inflation * 100).toFixed(1)}%
                   </span>
                 </div>
@@ -428,7 +428,7 @@ const calculateRetirement = (data) => {
                 step={0.5}
                 value={formData.inflation * 100}
                 onChange={(e) => handleSliderChange('inflation', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>2%</span>
@@ -440,7 +440,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <Users className="w-4 h-4 text-[#1a729e]" />
+                  <Users className="w-4 h-4 text-[#a68256]" />
                   Current Age (Years)
                 </label>
                 <div className="flex items-center gap-3">
@@ -454,7 +454,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="Years"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {formData.currentAge} years
                   </span>
                 </div>
@@ -469,7 +469,7 @@ const calculateRetirement = (data) => {
                 step={1}
                 value={formData.currentAge}
                 onChange={(e) => handleSliderChange('currentAge', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>18</span>
@@ -481,7 +481,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-[#1a729e]" />
+                  <Calendar className="w-4 h-4 text-[#a68256]" />
                   Age at which I want to Retire (Years)
                 </label>
                 <div className="flex items-center gap-3">
@@ -495,7 +495,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="Years"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {formData.retirementAge} years
                   </span>
                 </div>
@@ -510,7 +510,7 @@ const calculateRetirement = (data) => {
                 step={1}
                 value={formData.retirementAge}
                 onChange={(e) => handleSliderChange('retirementAge', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>{Math.max(formData.currentAge + 1, limits.retirementAge.min)}</span>
@@ -522,7 +522,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#1a729e]" />
+                  <Sparkles className="w-4 h-4 text-[#a68256]" />
                   Life Expectancy till which Age (Years)
                 </label>
                 <div className="flex items-center gap-3">
@@ -536,7 +536,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="Years"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {formData.lifeExpectancy} years
                   </span>
                 </div>
@@ -551,7 +551,7 @@ const calculateRetirement = (data) => {
                 step={1}
                 value={formData.lifeExpectancy}
                 onChange={(e) => handleSliderChange('lifeExpectancy', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>{Math.max(formData.retirementAge + 1, limits.lifeExpectancy.min)}</span>
@@ -563,7 +563,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-[#1a729e]" />
+                  <TrendingUp className="w-4 h-4 text-[#a68256]" />
                   Assumed Returns During Earning Years (%)
                 </label>
                 <div className="flex items-center gap-3">
@@ -577,7 +577,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {(formData.returnDuringEarning * 100).toFixed(1)}%
                   </span>
                 </div>
@@ -592,7 +592,7 @@ const calculateRetirement = (data) => {
                 step={0.5}
                 value={formData.returnDuringEarning * 100}
                 onChange={(e) => handleSliderChange('returnDuringEarning', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>4%</span>
@@ -604,7 +604,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-[#1a729e]" />
+                  <Shield className="w-4 h-4 text-[#a68256]" />
                   Assumed Returns During Retirement Years (%)
                 </label>
                 <div className="flex items-center gap-3">
@@ -618,7 +618,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {(formData.returnDuringRetirement * 100).toFixed(1)}%
                   </span>
                 </div>
@@ -633,7 +633,7 @@ const calculateRetirement = (data) => {
                 step={0.5}
                 value={formData.returnDuringRetirement * 100}
                 onChange={(e) => handleSliderChange('returnDuringRetirement', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>4%</span>
@@ -645,7 +645,7 @@ const calculateRetirement = (data) => {
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
                 <label className="text-gray-700 font-medium flex items-center gap-2">
-                  <PiggyBank className="w-4 h-4 text-[#1a729e]" />
+                  <PiggyBank className="w-4 h-4 text-[#a68256]" />
                   Current Wealth Allocated for Retirement Goal (₹)
                 </label>
                 <div className="flex items-center gap-3">
@@ -659,7 +659,7 @@ const calculateRetirement = (data) => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#1a729e] font-semibold w-32 text-right">
+                  <span className="text-[#a68256] font-semibold w-32 text-right">
                     {formatDisplayValue(formData.currentWealth, 'currentWealth')}
                   </span>
                 </div>
@@ -674,7 +674,7 @@ const calculateRetirement = (data) => {
                 step={100000}
                 value={formData.currentWealth}
                 onChange={(e) => handleSliderChange('currentWealth', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>₹0</span>
@@ -684,7 +684,7 @@ const calculateRetirement = (data) => {
 
             <button
               onClick={handleReset}
-              className="w-full py-3 bg-[#1a729e] hover:bg-[#074a6b] text-white font-semibold rounded-lg transition-colors duration-200"
+              className="w-full py-3 bg-[#a68256] hover:bg-[#0F1A51] text-white font-semibold rounded-lg transition-colors duration-200"
             >
               Reset to Default Values
             </button>
@@ -695,7 +695,7 @@ const calculateRetirement = (data) => {
             {results ? (
               <>
                 {/* Monthly Expense at Retirement */}
-                <div className="bg-gradient-to-br from-[#074a6b] to-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-gradient-to-br from-[#0F1A51] to-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg opacity-90 mb-2 flex items-center gap-2">
                     <Wallet className="w-5 h-5" />
                     Monthly Expense at the start of Retirement Age
@@ -709,7 +709,7 @@ const calculateRetirement = (data) => {
                 </div>
 
                 {/* Main Result - Corpus Required */}
-                <div className="bg-gradient-to-br from-[#074a6b] to-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-gradient-to-br from-[#0F1A51] to-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg opacity-90 mb-2 flex items-center gap-2">
                     <Target className="w-5 h-5" />
                     Retirement Corpus Required
@@ -723,7 +723,7 @@ const calculateRetirement = (data) => {
                 </div>
 
                 {/* Monthly SIP Required */}
-                <div className="bg-gradient-to-br from-[#074a6b] to-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-gradient-to-br from-[#0F1A51] to-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg opacity-90 mb-2 flex items-center gap-2">
                     <ArrowUp className="w-5 h-5" />
                     Monthly SIP Required to Achieve the Retirement Corpus

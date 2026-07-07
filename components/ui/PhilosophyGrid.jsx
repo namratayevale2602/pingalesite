@@ -33,10 +33,10 @@ export default function PhilosophyGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-12">
-          <span className="text-sm font-semibold text-[#2aa4eb] uppercase tracking-wider">
+          <span className="text-sm font-semibold text-[#a68256] uppercase tracking-wider">
             Why Choose Us
           </span>
-          <h2 className="text-3xl md:text-4xl text-[#125178] mt-3">
+          <h2 className="text-3xl md:text-4xl text-[#0F1A51] mt-3">
             Our Philosophy
           </h2>
         </div>
@@ -46,15 +46,15 @@ export default function PhilosophyGrid() {
           {PILLARS.map((pillar, index) => (
             <div
               key={pillar.title}
-              className="text-center group cursor-pointer p-5 rounded-xl border border-2 border-[#165178]"
+              className="text-center group cursor-pointer p-5 rounded-xl border border-2 border-[#0F1A51]"
             >
               {/* Icon Circle */}
-              <div className="w-16 h-16 mx-auto bg-[#125178]/5 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#125178] transition-all duration-300 group-hover:scale-110 group-hover:rounded-full">
-                <pillar.icon className="w-7 h-7 text-[#125178] group-hover:text-white transition-colors" />
+              <div className="w-16 h-16 mx-auto bg-[#0F1A51]/5 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#0F1A51] transition-all duration-300 group-hover:scale-110 group-hover:rounded-full">
+                <pillar.icon className="w-7 h-7 text-[#0F1A51] group-hover:text-white transition-colors" />
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold text-[#125178] mb-2">
+              <h3 className="text-lg font-bold text-[#0F1A51] mb-2">
                 {pillar.title}
               </h3>
 

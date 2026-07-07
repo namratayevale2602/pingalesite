@@ -15,7 +15,7 @@ const CalculatorCard = ({
   return (
     <Link href={`/calculators/${link}`} className="block h-full">
       <motion.div
-        className={`p-6 rounded-lg bg-[#3b7fa1] cursor-pointer transition-all duration-300 h-full flex flex-col`}
+        className={`p-6 rounded-lg bg-[#8a6a41] cursor-pointer transition-all duration-300 h-full flex flex-col`}
         whileHover={{ y: -5 }}
         onHoverStart={onHover}
         onHoverEnd={onHover}
@@ -92,7 +92,7 @@ const Calculators = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-6 font-dm-serif">
             Calculators<br/>
-            <span className="text-[#0A4D6B]">Calculate Your Profit</span>
+            <span className="text-[#0F1A51]">Calculate Your Profit</span>
           </h2>
         </div>
 

@@ -253,7 +253,7 @@ const GoalCalculator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Input Section */}
           <div className="lg:col-span-2 bg-gray-100 rounded-2xl shadow-xl p-6">
-            <h2 className="text-2xl font-bold text-[#074a6b] mb-6 flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-[#0F1A51] mb-6 flex items-center gap-2">
               Goal Parameters
             </h2>
 
@@ -276,7 +276,7 @@ const GoalCalculator = () => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formatDisplayValue(formData.amountRequiredToday, 'amountRequiredToday')}
                   </span>
                 </div>
@@ -291,7 +291,7 @@ const GoalCalculator = () => {
                 step={100000}
                 value={formData.amountRequiredToday}
                 onChange={(e) => handleSliderChange('amountRequiredToday', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>₹1 L</span>
@@ -316,7 +316,7 @@ const GoalCalculator = () => {
                     }`}
                     placeholder="Years"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.yearsLeft} years
                   </span>
                 </div>
@@ -331,7 +331,7 @@ const GoalCalculator = () => {
                 step={1}
                 value={formData.yearsLeft}
                 onChange={(e) => handleSliderChange('yearsLeft', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>1 Year</span>
@@ -356,7 +356,7 @@ const GoalCalculator = () => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.yearlyInflation}%
                   </span>
                 </div>
@@ -371,7 +371,7 @@ const GoalCalculator = () => {
                 step={0.5}
                 value={formData.yearlyInflation}
                 onChange={(e) => handleSliderChange('yearlyInflation', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>2%</span>
@@ -396,7 +396,7 @@ const GoalCalculator = () => {
                     }`}
                     placeholder="%"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formData.expectedReturn}%
                   </span>
                 </div>
@@ -411,7 +411,7 @@ const GoalCalculator = () => {
                 step={0.5}
                 value={formData.expectedReturn}
                 onChange={(e) => handleSliderChange('expectedReturn', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>6%</span>
@@ -436,7 +436,7 @@ const GoalCalculator = () => {
                     }`}
                     placeholder="Amount"
                   />
-                  <span className="text-[#1a729e] font-semibold w-20 text-right">
+                  <span className="text-[#a68256] font-semibold w-20 text-right">
                     {formatDisplayValue(formData.currentInvestment, 'currentInvestment')}
                   </span>
                 </div>
@@ -451,7 +451,7 @@ const GoalCalculator = () => {
                 step={100000}
                 value={formData.currentInvestment}
                 onChange={(e) => handleSliderChange('currentInvestment', e.target.value)}
-                className="w-full accent-[#1a729e]"
+                className="w-full accent-[#a68256]"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>₹0</span>
@@ -461,7 +461,7 @@ const GoalCalculator = () => {
 
             <button
               onClick={handleReset}
-              className="w-full py-3 bg-[#1a729e] text-white font-semibold rounded-lg"
+              className="w-full py-3 bg-[#a68256] text-white font-semibold rounded-lg"
             >
               Reset to Default Values
             </button>
@@ -472,7 +472,7 @@ const GoalCalculator = () => {
             {results ? (
               <>
                 {/* Goal Value Result */}
-                <div className="bg-[#1a729e] rounded-2xl shadow-xl p-6 text-white">
+                <div className="bg-[#a68256] rounded-2xl shadow-xl p-6 text-white">
                   <h3 className="text-lg opacity-90 mb-2 flex items-center gap-2">
                     <Target className="w-5 h-5" />
                     Future Goal Value
@@ -485,7 +485,7 @@ const GoalCalculator = () => {
                 </div>
 
                 {/* Monthly Investment Required */}
-                <div className={`rounded-2xl shadow-xl p-6 text-white bg-[#1a729e]`}>
+                <div className={`rounded-2xl shadow-xl p-6 text-white bg-[#a68256]`}>
                   <h3 className="text-lg opacity-90 mb-2 flex items-center gap-2">
                     <ArrowUp className="w-5 h-5" />
                     {results.isGoalAchievable ? 'Goal Achievable!' : 'Monthly Investment Required'}
@@ -517,7 +517,7 @@ const GoalCalculator = () => {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-3">
                       <div 
-                        className="bg-[#1a729e] h-3 rounded-full transition-all duration-500"
+                        className="bg-[#a68256] h-3 rounded-full transition-all duration-500"
                         style={{ width: `${results.progress}%` }}
                       ></div>
                     </div>
@@ -536,7 +536,7 @@ const GoalCalculator = () => {
               <div className="bg-white rounded-2xl shadow-xl p-8 flex items-center justify-center min-h-100">
                 <div className="text-center">
                   <Target className="w-16 h-16 mx-auto text-blue-300 mb-4" />
-                  <h3 className="text-lg font-medium text-[#074a6b] mb-2">
+                  <h3 className="text-lg font-medium text-[#0F1A51] mb-2">
                     Adjust Parameters
                   </h3>
                   <p className="text-gray-400 text-sm">
