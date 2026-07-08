@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>5C Section — Best UI Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --brand:    #0F1A51;
+  --brand-d:  #07102e;
+  --brand-2:  #a68256;
+  --brand-2l: #e3d3b8;
+  --bg:       #FAF9F7;
+  --bg-elev:  #ffffff;
+  --paper-2:  #f0ede8;
+  --fg:       #434345;
+  --fg-muted: #6b6b6d;
+  --fg-soft:  #9f9fa1;
+  --rule:     #dcdcde;
+  --gold-bg:  #f7f1e6;
+  --radius:   16px;
+}
+
+body { font-family:'Urbanist',sans-serif; background:var(--bg); color:var(--fg); }
+
+/* ── Nav ── */
+.top-nav {
+  position:sticky; top:0; z-index:200;
+  background:var(--brand-d);
+  display:flex; align-items:center; gap:0;
+  padding:0 24px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  overflow-x:auto;
+}
+.top-nav .logo {
+  font-family:'DM Serif Text',serif; font-size:14px;
+  color:rgba(255,255,255,0.45); padding:16px 20px 16px 0;
+  border-right:1px solid rgba(255,255,255,0.1); margin-right:16px;
+  white-space:nowrap; flex-shrink:0;
+}
+.top-nav button {
+  background:transparent; border:0;
+  color:rgba(255,255,255,0.45); font-family:'Urbanist',sans-serif;
+  font-size:12px; font-weight:700; letter-spacing:0.08em;
+  text-transform:uppercase; padding:18px 16px;
+  cursor:pointer; border-bottom:2px solid transparent;
+  transition:all 0.2s; white-space:nowrap;
+}
+.top-nav button:hover { color:rgba(255,255,255,0.8); }
+.top-nav button.active { color:#fff; border-bottom-color:var(--brand-2); }
+
+/* ── Panels ── */
+.concept { display:none; }
+.concept.show { display:block; }
+
+/* ── Shared ── */
+.container { max-width:1200px; margin:0 auto; padding:0 32px; }
+.eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:11px; font-weight:700; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--brand-2); margin-bottom:14px;
+}
+.eyebrow::before { content:''; width:24px; height:1px; background:var(--brand-2); }
+.sec-title {
+  font-family:'DM Serif Text',serif;
+  font-size:clamp(32px,4vw,54px); line-height:1.1; color:var(--brand); margin-bottom:14px;
+}
+.sec-title em { font-style:italic; color:var(--brand-2); }
+.sec-intro { font-size:17px; color:var(--fg-muted); max-width:520px; line-height:1.65; }
+.age-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--gold-bg); border:1px solid var(--brand-2l);
+  color:var(--brand-2); font-size:10px; font-weight:700;
+  letter-spacing:0.12em; text-transform:uppercase;
+  padding:4px 10px; border-radius:999px; margin-bottom:10px;
+}
+.stage-num { font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--brand-2); margin-bottom:4px; }
+.stage-name { font-family:'DM Serif Text',serif; font-size:clamp(26px,3vw,42px); color:var(--brand); line-height:1.1; margin-bottom:10px; }
+.stage-body { font-size:15px; color:var(--fg-muted); line-height:1.72; max-width:460px; margin-bottom:20px; }
+.prod-label { font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--fg-soft); margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid var(--rule); }
+
+/* Buttons */
+.btn-p { display:inline-flex; align-items:center; gap:6px; background:var(--brand); color:#fff; font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 22px; border-radius:999px; border:0; cursor:pointer; transition:background 0.2s; }
+.btn-p:hover { background:var(--brand-d); }
+.btn-s { display:inline-flex; align-items:center; gap:6px; background:transparent; color:var(--brand); font-size:13px; font-weight:600; letter-spacing:0.04em; padding:10px 22px; border-radius:999px; border:1px solid var(--rule); cursor:pointer; transition:border-color 0.2s; }
+.btn-s:hover { border-color:var(--brand); }
+.btn-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+
+/* img placeholder */
+.img-ph { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,#dfe2ed,#c8cfe0); border-radius:inherit; }
+.img-ph span { font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8090b0; }
+
+/* concept badge */
+.cbadge { display:inline-flex; align-items:center; gap:8px; background:var(--brand); color:rgba(255,255,255,0.55); font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; padding:5px 14px; border-radius:999px; margin-bottom:28px; }
+.cbadge span { color:#fff; }
+
+/* ─────────────────────────────────────
+   CONCEPT 4 — CINEMATIC FULL-BLEED
+───────────────────────────────────── */
+.cin-hero {
+  padding:72px 0 80px;
+}
+.cin-header {
+  display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:end; margin-bottom:72px;
+}
+@media(max-width:720px){ .cin-header{ grid-template-columns:1fr; } }
+
+.cin-stage {
+  position:relative; overflow:hidden;
+  border-radius:24px; margin-bottom:20px;
+  transition:box-shadow 0.3s;
+}
+.cin-stage:hover { box-shadow:0 20px 60px rgba(15,26,81,0.15); }
+
+/* Odd: dark navy */
+.cin-stage:nth-child(odd) { background:var(--brand); }
+/* Even: cream */
+.cin-stage:nth-child(even) { background:var(--bg-elev); border:1px solid var(--rule); }
+
+.cin-inner {
+  display:grid; grid-template-columns:1fr 380px; gap:0; min-height:360px;
+}
+.cin-stage:nth-child(even) .cin-inner { direction:rtl; }
+.cin-stage:nth-child(even) .cin-inner > * { direction:ltr; }
+@media(max-width:860px){ .cin-inner{ grid-template-columns:1fr; } }
+
+.cin-text { padding:48px 48px 48px 56px; display:flex; flex-direction:column; justify-content:center; position:relative; z-index:2; }
+.cin-stage:nth-child(even) .cin-text { padding:48px 56px 48px 48px; }
+@media(max-width:860px){ .cin-text { padding:36px 28px; } }
+
+/* dark stage text overrides */
+.cin-stage:nth-child(odd) .stage-num { color:rgba(255,255,255,0.45); }
+.cin-stage:nth-child(odd) .stage-name { color:#fff; }
+.cin-stage:nth-child(odd) .stage-body { color:rgba(255,255,255,0.65); }
+.cin-stage:nth-child(odd) .prod-label { color:rgba(255,255,255,0.35); border-bottom-color:rgba(255,255,255,0.1); }
+.cin-stage:nth-child(odd) .age-badge { background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.2); color:var(--brand-2); }
+
+/* big bg number */
+.cin-bg-num {
+  position:absolute; right:-20px; top:50%; transform:translateY(-50%);
+  font-family:'DM Serif Text',serif; font-size:200px; font-weight:400; line-height:1;
+  color:rgba(255,255,255,0.04); pointer-events:none; user-select:none; z-index:1;
+}
+.cin-stage:nth-child(even) .cin-bg-num { left:-20px; right:auto; color:rgba(15,26,81,0.04); }
+
+/* image panel */
+.cin-img-panel { position:relative; overflow:hidden; }
+@media(max-width:860px){ .cin-img-panel { height:240px; border-radius:0 0 24px 24px; } }
+.cin-img-panel .img-ph { border-radius:0; }
+
+/* product pills dark */
+.cin-pills { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:20px; }
+.cin-pill {
+  display:inline-flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18);
+  color:rgba(255,255,255,0.85); font-size:12px; font-weight:600;
+  padding:6px 14px; border-radius:999px; transition:all 0.2s;
+}
+.cin-pill:hover { background:rgba(255,255,255,0.2); }
+.cin-pill-light {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--paper-2); border:1px solid var(--rule);
+  color:var(--brand); font-size:12px; font-weight:600;
+  padding:6px 14px; border-radius:999px; transition:all 0.2s;
+}
+.cin-pill-light:hover { border-color:var(--brand); background:#e8eaf5; }
+
+/* dark btns */
+.btn-p-inv { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.12); color:#fff; font-size:13px; font-weight:600; padding:10px 22px; border-radius:999px; border:1px solid rgba(255,255,255,0.2); cursor:pointer; transition:background 0.2s; }
+.btn-p-inv:hover { background:rgba(255,255,255,0.22); }
+.btn-s-inv { display:inline-flex; align-items:center; gap:6px; background:var(--brand-2); color:#fff; font-size:13px; font-weight:600; padding:10px 22px; border-radius:999px; border:0; cursor:pointer; }
+
+/* insight chip */
+.cin-insight {
+  position:absolute; top:20px; left:20px; right:20px;
+  background:rgba(15,26,81,0.88); backdrop-filter:blur(12px);
+  border-radius:12px; padding:12px 14px; color:#fff;
+}
+.cin-stage:nth-child(even) .cin-insight { background:rgba(255,255,255,0.92); color:var(--brand); }
+.cin-stage:nth-child(even) .cin-insight .ci-val { color:var(--brand); }
+.ci-label { font-size:9px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--brand-2); margin-bottom:3px; }
+.ci-val { font-family:'DM Serif Text',serif; font-size:22px; color:#fff; line-height:1; }
+.ci-desc { font-size:11px; color:rgba(255,255,255,0.65); margin-top:2px; }
+.cin-stage:nth-child(even) .ci-desc { color:var(--fg-muted); }
+
+/* ─────────────────────────────────────
+   CONCEPT 5 — INTERACTIVE WHEEL
+───────────────────────────────────── */
+.wheel-section { padding:72px 0; }
+.wheel-layout {
+  display:grid; grid-template-columns:420px 1fr; gap:56px; align-items:start;
+}
+@media(max-width:900px){ .wheel-layout{ grid-template-columns:1fr; } }
+
+.wheel-wrap { position:sticky; top:100px; }
+.wheel-svg-wrap {
+  width:100%; max-width:400px; margin:0 auto;
+  aspect-ratio:1; position:relative;
+}
+.wheel-svg { width:100%; height:100%; cursor:pointer; }
+
+.seg {
+  transition:all 0.3s; filter:none;
+  cursor:pointer;
+}
+.seg:hover { filter:brightness(1.12); }
+.seg.active-seg { filter:brightness(1.18) drop-shadow(0 0 14px rgba(15,26,81,0.3)); }
+
+.seg-label { pointer-events:none; font-family:'Urbanist',sans-serif; font-weight:700; }
+.seg-num { font-size:12px; fill:rgba(255,255,255,0.6); }
+.seg-name { font-size:11px; fill:#fff; }
+.seg-age { font-size:9px; fill:rgba(255,255,255,0.5); }
+
+/* Center of wheel */
+.wheel-center-text {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:130px; text-align:center; pointer-events:none;
+}
+.wct-label { font-size:9px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--fg-soft); margin-bottom:4px; }
+.wct-name { font-family:'DM Serif Text',serif; font-size:17px; color:var(--brand); line-height:1.2; }
+.wct-age { font-size:10px; color:var(--brand-2); font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-top:4px; }
+
+/* Wheel legend dots */
+.wheel-legend { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; justify-content:center; }
+.wleg {
+  display:flex; align-items:center; gap:6px;
+  font-size:11px; font-weight:600; color:var(--fg-muted);
+  cursor:pointer; padding:4px 8px; border-radius:6px; transition:background 0.2s;
+}
+.wleg:hover { background:var(--paper-2); }
+.wleg.active { color:var(--brand); }
+.wleg-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+
+/* Wheel detail panel */
+.wheel-panel { min-height:400px; }
+.wp-inner { animation:fadeUp 0.35s ease; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+
+.wp-header { display:flex; align-items:center; gap:16px; margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid var(--rule); }
+.wp-emoji { font-size:44px; }
+.wp-meta { }
+.wp-stage { font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--brand-2); margin-bottom:2px; }
+.wp-title { font-family:'DM Serif Text',serif; font-size:28px; color:var(--brand); line-height:1.1; }
+
+/* product cards for wheel */
+.wp-cards { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px; }
+.wp-card {
+  background:var(--bg-elev); border:1.5px solid var(--rule);
+  border-radius:12px; padding:16px;
+  transition:all 0.22s; cursor:default;
+}
+.wp-card:hover { border-color:var(--brand-2); background:var(--gold-bg); transform:translateY(-2px); }
+.wpc-icon { font-size:22px; margin-bottom:8px; }
+.wpc-name { font-size:13px; font-weight:700; color:var(--brand); margin-bottom:3px; line-height:1.3; }
+.wpc-desc { font-size:11px; color:var(--fg-soft); line-height:1.4; }
+.wpc-link { font-size:10px; font-weight:700; color:var(--brand-2); letter-spacing:0.08em; text-transform:uppercase; margin-top:8px; display:block; }
+
+/* ─────────────────────────────────────
+   CONCEPT 6 — BENTO MOSAIC
+───────────────────────────────────── */
+.bento-section { padding:72px 0; }
+
+.bento-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:auto auto;
+  gap:14px;
+}
+@media(max-width:800px){ .bento-grid{ grid-template-columns:1fr 1fr; } }
+@media(max-width:500px){ .bento-grid{ grid-template-columns:1fr; } }
+
+.bento-card {
+  background:var(--bg-elev);
+  border:1.5px solid var(--rule);
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  transition:all 0.3s;
+  min-height:240px;
+}
+.bento-card:hover { border-color:var(--brand); box-shadow:0 12px 40px rgba(15,26,81,0.12); transform:translateY(-3px); }
+.bento-card.span-2 { grid-column:span 2; }
+@media(max-width:800px){ .bento-card.span-2{ grid-column:span 1; } }
+
+/* card dark style */
+.bento-card.dark { background:var(--brand); border-color:var(--brand); }
+.bento-card.gold { background:linear-gradient(135deg,#f7f1e6,#ede3cf); border-color:var(--brand-2l); }
+.bento-card.mid { background:#1a2a6e; border-color:#1a2a6e; }
+.bento-card.deep { background:var(--brand-d); border-color:var(--brand-d); }
+
+.bento-inner { padding:28px; height:100%; display:flex; flex-direction:column; justify-content:space-between; }
+.b-num { font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--brand-2); margin-bottom:6px; }
+.bento-card.dark .b-num, .bento-card.mid .b-num, .bento-card.deep .b-num { color:rgba(255,255,255,0.45); }
+.bento-card.gold .b-num { color:var(--brand); opacity:0.6; }
+
+.b-name { font-family:'DM Serif Text',serif; font-size:clamp(22px,2.5vw,30px); line-height:1.1; color:var(--brand); margin-bottom:6px; }
+.bento-card.dark .b-name, .bento-card.mid .b-name, .bento-card.deep .b-name { color:#fff; }
+.bento-card.gold .b-name { color:var(--brand); }
+
+.b-age { font-size:12px; font-weight:600; color:var(--fg-soft); letter-spacing:0.06em; margin-bottom:12px; }
+.bento-card.dark .b-age, .bento-card.mid .b-age, .bento-card.deep .b-age { color:rgba(255,255,255,0.4); }
+
+.b-desc { font-size:13px; color:var(--fg-muted); line-height:1.6; }
+.bento-card.dark .b-desc, .bento-card.mid .b-desc, .bento-card.deep .b-desc { color:rgba(255,255,255,0.6); }
+
+.b-pills { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+.b-pill { font-size:11px; font-weight:600; padding:4px 10px; border-radius:999px; }
+.b-pill-dark { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.15); }
+.b-pill-light { background:var(--paper-2); color:var(--brand); border:1px solid var(--rule); }
+.b-pill-gold { background:rgba(166,130,86,0.15); color:var(--brand-2); border:1px solid var(--brand-2l); }
+
+.b-emoji { font-size:36px; margin-bottom:12px; display:block; }
+
+/* Expand overlay */
+.bento-card .bento-overlay {
+  position:absolute; inset:0;
+  background:rgba(15,26,81,0.95);
+  backdrop-filter:blur(4px);
+  padding:24px; border-radius:20px;
+  opacity:0; transition:opacity 0.25s;
+  display:flex; flex-direction:column; justify-content:space-between;
+  pointer-events:none;
+}
+.bento-card:hover .bento-overlay { opacity:1; pointer-events:auto; }
+.bo-title { font-family:'DM Serif Text',serif; font-size:18px; color:#fff; margin-bottom:8px; }
+.bo-desc { font-size:12px; color:rgba(255,255,255,0.6); line-height:1.5; margin-bottom:12px; }
+.bo-products { display:flex; flex-direction:column; gap:5px; }
+.bo-prod { display:flex; align-items:center; gap:8px; font-size:12px; color:rgba(255,255,255,0.8); font-weight:500; }
+.bo-prod-icon { font-size:14px; }
+.bo-cta { font-size:11px; font-weight:700; color:var(--brand-2); letter-spacing:0.1em; text-transform:uppercase; margin-top:12px; }
+
+/* bento bottom stat bar */
+.bento-stat-bar {
+  display:grid; grid-template-columns:repeat(5,1fr);
+  gap:10px; margin-top:20px;
+}
+@media(max-width:700px){ .bento-stat-bar{ grid-template-columns:1fr 1fr; } }
+.bstat {
+  background:var(--bg-elev); border:1px solid var(--rule);
+  border-radius:12px; padding:14px 16px; text-align:center;
+}
+.bstat-icon { font-size:20px; margin-bottom:6px; }
+.bstat-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--fg-soft); }
+
+/* ─────────────────────────────────────
+   CONCEPT 7 — AGE SLIDER
+───────────────────────────────────── */
+.slider-section { padding:72px 0; }
+
+.slider-wrap { margin:48px 0; }
+
+/* The age track */
+.age-track-wrap { position:relative; margin-bottom:56px; padding:0 24px; }
+.age-track-labels {
+  display:flex; justify-content:space-between;
+  margin-bottom:8px;
+}
+.atl { font-size:11px; font-weight:700; color:var(--fg-soft); letter-spacing:0.08em; }
+.atl.active { color:var(--brand); }
+
+.age-track-bar { position:relative; height:6px; background:var(--rule); border-radius:3px; }
+.age-track-fill {
+  position:absolute; left:0; top:0; height:100%;
+  background:linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 100%);
+  border-radius:3px; transition:width 0.4s ease;
+}
+.age-thumb {
+  position:absolute; top:50%; transform:translate(-50%,-50%);
+  width:28px; height:28px; border-radius:50%;
+  background:#fff; border:3px solid var(--brand);
+  box-shadow:0 2px 12px rgba(15,26,81,0.2);
+  cursor:grab; transition:left 0.4s ease;
+  display:flex; align-items:center; justify-content:center;
+}
+.age-thumb-val { font-size:10px; font-weight:800; color:var(--brand); }
+
+/* stage dots on track */
+.stage-dots { position:relative; height:0; }
+.stage-dot-mark {
+  position:absolute; top:0; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:4px;
+  cursor:pointer;
+}
+.stage-dot-mark .dot {
+  width:14px; height:14px; border-radius:50%; border:2px solid var(--bg);
+  margin-top:-10px; transition:all 0.3s;
+}
+.stage-dot-mark .dot-label {
+  font-size:9px; font-weight:700; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--fg-soft); white-space:nowrap;
+  margin-top:8px;
+}
+.stage-dot-mark.active-dot .dot-label { color:var(--brand); }
+.stage-dot-mark.active-dot .dot { box-shadow:0 0 0 5px rgba(15,26,81,0.12); }
+
+/* range input */
+.age-range {
+  position:absolute; inset:0; opacity:0; cursor:pointer;
+  width:100%; height:100%; z-index:10;
+  -webkit-appearance:none; appearance:none;
+}
+
+/* Stage display card */
+.stage-display {
+  display:grid; grid-template-columns:1fr 420px; gap:48px; align-items:start;
+}
+@media(max-width:860px){ .stage-display{ grid-template-columns:1fr; } }
+
+/* Stage info */
+.stage-info { animation:fadeUp 0.3s ease; }
+
+/* Stage image card */
+.stage-img-card {
+  background:var(--bg-elev);
+  border:1.5px solid var(--rule);
+  border-radius:20px; overflow:hidden;
+  box-shadow:0 8px 32px rgba(15,26,81,0.08);
+}
+.sic-img { aspect-ratio:4/3; position:relative; }
+.sic-body { padding:20px 24px; }
+.sic-title { font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--fg-soft); margin-bottom:10px; }
+.sic-facts { display:flex; flex-direction:column; gap:8px; }
+.sic-fact { display:flex; align-items:flex-start; gap:10px; }
+.sic-fact-icon { font-size:16px; flex-shrink:0; margin-top:1px; }
+.sic-fact-text { font-size:13px; color:var(--fg-muted); line-height:1.4; }
+.sic-fact-text strong { color:var(--brand); }
+
+/* Products for slider */
+.sl-products { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px; }
+.sl-pcard {
+  background:var(--bg-elev); border:1.5px solid var(--rule);
+  border-radius:12px; padding:14px;
+  transition:all 0.2s;
+}
+.sl-pcard:hover { border-color:var(--brand-2); background:var(--gold-bg); transform:translateY(-2px); }
+.slp-icon { font-size:20px; margin-bottom:7px; }
+.slp-name { font-size:13px; font-weight:700; color:var(--brand); margin-bottom:3px; line-height:1.3; }
+.slp-desc { font-size:11px; color:var(--fg-soft); line-height:1.4; }
+
+/* stage selector buttons */
+.stage-btns { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:40px; }
+.stage-btn {
+  display:flex; align-items:center; gap:8px;
+  background:var(--bg-elev); border:1.5px solid var(--rule);
+  border-radius:10px; padding:10px 16px; cursor:pointer;
+  font-family:'Urbanist',sans-serif; font-size:13px; font-weight:600; color:var(--fg-muted);
+  transition:all 0.2s;
+}
+.stage-btn:hover { border-color:var(--brand); color:var(--brand); }
+.stage-btn.active { background:var(--brand); border-color:var(--brand); color:#fff; }
+.stage-btn .sb-emoji { font-size:16px; }
+
+/* animate transitions */
+.fade-in { animation:fadeUp 0.35s ease forwards; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+</style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<nav class="top-nav">
+  <div class="logo">5C Concepts — Premium</div>
+  <button class="active" onclick="show(4,this)">Idea 4 — Cinematic</button>
+  <button onclick="show(5,this)">Idea 5 — Life Wheel</button>
+  <button onclick="show(6,this)">Idea 6 — Bento Grid</button>
+  <button onclick="show(7,this)">Idea 7 — Age Slider</button>
+</nav>
+
+
+<!-- ═════════════════════════════════════════
+     CONCEPT 4 — CINEMATIC FULL-BLEED STAGES
+═════════════════════════════════════════ -->
+<div class="concept show" id="c4">
+<div class="cin-hero">
+<div class="container">
+
+  <div class="cbadge">Idea 4 — <span>Cinematic Full-Bleed</span></div>
+  <div class="cin-header">
+    <div>
+      <div class="eyebrow">The 5 C Framework</div>
+      <h2 class="sec-title">Money for every<br><em>stage of life</em></h2>
+    </div>
+    <p class="sec-intro">From birth to legacy — each phase of life demands a different financial strategy. Scroll through the journey and see exactly what you need at every stage.</p>
+  </div>
+
+  <!-- Stage 1: Consumption — Dark -->
+  <div class="cin-stage">
+    <div class="cin-bg-num">01</div>
+    <div class="cin-inner">
+      <div class="cin-text">
+        <div class="age-badge">📅 Age 0 – 25</div>
+        <div class="stage-num">01 · Consumption</div>
+        <div class="stage-name" style="color:#fff">The years of growing,<br>before you earn.</div>
+        <p class="stage-body">From birth through education, every human being purely consumes — food, school, healthcare, clothing. None of it is self-funded. This stage demands parents plan ahead so a child's future is protected no matter what.</p>
+        <div class="prod-label">What you need now</div>
+        <div class="cin-pills">
+          <span class="cin-pill">🎓 Child Education Plan</span>
+          <span class="cin-pill">🛡️ Term Insurance (Parents)</span>
+          <span class="cin-pill">💰 Child SIP / ELSS</span>
+          <span class="cin-pill">🏥 Family Health Cover</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn-p-inv">Talk to an advisor →</button>
+          <button class="btn-s-inv">Child plan calculator</button>
+        </div>
+      </div>
+      <div class="cin-img-panel" style="background:linear-gradient(135deg,#1a2a6e,#0a1238)">
+        <div class="img-ph" style="background:transparent">
+          <span style="font-size:72px">👨‍👩‍👧</span>
+          <span style="color:rgba(255,255,255,0.3)">Family · Child Stage</span>
+        </div>
+        <div class="cin-insight">
+          <div class="ci-label">💡 Compound magic</div>
+          <div class="ci-val">₹1.2 Cr</div>
+          <div class="ci-desc">SIP of ₹2,000/month started at birth, by age 25 at 12% return</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 2: Creation — Light -->
+  <div class="cin-stage">
+    <div class="cin-bg-num">02</div>
+    <div class="cin-inner">
+      <div class="cin-text">
+        <div class="age-badge">📅 Age 25 – 50</div>
+        <div class="stage-num">02 · Creation</div>
+        <div class="stage-name">Build the wealth that<br>defines your future.</div>
+        <p class="stage-body">Your prime earning years. Every rupee invested now has maximum time to compound into life-changing wealth. This is when SIPs, mutual funds, and term insurance form the foundation of everything that follows.</p>
+        <div class="prod-label">What you need now</div>
+        <div class="cin-pills">
+          <span class="cin-pill-light">📈 SIP / Mutual Funds</span>
+          <span class="cin-pill-light">🛡️ Term Insurance</span>
+          <span class="cin-pill-light">🏷️ ELSS Tax Saver</span>
+          <span class="cin-pill-light">💊 Health Insurance</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn-p">Start my SIP →</button>
+          <button class="btn-s">SIP calculator</button>
+        </div>
+      </div>
+      <div class="cin-img-panel" style="background:linear-gradient(135deg,#e8eaf5,#d0d5ee)">
+        <div class="img-ph" style="background:transparent">
+          <span style="font-size:72px">💼</span>
+          <span>Wealth Creation Stage</span>
+        </div>
+        <div class="cin-insight" style="background:rgba(255,255,255,0.92)">
+          <div class="ci-label">💡 The power of SIP</div>
+          <div class="ci-val" style="color:var(--brand)">₹1.89 Cr</div>
+          <div class="ci-desc" style="color:var(--fg-muted)">₹10,000/month SIP for 25 years at 12% annual return</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 3: Conservation — Dark -->
+  <div class="cin-stage">
+    <div class="cin-bg-num">03</div>
+    <div class="cin-inner">
+      <div class="cin-text">
+        <div class="age-badge">📅 Age 25 – 60</div>
+        <div class="stage-num">03 · Conservation</div>
+        <div class="stage-name" style="color:#fff">Protect everything<br>you've built.</div>
+        <p class="stage-body">Running parallel to Creation, Conservation ensures that what you've worked for can never be destroyed by an unexpected event. Critical illness, accidents, or a lawsuit can wipe years of wealth in days — the right cover prevents this.</p>
+        <div class="prod-label">What you need now</div>
+        <div class="cin-pills">
+          <span class="cin-pill">❤️‍🩹 Critical Illness Cover</span>
+          <span class="cin-pill">🏠 Home Insurance</span>
+          <span class="cin-pill">⚖️ Portfolio Rebalancing</span>
+          <span class="cin-pill">🚗 Motor Insurance</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn-p-inv">Review my coverage →</button>
+          <button class="btn-s-inv">General insurance</button>
+        </div>
+      </div>
+      <div class="cin-img-panel" style="background:linear-gradient(135deg,#1e3060,#0f1a3e)">
+        <div class="img-ph" style="background:transparent">
+          <span style="font-size:72px">🏛️</span>
+          <span style="color:rgba(255,255,255,0.3)">Conservation Stage</span>
+        </div>
+        <div class="cin-insight">
+          <div class="ci-label">💡 Risk reality</div>
+          <div class="ci-val">1 in 4</div>
+          <div class="ci-desc">Indians face a critical illness before 65. ₹50L CI cover costs ₹400/month at age 35.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 4: Continuation — Light -->
+  <div class="cin-stage">
+    <div class="cin-bg-num">04</div>
+    <div class="cin-inner">
+      <div class="cin-text">
+        <div class="age-badge">📅 Age 60+</div>
+        <div class="stage-num">04 · Continuation</div>
+        <div class="stage-name">Live your retirement<br>on your own terms.</div>
+        <p class="stage-body">Retirement should mean freedom — not dependency. Through pension plans, SWPs, and senior health cover, this stage ensures your monthly income never stops and you're never a financial burden on the people you love.</p>
+        <div class="prod-label">What you need now</div>
+        <div class="cin-pills">
+          <span class="cin-pill-light">🏦 Pension / Annuity Plan</span>
+          <span class="cin-pill-light">📤 SWP Withdrawal Plan</span>
+          <span class="cin-pill-light">🏥 Senior Health Cover</span>
+          <span class="cin-pill-light">📊 Debt / Fixed Income Funds</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn-p">Plan my retirement →</button>
+          <button class="btn-s">Retirement calculator</button>
+        </div>
+      </div>
+      <div class="cin-img-panel" style="background:linear-gradient(135deg,#f0e8d8,#dfd0b4)">
+        <div class="img-ph" style="background:transparent">
+          <span style="font-size:72px">🌅</span>
+          <span>Continuation Stage</span>
+        </div>
+        <div class="cin-insight" style="background:rgba(255,255,255,0.92)">
+          <div class="ci-label">💡 Retirement reality</div>
+          <div class="ci-val" style="color:var(--brand)">₹3–5 Cr</div>
+          <div class="ci-desc" style="color:var(--fg-muted)">Needed at 60 to sustain ₹50,000/month for 25 years</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stage 5: Contribution — Dark -->
+  <div class="cin-stage">
+    <div class="cin-bg-num">05</div>
+    <div class="cin-inner">
+      <div class="cin-text">
+        <div class="age-badge">📅 Legacy</div>
+        <div class="stage-num">05 · Contribution</div>
+        <div class="stage-name" style="color:#fff">The wealth you leave<br>is the life you lived.</div>
+        <p class="stage-body">True wealth outlives the person who created it. What you leave for your family, your community, and the causes you believed in — that is the final measure of your financial journey. Legacy planning makes sure it reaches the right hands.</p>
+        <div class="prod-label">What you need now</div>
+        <div class="cin-pills">
+          <span class="cin-pill">📜 Will & Nomination</span>
+          <span class="cin-pill">🏛️ Whole Life Insurance</span>
+          <span class="cin-pill">🤝 Wealth Transfer Plan</span>
+          <span class="cin-pill">💝 Charitable Giving</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn-p-inv">Plan my legacy →</button>
+          <button class="btn-s-inv">Talk to advisor</button>
+        </div>
+      </div>
+      <div class="cin-img-panel" style="background:linear-gradient(135deg,#07102e,#0a1642)">
+        <div class="img-ph" style="background:transparent">
+          <span style="font-size:72px">🕊️</span>
+          <span style="color:rgba(255,255,255,0.3)">Legacy Stage</span>
+        </div>
+        <div class="cin-insight">
+          <div class="ci-label">💡 Legacy gap</div>
+          <div class="ci-val">22%</div>
+          <div class="ci-desc">Only 22% of Indians have a written Will. Assets can be stuck in courts for years.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ═════════════════════════════════════════
+     CONCEPT 5 — INTERACTIVE LIFE WHEEL
+═════════════════════════════════════════ -->
+<div class="concept" id="c5">
+<section class="wheel-section">
+<div class="container">
+
+  <div class="cbadge">Idea 5 — <span>Interactive Life Wheel</span></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px">
+    <div>
+      <div class="eyebrow">The 5 C Framework</div>
+      <h2 class="sec-title">Your financial life,<br><em>all in one circle.</em></h2>
+    </div>
+    <p class="sec-intro">Click any segment of the wheel to explore that stage — see what it means for your life and which financial products matter most at that point.</p>
+  </div>
+
+  <div class="wheel-layout">
+
+    <!-- LEFT: Wheel -->
+    <div class="wheel-wrap">
+      <div class="wheel-svg-wrap">
+        <svg class="wheel-svg" viewBox="0 0 400 400" id="wheel-svg">
+          <!-- Gap between segments via stroke trick -->
+          <!-- Segment 1: Consumption -90° to -18° -->
+          <path id="seg-0" class="seg active-seg" onclick="selectSeg(0)"
+            d="M200,200 L200,20 A180,180 0 0,1 371.3,144.4 Z"
+            fill="#0F1A51"/>
+          <!-- Segment 2: Creation -18° to 54° -->
+          <path id="seg-1" class="seg" onclick="selectSeg(1)"
+            d="M200,200 L371.3,144.4 A180,180 0 0,1 305.9,345.6 Z"
+            fill="#1a2a72"/>
+          <!-- Segment 3: Conservation 54° to 126° -->
+          <path id="seg-2" class="seg" onclick="selectSeg(2)"
+            d="M200,200 L305.9,345.6 A180,180 0 0,1 94.1,345.6 Z"
+            fill="#a68256"/>
+          <!-- Segment 4: Continuation 126° to 198° -->
+          <path id="seg-3" class="seg" onclick="selectSeg(3)"
+            d="M200,200 L94.1,345.6 A180,180 0 0,1 28.7,144.4 Z"
+            fill="#c9a96e"/>
+          <!-- Segment 5: Contribution 198° to 270° -->
+          <path id="seg-4" class="seg" onclick="selectSeg(4)"
+            d="M200,200 L28.7,144.4 A180,180 0 0,1 200,20 Z"
+            fill="#354280"/>
+
+          <!-- White divider lines -->
+          <line x1="200" y1="200" x2="200" y2="20" stroke="white" stroke-width="2"/>
+          <line x1="200" y1="200" x2="371.3" y2="144.4" stroke="white" stroke-width="2"/>
+          <line x1="200" y1="200" x2="305.9" y2="345.6" stroke="white" stroke-width="2"/>
+          <line x1="200" y1="200" x2="94.1" y2="345.6" stroke="white" stroke-width="2"/>
+          <line x1="200" y1="200" x2="28.7" y2="144.4" stroke="white" stroke-width="2"/>
+
+          <!-- Labels on segments (midpoint of each arc at r=125) -->
+          <!-- Seg 1 midpoint: -54° → x=200+125*cos(-54°)=273.5, y=200+125*sin(-54°)=98.8 -->
+          <text x="273" y="90" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="10" opacity="0.85">01</text>
+          <text x="273" y="103" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="11">Consumption</text>
+          <text x="273" y="116" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Urbanist,sans-serif" font-size="9">Age 0–25</text>
+
+          <!-- Seg 2 midpoint: 18° → x=200+125*cos(18°)=318.9, y=200+125*sin(18°)=238.6 -->
+          <text x="325" y="228" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="10" opacity="0.85">02</text>
+          <text x="325" y="241" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="11">Creation</text>
+          <text x="325" y="254" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Urbanist,sans-serif" font-size="9">Age 25–50</text>
+
+          <!-- Seg 3 midpoint: 90° → x=200, y=200+125=325 -->
+          <text x="200" y="316" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="10" opacity="0.85">03</text>
+          <text x="200" y="329" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="11">Conservation</text>
+          <text x="200" y="342" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Urbanist,sans-serif" font-size="9">Age 25–60</text>
+
+          <!-- Seg 4 midpoint: 162° → x=200+125*cos(162°)=81.1, y=200+125*sin(162°)=238.6 -->
+          <text x="72" y="228" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="10" opacity="0.85">04</text>
+          <text x="72" y="241" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="11">Continuation</text>
+          <text x="72" y="254" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Urbanist,sans-serif" font-size="9">Age 60+</text>
+
+          <!-- Seg 5 midpoint: 234° → x=200+125*cos(234°)=126.5, y=200+125*sin(234°)=98.8 -->
+          <text x="124" y="90" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="10" opacity="0.85">05</text>
+          <text x="124" y="103" text-anchor="middle" fill="white" font-family="Urbanist,sans-serif" font-weight="700" font-size="11">Contribution</text>
+          <text x="124" y="116" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Urbanist,sans-serif" font-size="9">Legacy</text>
+
+          <!-- Center white circle -->
+          <circle cx="200" cy="200" r="65" fill="white" filter="url(#shadow)"/>
+          <defs>
+            <filter id="shadow">
+              <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="rgba(15,26,81,0.15)"/>
+            </filter>
+          </defs>
+        </svg>
+        <!-- Center text overlay -->
+        <div class="wheel-center-text" id="wheel-center">
+          <div class="wct-label">Stage</div>
+          <div class="wct-name" id="wct-name">Consumption</div>
+          <div class="wct-age" id="wct-age">Age 0–25</div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="wheel-legend">
+        <div class="wleg active" onclick="selectSeg(0)"><span class="wleg-dot" style="background:#0F1A51"></span>Consumption</div>
+        <div class="wleg" onclick="selectSeg(1)"><span class="wleg-dot" style="background:#1a2a72"></span>Creation</div>
+        <div class="wleg" onclick="selectSeg(2)"><span class="wleg-dot" style="background:#a68256"></span>Conservation</div>
+        <div class="wleg" onclick="selectSeg(3)"><span class="wleg-dot" style="background:#c9a96e"></span>Continuation</div>
+        <div class="wleg" onclick="selectSeg(4)"><span class="wleg-dot" style="background:#354280"></span>Contribution</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Detail Panel -->
+    <div class="wheel-panel" id="wheel-panel">
+      <div class="wp-inner" id="wp-inner"></div>
+    </div>
+
+  </div>
+</div>
+</section>
+</div>
+
+
+<!-- ═════════════════════════════════════════
+     CONCEPT 6 — BENTO MOSAIC GRID
+═════════════════════════════════════════ -->
+<div class="concept" id="c6">
+<section class="bento-section">
+<div class="container">
+
+  <div class="cbadge">Idea 6 — <span>Bento Mosaic Grid</span></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px">
+    <div>
+      <div class="eyebrow">The 5 C Framework</div>
+      <h2 class="sec-title">All of life's stages.<br><em>One clear view.</em></h2>
+    </div>
+    <p class="sec-intro">Every phase of life at a glance. Hover any card to see what financial products matter most at that stage of your journey.</p>
+  </div>
+
+  <div class="bento-grid">
+
+    <!-- Card 1: Consumption (wide, dark) -->
+    <div class="bento-card dark span-2">
+      <div class="bento-inner">
+        <div>
+          <span class="b-emoji">👶</span>
+          <div class="b-num">01 · Consumption</div>
+          <div class="b-name">The years before you earn.</div>
+          <div class="b-age">Age 0 – 25 · Dependent & Growing</div>
+          <p class="b-desc">From birth through college, every need is funded by parents. This stage demands planning from loved ones — a child education corpus, term cover, and a health plan that protects the whole family.</p>
+        </div>
+        <div class="b-pills">
+          <span class="b-pill b-pill-dark">🎓 Child Education Plan</span>
+          <span class="b-pill b-pill-dark">🛡️ Term for Parents</span>
+          <span class="b-pill b-pill-dark">💰 Child SIP</span>
+          <span class="b-pill b-pill-dark">🏥 Family Health Cover</span>
+        </div>
+      </div>
+      <div class="bento-overlay">
+        <div>
+          <div class="bo-title">Consumption — Age 0 to 25</div>
+          <div class="bo-desc">Plan for your child's future before they even know what money is. The earlier you start, the easier it gets.</div>
+        </div>
+        <div>
+          <div class="bo-products">
+            <div class="bo-prod"><span class="bo-prod-icon">🎓</span> Child Education Plan — Build a corpus for college</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🛡️</span> Term Insurance (Parents) — Protect if breadwinner is lost</div>
+            <div class="bo-prod"><span class="bo-prod-icon">💰</span> Child SIP / ELSS — Compounding from day one</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🏥</span> Family Health Cover — Full family medical protection</div>
+          </div>
+          <div class="bo-cta">Talk to an advisor →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Creation (tall, mid-blue) -->
+    <div class="bento-card mid" style="grid-row:span 1">
+      <div class="bento-inner">
+        <div>
+          <span class="b-emoji">💼</span>
+          <div class="b-num">02 · Creation</div>
+          <div class="b-name">Build wealth. Every month.</div>
+          <div class="b-age">Age 25 – 50 · Earning & Investing</div>
+          <p class="b-desc" style="font-size:13px">Your prime years. Invest consistently now and let compounding do the heavy lifting.</p>
+        </div>
+        <div class="b-pills">
+          <span class="b-pill b-pill-dark">📈 SIP</span>
+          <span class="b-pill b-pill-dark">🛡️ Term Cover</span>
+          <span class="b-pill b-pill-dark">🏷️ ELSS</span>
+        </div>
+      </div>
+      <div class="bento-overlay">
+        <div>
+          <div class="bo-title">Creation — Age 25 to 50</div>
+          <div class="bo-desc">This is your wealth-building decade. Start SIPs, get term cover, save tax with ELSS, and stay invested.</div>
+        </div>
+        <div>
+          <div class="bo-products">
+            <div class="bo-prod"><span class="bo-prod-icon">📈</span> SIP / Mutual Funds — From ₹500/month</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🛡️</span> Term Insurance — Maximum cover, low cost</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🏷️</span> ELSS Tax Saver — Save ₹46,800 tax + grow</div>
+            <div class="bo-prod"><span class="bo-prod-icon">💊</span> Health Insurance — Family floater plan</div>
+          </div>
+          <div class="bo-cta">Start my SIP →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Conservation (gold) -->
+    <div class="bento-card gold">
+      <div class="bento-inner">
+        <div>
+          <span class="b-emoji">🏛️</span>
+          <div class="b-num" style="color:var(--brand);opacity:0.5">03 · Conservation</div>
+          <div class="b-name" style="color:var(--brand)">Protect what you've built.</div>
+          <div class="b-age" style="color:var(--brand-2)">Age 25 – 60 · Securing Wealth</div>
+          <p class="b-desc" style="color:var(--fg-muted);font-size:13px">Runs parallel to Creation. One illness or accident shouldn't destroy years of hard work.</p>
+        </div>
+        <div class="b-pills">
+          <span class="b-pill b-pill-gold">❤️‍🩹 Critical Illness</span>
+          <span class="b-pill b-pill-gold">🏠 Home Cover</span>
+        </div>
+      </div>
+      <div class="bento-overlay">
+        <div>
+          <div class="bo-title">Conservation — Age 25 to 60</div>
+          <div class="bo-desc">What you build must be protected. Insurance is not an expense — it's a shield for your wealth.</div>
+        </div>
+        <div>
+          <div class="bo-products">
+            <div class="bo-prod"><span class="bo-prod-icon">❤️‍🩹</span> Critical Illness — Lump sum on 40+ illnesses</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🏠</span> Home Insurance — Protect your biggest asset</div>
+            <div class="bo-prod"><span class="bo-prod-icon">⚖️</span> Portfolio Rebalancing — Manage risk as goals near</div>
+          </div>
+          <div class="bo-cta">Review my coverage →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Continuation (light) -->
+    <div class="bento-card" style="background:var(--bg-elev)">
+      <div class="bento-inner">
+        <div>
+          <span class="b-emoji">🌅</span>
+          <div class="b-num">04 · Continuation</div>
+          <div class="b-name">Retire free. Stay free.</div>
+          <div class="b-age" style="color:var(--brand-2)">Age 60+ · Independent</div>
+          <p class="b-desc" style="font-size:13px">A monthly pension and SWP ensure you never depend on anyone in your golden years.</p>
+        </div>
+        <div class="b-pills">
+          <span class="b-pill b-pill-light">🏦 Pension</span>
+          <span class="b-pill b-pill-light">📤 SWP Plan</span>
+        </div>
+      </div>
+      <div class="bento-overlay">
+        <div>
+          <div class="bo-title">Continuation — Age 60+</div>
+          <div class="bo-desc">You've worked hard. Now your money should work for you, every single month, without fail.</div>
+        </div>
+        <div>
+          <div class="bo-products">
+            <div class="bo-prod"><span class="bo-prod-icon">🏦</span> Pension / Annuity — Guaranteed income for life</div>
+            <div class="bo-prod"><span class="bo-prod-icon">📤</span> SWP Plan — Monthly from your corpus</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🏥</span> Senior Health Cover — Medical for 60+ needs</div>
+          </div>
+          <div class="bo-cta">Plan my retirement →</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5: Contribution (deep dark, wide) -->
+    <div class="bento-card deep span-2">
+      <div class="bento-inner" style="flex-direction:row;align-items:center;gap:40px">
+        <div style="flex:1">
+          <span class="b-emoji">🕊️</span>
+          <div class="b-num">05 · Contribution</div>
+          <div class="b-name">The wealth you leave is the life you lived.</div>
+          <div class="b-age">Legacy · After Life · Generational Impact</div>
+          <p class="b-desc">True wealth outlives the person who built it. A written Will, whole life insurance, and wealth transfer planning ensure your hard work reaches your family and your values live on beyond you.</p>
+        </div>
+        <div style="flex:1">
+          <div class="b-pills" style="margin-bottom:0">
+            <span class="b-pill b-pill-dark">📜 Will & Nomination</span>
+            <span class="b-pill b-pill-dark">🏛️ Whole Life Insurance</span>
+            <span class="b-pill b-pill-dark">🤝 Wealth Transfer</span>
+            <span class="b-pill b-pill-dark">💝 Charitable Giving</span>
+          </div>
+        </div>
+      </div>
+      <div class="bento-overlay">
+        <div>
+          <div class="bo-title">Contribution — Your Legacy</div>
+          <div class="bo-desc">The final chapter. Make sure what you built reaches who you love, in the way you intend.</div>
+        </div>
+        <div>
+          <div class="bo-products">
+            <div class="bo-prod"><span class="bo-prod-icon">📜</span> Will & Nomination — Legally direct your assets</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🏛️</span> Whole Life Insurance — Lifelong cover, guaranteed payout</div>
+            <div class="bo-prod"><span class="bo-prod-icon">🤝</span> Wealth Transfer Plan — Tax-efficient family transfer</div>
+          </div>
+          <div class="bo-cta">Plan my legacy →</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom stat bar -->
+  <div class="bento-stat-bar" style="margin-top:20px">
+    <div class="bstat"><div class="bstat-icon">👶</div><div class="bstat-label">Consumption</div></div>
+    <div class="bstat"><div class="bstat-icon">💼</div><div class="bstat-label">Creation</div></div>
+    <div class="bstat"><div class="bstat-icon">🏛️</div><div class="bstat-label">Conservation</div></div>
+    <div class="bstat"><div class="bstat-icon">🌅</div><div class="bstat-label">Continuation</div></div>
+    <div class="bstat"><div class="bstat-icon">🕊️</div><div class="bstat-label">Contribution</div></div>
+  </div>
+
+</div>
+</section>
+</div>
+
+
+<!-- ═════════════════════════════════════════
+     CONCEPT 7 — AGE SLIDER INTERACTIVE
+═════════════════════════════════════════ -->
+<div class="concept" id="c7">
+<section class="slider-section">
+<div class="container">
+
+  <div class="cbadge">Idea 7 — <span>Age Slider Interactive</span></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px">
+    <div>
+      <div class="eyebrow">The 5 C Framework</div>
+      <h2 class="sec-title">Drag to your age.<br><em>See what you need.</em></h2>
+    </div>
+    <p class="sec-intro">Use the slider below to move through the journey of life. At every stage, see the right financial tools and why they matter for you right now.</p>
+  </div>
+
+  <!-- Stage selector buttons -->
+  <div class="stage-btns" id="stage-btns">
+    <button class="stage-btn active" onclick="setStage(0,this)"><span class="sb-emoji">👶</span> Consumption <span style="font-size:11px;opacity:0.6;margin-left:4px">0–25</span></button>
+    <button class="stage-btn" onclick="setStage(1,this)"><span class="sb-emoji">💼</span> Creation <span style="font-size:11px;opacity:0.6;margin-left:4px">25–50</span></button>
+    <button class="stage-btn" onclick="setStage(2,this)"><span class="sb-emoji">🏛️</span> Conservation <span style="font-size:11px;opacity:0.6;margin-left:4px">25–60</span></button>
+    <button class="stage-btn" onclick="setStage(3,this)"><span class="sb-emoji">🌅</span> Continuation <span style="font-size:11px;opacity:0.6;margin-left:4px">60+</span></button>
+    <button class="stage-btn" onclick="setStage(4,this)"><span class="sb-emoji">🕊️</span> Contribution <span style="font-size:11px;opacity:0.6;margin-left:4px">Legacy</span></button>
+  </div>
+
+  <!-- Slider track -->
+  <div class="age-track-wrap">
+    <div class="age-track-labels">
+      <span class="atl">Birth</span>
+      <span class="atl">Age 25</span>
+      <span class="atl">Age 50</span>
+      <span class="atl">Age 60</span>
+      <span class="atl">Legacy ∞</span>
+    </div>
+    <div class="age-track-bar" style="margin-bottom:32px">
+      <div class="age-track-fill" id="slider-fill" style="width:10%"></div>
+      <div class="age-thumb" id="slider-thumb" style="left:10%">
+        <span class="age-thumb-val" id="slider-val">5</span>
+      </div>
+
+      <!-- Stage dot marks -->
+      <div class="stage-dots">
+        <div class="stage-dot-mark active-dot" style="left:0%" onclick="setStage(0,null)">
+          <div class="dot" style="background:#0F1A51"></div>
+          <div class="dot-label">Consumption</div>
+        </div>
+        <div class="stage-dot-mark" style="left:25%" onclick="setStage(1,null)">
+          <div class="dot" style="background:#1a2a72"></div>
+          <div class="dot-label">Creation</div>
+        </div>
+        <div class="stage-dot-mark" style="left:50%" onclick="setStage(2,null)">
+          <div class="dot" style="background:#a68256"></div>
+          <div class="dot-label">Conservation</div>
+        </div>
+        <div class="stage-dot-mark" style="left:75%" onclick="setStage(3,null)">
+          <div class="dot" style="background:#c9a96e"></div>
+          <div class="dot-label">Continuation</div>
+        </div>
+        <div class="stage-dot-mark" style="left:98%" onclick="setStage(4,null)">
+          <div class="dot" style="background:#354280"></div>
+          <div class="dot-label">Contribution</div>
+        </div>
+      </div>
+
+      <!-- Hidden range input for drag -->
+      <input type="range" min="0" max="100" value="10" class="age-range" id="age-slider" oninput="onSlider(this.value)"/>
+    </div>
+  </div>
+
+  <!-- Stage Content -->
+  <div class="stage-display" id="stage-display"></div>
+
+</div>
+</section>
+</div>
+
+
+<script>
+/* ════════════════════════════════
+   SWITCHER
+════════════════════════════════ */
+function show(n, btn) {
+  document.querySelectorAll('.concept').forEach(el => el.classList.remove('show'));
+  document.querySelectorAll('.top-nav button').forEach(el => el.classList.remove('active'));
+  document.getElementById('c'+n).classList.add('show');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0 });
+}
+
+/* ════════════════════════════════
+   STAGE DATA
+════════════════════════════════ */
+const STAGES = [
+  {
+    num:'01', key:'consumption', emoji:'👶', name:'Consumption', age:'Age 0 – 25',
+    tagline:'The years of growing, before you earn.',
+    desc:'From birth through education, every human being purely consumes — food, school, healthcare, clothing. None of it is self-funded. This stage demands parents plan ahead so a child\'s future is secure no matter what happens.',
+    insight:{ label:'Compound magic', val:'₹1.2 Cr', desc:'SIP of ₹2,000/month started at birth, by age 25 at 12% return' },
+    products:[
+      { icon:'🎓', name:'Child Education Plan', desc:'Grow a corpus for college & higher education' },
+      { icon:'🛡️', name:'Term Insurance (Parents)', desc:'Protect child if the breadwinner is lost' },
+      { icon:'💰', name:'Child SIP / ELSS', desc:'Time is your biggest advantage — start early' },
+      { icon:'🏥', name:'Family Health Cover', desc:'Full family medical protection in one policy' },
+    ],
+    cta:'Talk to an advisor', cta2:'Child plan calculator', sliderPct:10, sliderVal:'5'
+  },
+  {
+    num:'02', key:'creation', emoji:'💼', name:'Creation', age:'Age 25 – 50',
+    tagline:'Build the wealth that defines your future.',
+    desc:'Your prime earning years. Every rupee invested now has maximum time to compound into life-changing wealth. SIPs, mutual funds, and tax-saving instruments are the core of your financial strategy in this phase.',
+    insight:{ label:'SIP power', val:'₹1.89 Cr', desc:'₹10,000/month SIP for 25 years at 12% annual return' },
+    products:[
+      { icon:'📈', name:'SIP / Mutual Funds', desc:'Systematic wealth creation from ₹500/month' },
+      { icon:'🛡️', name:'Term Insurance', desc:'Maximum cover at lowest possible cost' },
+      { icon:'🏷️', name:'ELSS Tax Saver', desc:'Save ₹46,800 tax annually while growing wealth' },
+      { icon:'💊', name:'Health Insurance', desc:'Family floater plan for complete medical cover' },
+    ],
+    cta:'Start my SIP', cta2:'SIP calculator', sliderPct:30, sliderVal:'35'
+  },
+  {
+    num:'03', key:'conservation', emoji:'🏛️', name:'Conservation', age:'Age 25 – 60',
+    tagline:'Protect everything you have worked hard to build.',
+    desc:'Conservation runs parallel to Creation. One critical illness, one accident, or one lawsuit can destroy years of accumulated wealth overnight. The right insurance and portfolio protection ensures what you\'ve built can never be taken from you.',
+    insight:{ label:'Risk reality', val:'1 in 4', desc:'Indians face a critical illness before 65. CI cover costs ₹400/month at age 35.' },
+    products:[
+      { icon:'❤️‍🩹', name:'Critical Illness Cover', desc:'Lump sum on 40+ illnesses — cancer, heart attack, stroke' },
+      { icon:'🏠', name:'Home Insurance', desc:'Protect your biggest asset from fire, flood, theft' },
+      { icon:'⚖️', name:'Portfolio Rebalancing', desc:'Shift from equity to debt as goals approach' },
+      { icon:'🚗', name:'Motor Insurance', desc:'Full comprehensive cover for your vehicle' },
+    ],
+    cta:'Review my coverage', cta2:'General insurance', sliderPct:50, sliderVal:'42'
+  },
+  {
+    num:'04', key:'continuation', emoji:'🌅', name:'Continuation', age:'Age 60+',
+    tagline:'Live your retirement completely on your own terms.',
+    desc:'Retirement should mean freedom — not dependency on children or running out of savings. Through pension plans, SWPs, and senior health cover, this stage ensures your monthly income never stops and you stay financially independent.',
+    insight:{ label:'Retirement target', val:'₹3–5 Cr', desc:'Needed at 60 to sustain ₹50,000/month for 25 retirement years' },
+    products:[
+      { icon:'🏦', name:'Pension / Annuity Plan', desc:'Guaranteed monthly income for life after retirement' },
+      { icon:'📤', name:'SWP Withdrawal Plan', desc:'Fixed monthly from your mutual fund corpus' },
+      { icon:'🏥', name:'Senior Citizen Health Plan', desc:'Comprehensive cover designed for 60+ needs' },
+      { icon:'📊', name:'Debt / Fixed Income Funds', desc:'Stable, low-risk returns to protect your corpus' },
+    ],
+    cta:'Plan my retirement', cta2:'Retirement calculator', sliderPct:77, sliderVal:'62'
+  },
+  {
+    num:'05', key:'contribution', emoji:'🕊️', name:'Contribution', age:'Legacy',
+    tagline:'The wealth you leave is the life you lived.',
+    desc:'True wealth outlives the person who created it. The final chapter of your financial journey is the legacy you leave — for your family, your community, and the causes you believed in. Estate planning ensures it all reaches the right hands.',
+    insight:{ label:'Legacy gap', val:'22%', desc:'Only 22% of Indians have a written Will. Assets can be stuck in courts for years.' },
+    products:[
+      { icon:'📜', name:'Will & Nomination', desc:'Legally ensure assets go to who you choose' },
+      { icon:'🏛️', name:'Whole Life Insurance', desc:'Lifelong cover with guaranteed payout to nominees' },
+      { icon:'🤝', name:'Wealth Transfer Plan', desc:'Structured, tax-efficient family wealth transfer' },
+      { icon:'💝', name:'Charitable Giving', desc:'Support causes you care about as part of your plan' },
+    ],
+    cta:'Plan my legacy', cta2:'Talk to advisor', sliderPct:97, sliderVal:'∞'
+  }
+];
+
+/* ════════════════════════════════
+   CONCEPT 5: WHEEL
+════════════════════════════════ */
+let currentSeg = 0;
+
+function selectSeg(idx) {
+  currentSeg = idx;
+  // Update segments
+  for(let i=0;i<5;i++) {
+    const seg = document.getElementById('seg-'+i);
+    if(seg) seg.classList.toggle('active-seg', i===idx);
+  }
+  // Update legend
+  document.querySelectorAll('.wleg').forEach((el,i) => el.classList.toggle('active', i===idx));
+  // Update center text
+  const s = STAGES[idx];
+  document.getElementById('wct-name').textContent = s.name;
+  document.getElementById('wct-age').textContent = s.age;
+  // Render panel
+  renderWheelPanel(idx);
+}
+
+function renderWheelPanel(idx) {
+  const s = STAGES[idx];
+  const panel = document.getElementById('wp-inner');
+  panel.className = 'wp-inner';
+  void panel.offsetWidth; // trigger reflow
+  panel.className = 'wp-inner fade-in';
+  panel.innerHTML = `
+    <div class="wp-header">
+      <div class="wp-emoji">${s.emoji}</div>
+      <div class="wp-meta">
+        <div class="age-badge">📅 ${s.age}</div>
+        <div class="wp-stage">${s.num} · ${s.name}</div>
+        <div class="wp-title">${s.tagline}</div>
+      </div>
+    </div>
+    <p class="stage-body">${s.desc}</p>
+
+    <!-- Insight box -->
+    <div style="background:var(--paper-2);border:1px solid var(--rule);border-radius:12px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:16px">
+      <div>
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--brand-2);margin-bottom:4px">💡 ${s.insight.label}</div>
+        <div style="font-family:'DM Serif Text',serif;font-size:28px;color:var(--brand);line-height:1">${s.insight.val}</div>
+        <div style="font-size:12px;color:var(--fg-soft);margin-top:3px">${s.insight.desc}</div>
+      </div>
+    </div>
+
+    <div class="prod-label">What you need at this stage</div>
+    <div class="wp-cards">
+      ${s.products.map(p=>`
+        <div class="wp-card">
+          <div class="wpc-icon">${p.icon}</div>
+          <div class="wpc-name">${p.name}</div>
+          <div class="wpc-desc">${p.desc}</div>
+          <span class="wpc-link">Learn more →</span>
+        </div>
+      `).join('')}
+    </div>
+    <div class="btn-row" style="margin-top:24px">
+      <button class="btn-p">${s.cta} →</button>
+      <button class="btn-s">${s.cta2}</button>
+    </div>
+  `;
+}
+
+// Init wheel
+selectSeg(0);
+
+/* ════════════════════════════════
+   CONCEPT 7: SLIDER
+════════════════════════════════ */
+let currentStage = 0;
+
+const stagePcts = [10, 30, 50, 77, 97];
+
+function onSlider(val) {
+  val = parseInt(val);
+  document.getElementById('slider-fill').style.width = val+'%';
+  document.getElementById('slider-thumb').style.left = val+'%';
+
+  // Determine which stage
+  let stage = 0;
+  if(val >= 85) stage = 4;
+  else if(val >= 62) stage = 3;
+  else if(val >= 38) stage = 2;
+  else if(val >= 18) stage = 1;
+  else stage = 0;
+
+  if(stage !== currentStage) {
+    currentStage = stage;
+    renderSliderStage(stage);
+    updateStageButtons(stage);
+    updateStageDots(stage);
+  }
+
+  // Show age value
+  const ageMap = {0:'0',10:'5',20:'15',30:'25',40:'30',50:'42',60:'52',70:'55',77:'60',85:'65',97:'70+'};
+  const nearest = Object.keys(ageMap).reduce((a,b) => Math.abs(b-val)<Math.abs(a-val)?b:a);
+  document.getElementById('slider-val').textContent = STAGES[currentStage].sliderVal;
+}
+
+function setStage(idx, btn) {
+  currentStage = idx;
+  const pct = stagePcts[idx];
+  document.getElementById('slider-fill').style.width = pct+'%';
+  document.getElementById('slider-thumb').style.left = pct+'%';
+  document.getElementById('age-slider').value = pct;
+  document.getElementById('slider-val').textContent = STAGES[idx].sliderVal;
+  renderSliderStage(idx);
+  updateStageButtons(idx);
+  updateStageDots(idx);
+}
+
+function updateStageButtons(idx) {
+  document.querySelectorAll('.stage-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
+}
+function updateStageDots(idx) {
+  document.querySelectorAll('.stage-dot-mark').forEach((d,i) => d.classList.toggle('active-dot', i===idx));
+}
+
+function renderSliderStage(idx) {
+  const s = STAGES[idx];
+  const el = document.getElementById('stage-display');
+  el.className = 'stage-display fade-in';
+  void el.offsetWidth;
+  el.innerHTML = `
+    <div class="stage-info">
+      <div class="age-badge">📅 ${s.age}</div>
+      <div class="stage-num">${s.num} · ${s.name}</div>
+      <div class="stage-name">${s.tagline}</div>
+      <p class="stage-body">${s.desc}</p>
+
+      <div class="prod-label">What you need at this stage</div>
+      <div class="sl-products">
+        ${s.products.map(p=>`
+          <div class="sl-pcard">
+            <div class="slp-icon">${p.icon}</div>
+            <div class="slp-name">${p.name}</div>
+            <div class="slp-desc">${p.desc}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="btn-row">
+        <button class="btn-p">${s.cta} →</button>
+        <button class="btn-s">${s.cta2}</button>
+      </div>
+    </div>
+
+    <div class="stage-img-card">
+      <div class="sic-img">
+        <div class="img-ph" style="border-radius:0">
+          <span style="font-size:64px">${s.emoji}</span>
+          <span>${s.name}</span>
+        </div>
+      </div>
+      <div class="sic-body">
+        <div class="sic-title">💡 Key insight for this stage</div>
+        <div class="sic-facts">
+          <div class="sic-fact">
+            <div class="sic-fact-icon">📌</div>
+            <div class="sic-fact-text"><strong>${s.insight.val}</strong> — ${s.insight.desc}</div>
+          </div>
+          <div class="sic-fact">
+            <div class="sic-fact-icon">🎯</div>
+            <div class="sic-fact-text">This stage is about <strong>${s.tagline.split('.')[0].toLowerCase()}</strong></div>
+          </div>
+          <div class="sic-fact">
+            <div class="sic-fact-icon">✅</div>
+            <div class="sic-fact-text"><strong>${s.products.length} key products</strong> recommended for this phase</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Init slider
+renderSliderStage(0);
+</script>
+</body>
+</html>
