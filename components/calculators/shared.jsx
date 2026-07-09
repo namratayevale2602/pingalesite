@@ -1,16 +1,52 @@
+import { useEffect, useRef, useState } from "react";
 import { INR } from "@/lib/format";
 
 export function SliderInput({ label, value, onChange, min, max, step = 1, format = (v) => v, suffix }) {
+  const [text, setText] = useState(String(value));
+  const typing = useRef(false);
+
+  useEffect(() => {
+    if (!typing.current) setText(String(value));
+  }, [value]);
+
+  const handleChange = (e) => {
+    typing.current = true;
+    const raw = e.target.value;
+    setText(raw);
+    const n = parseFloat(raw);
+    if (raw !== "" && isFinite(n)) onChange(n);
+  };
+
+  const handleBlur = () => {
+    typing.current = false;
+    let n = parseFloat(text);
+    if (!isFinite(n)) n = value;
+    if (min !== undefined) n = Math.max(min, n);
+    if (max !== undefined) n = Math.min(max, n);
+    onChange(n);
+    setText(String(n));
+  };
+
   return (
     <div className="field mb-5">
-      <div className="flex justify-between items-baseline gap-2">
+      <div className="flex justify-between items-center gap-2">
         <label className="text-[13px] leading-snug">{label}</label>
-        <span className="font-[var(--font-display)] text-[18px] sm:text-[22px] text-[var(--fg)] shrink-0">
-          {format(value)}
-          {suffix && <span className="text-xs text-[var(--fg-muted)] font-[var(--font-sans)] ml-1">{suffix}</span>}
-        </span>
+        <div className="flex items-baseline gap-1.5 shrink-0">
+          <input
+            type="number"
+            inputMode="decimal"
+            className="value-input"
+            value={text}
+            step={step}
+            onChange={handleChange}
+            onFocus={() => (typing.current = true)}
+            onBlur={handleBlur}
+            onKeyDown={(e) => e.key === "Enter" && e.currentTarget.blur()}
+          />
+          {suffix && <span className="text-xs text-[var(--fg-muted)] font-[var(--font-sans)]">{suffix}</span>}
+        </div>
       </div>
-      <input type="range" className="slider" min={min} max={max} step={step} value={value}
+      <input type="range" className="slider mt-2.5" min={min} max={max} step={step} value={value}
         onChange={(e) => onChange(Number(e.target.value))} />
       <div className="flex justify-between text-[var(--fg-soft)] text-[11px] font-[var(--font-mono)] mt-1">
         <span>{format(min)}</span><span>{format(max)}</span>

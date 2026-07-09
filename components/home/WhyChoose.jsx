@@ -1,12 +1,45 @@
-import Counter from "@/components/Counter";
+import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import Link from "next/link";
+import { FaTrophy, FaRegCalendarAlt, FaUsers, FaCoins, FaBuilding, FaHandshake } from "react-icons/fa";
 
-const STATS = [
-  { v: 5500, suffix: "+", l: "Families served", sub: "Nashik & beyond" },
-  { v: 420, suffix: " Cr+", l: "AUM managed", sub: "₹ as of FY25", prefix: "₹" },
-  { v: 33, suffix: "+", l: "Years of experience", sub: "Since 1993" },
-  { v: 96.4, suffix: "%", l: "Claim success rate", sub: "5-year rolling avg." },
+const ACHIEVEMENTS = [
+  {
+    icon: FaTrophy,
+    stat: "Zero",
+    label: "Claims ever rejected",
+    sub: "Every LIC & insurer claim we've filed has been settled — not one refund turned down.",
+  },
+  {
+    icon: FaRegCalendarAlt,
+    stat: "33 Years",
+    label: "In continuous service",
+    sub: "Since 1993 — three decades of the same family-first practice, now in its third generation.",
+  },
+  {
+    icon: FaUsers,
+    stat: "8,400+",
+    label: "Families served",
+    sub: "Across Pune, Mumbai and Bengaluru, with NRI clients in Dubai and Singapore.",
+  },
+  {
+    icon: FaCoins,
+    stat: "₹4,200 Cr+",
+    label: "Wealth advised",
+    sub: "Assets under advisory across SIPs, portfolios and insurance corpora.",
+  },
+  {
+    icon: FaBuilding,
+    stat: "4 Offices",
+    label: "On-ground presence",
+    sub: "Real desks, real people — not a call centre. Meet your advisor in person, every year.",
+  },
+  {
+    icon: FaHandshake,
+    stat: "₹120 Cr+",
+    label: "Claims settled since 2015",
+    sub: "Handled end-to-end by our in-house claims desk — paperwork, follow-ups, escalations.",
+  },
 ];
 
 const DIFFERENCES = [
@@ -53,16 +86,21 @@ export default function WhyChoose() {
           align="split"
         />
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 bg-[var(--paper-2)] border border-[var(--rule)] rounded-2xl overflow-hidden bg-[var(--bg-elev)] mb-14">
-          {STATS.map((s, i) => (
-            <div key={i} className={`p-7 ${i < STATS.length - 1 ? "border-b lg:border-b-0 lg:border-r border-[var(--rule)]" : ""}`}>
-              <div className="font-[var(--font-display)] text-[clamp(40px,4.5vw,64px)] leading-none mb-3">
-                <Counter to={s.v} suffix={s.suffix} prefix={s.prefix || ""} />
+        {/* Achievements */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-14">
+          {ACHIEVEMENTS.map((a, i) => (
+            <Reveal key={i} delay={i * 60}>
+              <div className="card h-full">
+                <a.icon className="text-[26px] mb-4 text-[var(--brand)]" />
+                <div className="font-[var(--font-display)] text-[clamp(24px,3vw,32px)] leading-none mb-2 text-[var(--fg)]">
+                  {a.stat}
+                </div>
+                <div className="text-[13px] font-semibold text-[var(--brand-2)] uppercase tracking-[0.06em] mb-2">
+                  {a.label}
+                </div>
+                <p className="text-[13px] text-[var(--fg-muted)] leading-[1.6]">{a.sub}</p>
               </div>
-              <div className="text-[15px] text-[var(--fg)] font-medium mb-1">{s.l}</div>
-              <div className="text-[12px] text-[var(--fg-muted)] font-[var(--font-mono)] tracking-[0.06em]">{s.sub}</div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

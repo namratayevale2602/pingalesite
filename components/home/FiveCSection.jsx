@@ -3,6 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
+import {
+  FaGraduationCap, FaShieldAlt, FaPiggyBank, FaBriefcaseMedical,
+  FaChartLine, FaTags, FaPills,
+  FaHeartbeat, FaHome, FaBalanceScale, FaCarSide,
+  FaUniversity, FaFileExport, FaChartBar,
+  FaScroll, FaLandmark, FaHandshake, FaHandHoldingHeart,
+  FaRegCalendarAlt, FaLightbulb,
+} from "react-icons/fa";
 
 const FIVE_C = [
   {
@@ -14,10 +22,10 @@ const FIVE_C = [
     desc: "From birth through education, every human being purely consumes — food, school, healthcare, clothing. None of it is self-funded. This stage demands parents plan ahead so a child's future stays secure no matter what happens.",
     insight: { label: "Compound magic", val: "₹1.2 Cr", desc: "SIP of ₹2,000/month started at birth, by age 25 at 12% return" },
     products: [
-      { icon: "🎓", name: "Child Education Plan", desc: "Grow a corpus for college & higher education" },
-      { icon: "🛡️", name: "Term Insurance (Parents)", desc: "Protect the child if the breadwinner is lost" },
-      { icon: "💰", name: "Child SIP / ELSS", desc: "Time is the biggest advantage — start early" },
-      { icon: "🏥", name: "Family Health Cover", desc: "Full family medical protection in one policy" },
+      { icon: FaGraduationCap, name: "Child Education Plan", desc: "Grow a corpus for college & higher education" },
+      { icon: FaShieldAlt, name: "Term Insurance (Parents)", desc: "Protect the child if the breadwinner is lost" },
+      { icon: FaPiggyBank, name: "Child SIP / ELSS", desc: "Time is the biggest advantage — start early" },
+      { icon: FaBriefcaseMedical, name: "Family Health Cover", desc: "Full family medical protection in one policy" },
     ],
     cta: "Talk to an advisor",
     cta2: "Child plan calculator",
@@ -33,10 +41,10 @@ const FIVE_C = [
     desc: "Your prime earning years. Every rupee invested now has maximum time to compound into life-changing wealth. SIPs, mutual funds, and tax-saving instruments form the core of your strategy in this phase.",
     insight: { label: "SIP power", val: "₹1.89 Cr", desc: "₹10,000/month SIP for 25 years at 12% annual return" },
     products: [
-      { icon: "📈", name: "SIP / Mutual Funds", desc: "Systematic wealth creation from ₹500/month" },
-      { icon: "🛡️", name: "Term Insurance", desc: "Maximum cover at the lowest possible cost" },
-      { icon: "🏷️", name: "ELSS Tax Saver", desc: "Save tax annually while growing wealth" },
-      { icon: "💊", name: "Health Insurance", desc: "Family floater plan for complete medical cover" },
+      { icon: FaChartLine, name: "SIP / Mutual Funds", desc: "Systematic wealth creation from ₹500/month" },
+      { icon: FaShieldAlt, name: "Term Insurance", desc: "Maximum cover at the lowest possible cost" },
+      { icon: FaTags, name: "ELSS Tax Saver", desc: "Save tax annually while growing wealth" },
+      { icon: FaPills, name: "Health Insurance", desc: "Family floater plan for complete medical cover" },
     ],
     cta: "Start my SIP",
     cta2: "SIP calculator",
@@ -52,10 +60,10 @@ const FIVE_C = [
     desc: "Conservation runs parallel to Creation. One critical illness, one accident, or one lawsuit can destroy years of accumulated wealth overnight. The right insurance and portfolio protection ensures what you've built can never be taken from you.",
     insight: { label: "Risk reality", val: "1 in 4", desc: "Indians face a critical illness before 65 — cover costs a fraction of the risk" },
     products: [
-      { icon: "❤️‍🩹", name: "Critical Illness Cover", desc: "Lump sum on major illnesses — cancer, heart attack, stroke" },
-      { icon: "🏠", name: "Home Insurance", desc: "Protect your biggest asset from fire, flood, theft" },
-      { icon: "⚖️", name: "Portfolio Rebalancing", desc: "Shift from equity to debt as goals approach" },
-      { icon: "🚗", name: "Motor Insurance", desc: "Full comprehensive cover for your vehicle" },
+      { icon: FaHeartbeat, name: "Critical Illness Cover", desc: "Lump sum on major illnesses — cancer, heart attack, stroke" },
+      { icon: FaHome, name: "Home Insurance", desc: "Protect your biggest asset from fire, flood, theft" },
+      { icon: FaBalanceScale, name: "Portfolio Rebalancing", desc: "Shift from equity to debt as goals approach" },
+      { icon: FaCarSide, name: "Motor Insurance", desc: "Full comprehensive cover for your vehicle" },
     ],
     cta: "Review my coverage",
     cta2: "General insurance",
@@ -71,10 +79,10 @@ const FIVE_C = [
     desc: "Retirement should mean freedom — not dependency on children or running out of savings. Through pension plans, SWPs, and senior health cover, this stage ensures your monthly income never stops and you stay financially independent.",
     insight: { label: "Retirement target", val: "₹3–5 Cr", desc: "Needed at 60 to sustain ₹50,000/month across 25 retirement years" },
     products: [
-      { icon: "🏦", name: "Pension / Annuity Plan", desc: "Guaranteed monthly income for life after retirement" },
-      { icon: "📤", name: "SWP Withdrawal Plan", desc: "Fixed monthly payout from your mutual fund corpus" },
-      { icon: "🏥", name: "Senior Citizen Health Plan", desc: "Comprehensive cover designed for 60+ needs" },
-      { icon: "📊", name: "Debt / Fixed Income Funds", desc: "Stable, low-risk returns that protect your corpus" },
+      { icon: FaUniversity, name: "Pension / Annuity Plan", desc: "Guaranteed monthly income for life after retirement" },
+      { icon: FaFileExport, name: "SWP Withdrawal Plan", desc: "Fixed monthly payout from your mutual fund corpus" },
+      { icon: FaBriefcaseMedical, name: "Senior Citizen Health Plan", desc: "Comprehensive cover designed for 60+ needs" },
+      { icon: FaChartBar, name: "Debt / Fixed Income Funds", desc: "Stable, low-risk returns that protect your corpus" },
     ],
     cta: "Plan my retirement",
     cta2: "Retirement calculator",
@@ -90,10 +98,10 @@ const FIVE_C = [
     desc: "True wealth outlives the person who created it. The final chapter of your financial journey is the legacy you leave — for family, community, and the causes you believed in. Estate planning ensures it all reaches the right hands.",
     insight: { label: "Legacy gap", val: "22%", desc: "Only 22% of Indians have a written Will — assets can be stuck in courts for years" },
     products: [
-      { icon: "📜", name: "Will & Nomination", desc: "Legally ensure assets go to who you choose" },
-      { icon: "🏛️", name: "Whole Life Insurance", desc: "Lifelong cover with a guaranteed payout to nominees" },
-      { icon: "🤝", name: "Wealth Transfer Plan", desc: "Structured, tax-efficient family wealth transfer" },
-      { icon: "💝", name: "Charitable Giving", desc: "Support causes you care about as part of your plan" },
+      { icon: FaScroll, name: "Will & Nomination", desc: "Legally ensure assets go to who you choose" },
+      { icon: FaLandmark, name: "Whole Life Insurance", desc: "Lifelong cover with a guaranteed payout to nominees" },
+      { icon: FaHandshake, name: "Wealth Transfer Plan", desc: "Structured, tax-efficient family wealth transfer" },
+      { icon: FaHandHoldingHeart, name: "Charitable Giving", desc: "Support causes you care about as part of your plan" },
     ],
     cta: "Plan my legacy",
     cta2: "Talk to advisor",
@@ -265,7 +273,7 @@ export default function FiveCSection() {
                     <CImage src={s.image} alt={s.imageAlt} />
                   </div>
                   <div>
-                    <div className="age-badge">📅 {s.age}</div>
+                    <div className="age-badge"><FaRegCalendarAlt className="inline-block mr-1.5 -mt-0.5" /> {s.age}</div>
                     <div className="wp-stage">{s.num} · {s.label}</div>
                   </div>
                 </div>
@@ -274,7 +282,7 @@ export default function FiveCSection() {
                 <p className="text-[var(--fg-muted)] text-[16px] leading-[1.65] mb-6 max-w-[520px]">{s.desc}</p>
 
                 <div className="insight-box mb-6">
-                  <div className="insight-label">💡 {s.insight.label}</div>
+                  <div className="insight-label"><FaLightbulb className="inline-block mr-1.5 -mt-0.5" /> {s.insight.label}</div>
                   <div className="insight-val">{s.insight.val}</div>
                   <div className="insight-desc">{s.insight.desc}</div>
                 </div>
@@ -283,7 +291,7 @@ export default function FiveCSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {s.products.map((p) => (
                     <div key={p.name} className="wp-card">
-                      <div className="text-[22px] mb-2">{p.icon}</div>
+                      <p.icon className="text-[22px] mb-2 text-[var(--brand)]" />
                       <div className="text-[13px] font-semibold text-[var(--fg)] mb-1 leading-tight">{p.name}</div>
                       <div className="text-[12px] text-[var(--fg-soft)] leading-snug">{p.desc}</div>
                     </div>
@@ -321,7 +329,7 @@ export default function FiveCSection() {
 
               <div className="timeline-content">
                 <div className="timeline-head" onClick={() => goToStage(i)}>
-                  <span className="age-badge">📅 {stage.age}</span>
+                  <span className="age-badge"><FaRegCalendarAlt className="inline-block mr-1.5 -mt-0.5" /> {stage.age}</span>
                   <h3 className="timeline-tagline">{stage.tagline}</h3>
                 </div>
 
@@ -336,7 +344,7 @@ export default function FiveCSection() {
                   <p className="text-[var(--fg-muted)] text-[14px] leading-[1.6] mb-4">{stage.desc}</p>
 
                   <div className="insight-box mb-4">
-                    <div className="insight-label">💡 {stage.insight.label}</div>
+                    <div className="insight-label"><FaLightbulb className="inline-block mr-1.5 -mt-0.5" /> {stage.insight.label}</div>
                     <div className="insight-val">{stage.insight.val}</div>
                     <div className="insight-desc">{stage.insight.desc}</div>
                   </div>
@@ -345,7 +353,7 @@ export default function FiveCSection() {
                   <div className="grid grid-cols-2 gap-2">
                     {stage.products.map((p) => (
                       <div key={p.name} className="wp-card wp-card-sm">
-                        <div className="text-[18px] mb-1">{p.icon}</div>
+                        <p.icon className="text-[18px] mb-1 text-[var(--brand)]" />
                         <div className="text-[12px] font-semibold text-[var(--fg)] mb-1 leading-tight">{p.name}</div>
                         <div className="text-[11px] text-[var(--fg-soft)] leading-snug">{p.desc}</div>
                       </div>
