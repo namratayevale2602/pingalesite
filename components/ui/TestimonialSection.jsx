@@ -68,7 +68,7 @@ export default function TestimonialSection() {
               <Quote className="w-7 h-7 text-[#a68256] mb-3 flex-shrink-0" />
 
               {/* Quote text */}
-              <p className="text-white/80 text-sm leading-relaxed italic flex-grow">
+              <p className="text-white/80 text-sm leading-relaxed flex-grow">
                 &ldquo;{t.quote}&rdquo;
               </p>
 

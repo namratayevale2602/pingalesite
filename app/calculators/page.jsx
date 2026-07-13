@@ -18,7 +18,7 @@ export default function CalculatorsPage() {
       <main>
         <PageHero
           eyebrow="Calculators · Free, no signup"
-          title={<>Five tools. <span className="italic-serif">Real math.</span></>}
+          title={<>Five tools. <span className="">Real math.</span></>}
           intro="Slide the inputs. Watch the chart change. Numbers don't lie, but a good chart shows you what they're saying."
         />
         <section>

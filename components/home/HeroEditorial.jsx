@@ -153,7 +153,7 @@ export default function HeroEditorial() {
               className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-0.02em] pb-4 md:pb-5 transition-all duration-300 ${fading ? "opacity-0 translate-y-3" : "opacity-100 translate-y-0"}`}
             >
               {s.headline}{" "}
-              <span className="italic text-[var(--brand-2)]">{s.accent}</span>
+              <span className="text-[var(--brand-2)]">{s.accent}</span>
               <br />
               <span className="text-[var(--fg-muted)]">{s.subline}</span>
             </h1>

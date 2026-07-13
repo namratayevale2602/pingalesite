@@ -45,7 +45,7 @@ export default function BlogListing() {
     <main>
       <PageHero
         eyebrow="Insights · The Pingale journal"
-        title={<>Long-form blogs on <span className="italic-serif">money &amp; meaning.</span></>}
+        title={<>Long-form blogs on <span className="">money &amp; meaning.</span></>}
         intro="Updated monthly. No clickbait, no fear-mongering, no SEO-bait. Things we'd be willing to say across a dinner table."
       />
 

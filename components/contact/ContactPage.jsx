@@ -33,7 +33,7 @@ export default function ContactPage() {
     <main>
       <PageHero
         eyebrow="Contact · The first conversation is free"
-        title={<>Forty-five minutes. <span className="italic-serif">One honest plan.</span></>}
+        title={<>Forty-five minutes. <span className="">One honest plan.</span></>}
         intro="No upsell, no pressure. We'll listen first, sketch a plan, and tell you honestly whether we're the right firm for your situation."
       />
 
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
       <section className="mt-12 py-12 bg-[var(--paper-2)] border-t border-[var(--rule)]">
         <div className="container">
-          <SectionHeader eyebrow="Office hours" title={<>When you'll <span className="italic-serif">actually</span> reach us.</>} align="split" />
+          <SectionHeader eyebrow="Office hours" title={<>When you'll <span className="">actually</span> reach us.</>} align="split" />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {[
               { l: "Mon – Fri", h: "09:30 – 18:30 IST", n: "Full team available" },

@@ -39,7 +39,7 @@ export default function FAQ() {
       <div className="container">
         <SectionHeader
           eyebrow="Common questions"
-          title={<>The questions <span className="italic-serif">worth asking.</span></>}
+          title={<>The questions <span className="">worth asking.</span></>}
           intro="If you're thinking it, someone else already asked it. Plain answers below."
           align="split"
         />

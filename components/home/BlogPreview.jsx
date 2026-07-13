@@ -13,7 +13,7 @@ export default function BlogPreview() {
       <div className="container">
         <SectionHeader
           eyebrow="Insights"
-          title={<>Read. <span className="italic-serif">Disagree.</span> Discuss.</>}
+          title={<>Read. <span className="">Disagree.</span> Discuss.</>}
           intro="A small library of long-form blogs — no headlines, no hot takes, no fear-mongering."
           align="split"
           actions={<Link href="/blog" className="btn btn-secondary">All blogs <span>→</span></Link>}

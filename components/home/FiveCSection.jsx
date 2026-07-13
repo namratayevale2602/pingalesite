@@ -201,7 +201,7 @@ export default function FiveCSection() {
       <div className="container">
         <SectionHeader
           eyebrow="The Pingale framework"
-          title={<>The five C&apos;s of a <span className="italic-serif">complete</span> financial life.</>}
+          title={<>The five C&apos;s of a <span className="">complete</span> financial life.</>}
           intro="Scroll to move through each stage of life — the wheel highlights where you are — or click any wedge to jump straight there."
           align="split"
         />

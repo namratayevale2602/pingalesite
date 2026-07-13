@@ -70,7 +70,7 @@ export default function TestimonialsCarousel() {
 
             <h2 className="text-[clamp(32px,4vw,52px)] leading-[1.1] pb-6 font-[var(--font-display)]" style={{ color: "#EDE6DA" }}>
               Results matter.<br />
-              <span className="italic text-[var(--sky-400)]">People remember results.</span>
+              <span className="text-[var(--sky-400)]">People remember results.</span>
             </h2>
 
             <p className="text-sm leading-[1.7] mb-8 max-w-[320px]" style={{ color: "#a08a68" }}>
@@ -86,7 +86,7 @@ export default function TestimonialsCarousel() {
               {cur.service}
             </div>
 
-            <div className="font-[var(--font-display)] text-[clamp(24px,3.5vw,40px)] leading-[1.15] italic mb-6 text-[var(--sky-400)]">
+            <div className="font-[var(--font-display)] text-[clamp(24px,3.5vw,40px)] leading-[1.15] mb-6 text-[var(--sky-400)]">
               &ldquo;{cur.result}&rdquo;
             </div>
 

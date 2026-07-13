@@ -33,7 +33,7 @@ export default function SIPPage() {
               <div>
                 <div className="eyebrow mb-5">What is a mutual fund?</div>
                 <h2 className="pb-6">
-                  A pool of money, <span className="italic-serif">professionally managed.</span>
+                  A pool of money, <span className="">professionally managed.</span>
                 </h2>
                 <p className="text-[17px] leading-[1.72] text-[var(--fg-muted)] mb-8">
                   A mutual fund collects money from thousands of investors and deploys it into a diversified portfolio of stocks, bonds or both — managed by a SEBI-registered fund manager.
@@ -93,7 +93,7 @@ export default function SIPPage() {
           <div className="container">
             <SectionHeader
               eyebrow="Eight fund categories"
-              title={<>Funds for every <span className="italic-serif">goal and horizon.</span></>}
+              title={<>Funds for every <span className="">goal and horizon.</span></>}
               intro="We map each goal to the right fund category — not the other way around. Here's what each category does."
               align="split"
             />
@@ -118,7 +118,7 @@ export default function SIPPage() {
           <div className="container">
             <SectionHeader
               eyebrow="Risk profiling"
-              title={<>Right fund for <span className="italic-serif">your risk appetite.</span></>}
+              title={<>Right fund for <span className="">your risk appetite.</span></>}
               intro="Before recommending any fund, we assess your risk tolerance, investment horizon and liquidity needs. Here's how we categorise investors."
               align="split"
             />
@@ -144,7 +144,7 @@ export default function SIPPage() {
           <div className="container">
             <SectionHeader
               eyebrow="Calculators"
-              title={<>See what your <span className="italic-serif">money can become.</span></>}
+              title={<>See what your <span className="">money can become.</span></>}
               intro="Interactive calculators for SIP, SWP, retirement corpus, goal planning and more. Adjust inputs — results update instantly."
               align="split"
             />
@@ -159,7 +159,7 @@ export default function SIPPage() {
           <div className="container">
             <SectionHeader
               eyebrow="AMFI guidelines · What you should know"
-              title={<>Regulations that <span className="italic-serif">protect you.</span></>}
+              title={<>Regulations that <span className="">protect you.</span></>}
               align="split"
             />
             <div className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-3">
@@ -207,7 +207,7 @@ export default function SIPPage() {
             <StickyLead title="Start your SIP today">
               <div className="eyebrow mb-6">Why invest through us</div>
               <h2 className="pb-8">
-                We plan the <span className="italic-serif">portfolio.</span> You plan the life.
+                We plan the <span className="">portfolio.</span> You plan the life.
               </h2>
               <div className="flex flex-col gap-6 text-[16px] leading-[1.7] text-[var(--fg-muted)]">
                 <div>

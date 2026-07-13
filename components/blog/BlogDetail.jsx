@@ -223,7 +223,7 @@ export default function BlogDetail() {
               </div>
 
               <blockquote className="my-10 py-1 pl-7" style={{ borderLeft: "3px solid var(--brand)", margin: "40px 0" }}>
-                <p className="italic leading-[1.35]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(19px,2.4vw,24px)", color: "var(--fg)" }}>
+                <p className="leading-[1.35]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(19px,2.4vw,24px)", color: "var(--fg)" }}>
                   "Lumpsum wins on a spreadsheet over 20 years. SIPs win across the emotional bandwidth of actual human investors."
                 </p>
               </blockquote>
@@ -288,7 +288,7 @@ export default function BlogDetail() {
               </div>
 
               <blockquote className="py-1 pl-7" style={{ borderLeft: "3px solid var(--brand-2)", margin: "40px 0" }}>
-                <p className="italic leading-[1.35]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(19px,2.4vw,24px)", color: "var(--brand-2)" }}>
+                <p className="leading-[1.35]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(19px,2.4vw,24px)", color: "var(--brand-2)" }}>
                   "The 1.7% annual gap between what funds earned and what investors earned is not a market problem. It is a human problem."
                 </p>
               </blockquote>
@@ -329,7 +329,7 @@ export default function BlogDetail() {
               </div>
 
               <blockquote className="py-1 pl-7" style={{ borderLeft: "3px solid var(--gold)", margin: "40px 0" }}>
-                <p className="italic leading-[1.35]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(19px,2.4vw,24px)", color: "var(--gold)" }}>
+                <p className="leading-[1.35]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(19px,2.4vw,24px)", color: "var(--gold)" }}>
                   "Doing nothing is the hardest investment strategy to sell, and the easiest to execute. A SIP is automated 'doing nothing.'"
                 </p>
               </blockquote>
@@ -346,7 +346,7 @@ export default function BlogDetail() {
                 <ol className="flex flex-col gap-5 list-none p-0 m-0">
                   {detail.takeaways.map((point, i) => (
                     <li key={i} className="flex gap-4 items-start">
-                      <span className="italic shrink-0 leading-none mt-1"
+                      <span className="shrink-0 leading-none mt-1"
                         style={{ fontFamily: "var(--font-display)", fontSize: 20, color: "var(--brand-2)", minWidth: 28 }}>
                         {String(i + 1).padStart(2, "0")}
                       </span>

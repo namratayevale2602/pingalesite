@@ -81,7 +81,7 @@ export default function WhyChoose() {
       <div className="container">
         <SectionHeader
           eyebrow="Why Pingale"
-          title={<>Different isn't a word we use. <span className="italic-serif">Results are.</span></>}
+          title={<>Different isn't a word we use. <span className="">Results are.</span></>}
           intro="We've been doing this since 1993. Here's what three decades of client-first practice looks like in practice."
           align="split"
         />

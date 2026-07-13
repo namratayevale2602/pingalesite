@@ -40,7 +40,7 @@ export default function LifePage() {
               <div>
                 <div className="eyebrow mb-5">What is life insurance?</div>
                 <h2 className="pb-6">
-                  A promise that your <span className="italic-serif">family won't struggle.</span>
+                  A promise that your <span className="">family won't struggle.</span>
                 </h2>
                 <p className="text-[17px] leading-[1.72] text-[var(--fg-muted)] mb-8">
                   Life insurance is a legal contract between you and an insurer: in exchange for regular premiums, the insurer pays a defined sum to your nominees if you pass away during the policy term.
@@ -100,7 +100,7 @@ export default function LifePage() {
           <div className="container">
             <SectionHeader
               eyebrow="Why life insurance"
-              title={<>Four things cover <span className="italic-serif">actually does.</span></>}
+              title={<>Four things cover <span className="">actually does.</span></>}
               intro="Most people buy life insurance for the wrong reasons — returns, tax saving, investment. Here's what it's actually for."
               align="split"
             />
@@ -121,18 +121,18 @@ export default function LifePage() {
         {/* ── PLAN TYPES ── */}
         <BenefitsGrid
           eyebrow="Six plan categories"
-          title={<>Every life stage has <span className="italic-serif">its plan.</span></>}
+          title={<>Every life stage has <span className="">its plan.</span></>}
           intro="We don't sell the same plan to everyone. The right product depends on your age, income, dependants and existing liabilities."
           items={PLAN_TYPES}
           columns={3}
         />
 
         {/* ── CALCULATOR ── */}
-        <section className="section bg-[var(--paper-2)] border-t border-b border-[var(--rule)]">
+        {/* <section className="section bg-[var(--paper-2)] border-t border-b border-[var(--rule)]">
           <div className="container">
             <SectionHeader
               eyebrow="How much cover do you need?"
-              title={<>Calculate your <span className="italic-serif">ideal term cover.</span></>}
+              title={<>Calculate your <span className="">ideal term cover.</span></>}
               intro="A working rule: 15–20× annual income + outstanding loans. Use our goal calculator to model the exact corpus your family would need."
               align="split"
             />
@@ -140,7 +140,7 @@ export default function LifePage() {
               <CalculatorSuite initial="goal" />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ── HOW IT WORKS ── */}
         <ServiceProcess steps={PROCESS} />
@@ -151,7 +151,7 @@ export default function LifePage() {
             <StickyLead title="Get a callback from our life desk">
               <div className="eyebrow mb-6">Three things to know before you buy</div>
               <h2 className="pb-8">
-                Buy <span className="italic-serif">early.</span> Buy <span className="italic-serif">enough.</span> Tell the truth.
+                Buy <span className="">early.</span> Buy <span className="">enough.</span> Tell the truth.
               </h2>
               <div className="flex flex-col gap-6 text-[16px] leading-[1.7] text-[var(--fg-muted)]">
                 <div>

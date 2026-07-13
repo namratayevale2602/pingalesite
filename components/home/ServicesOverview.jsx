@@ -15,7 +15,7 @@ export default function ServicesOverview() {
       <div className="container">
         <SectionHeader
           eyebrow="What we do"
-          title={<>Four desks. <span className="italic-serif">One conversation.</span></>}
+          title={<>Four desks. <span className="">One conversation.</span></>}
           intro="We are advisors first, distributors second. Everything we recommend ladders up to a single, written financial plan."
           align="split"
         />

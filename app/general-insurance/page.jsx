@@ -33,7 +33,7 @@ export default function GeneralPage() {
               <div>
                 <div className="eyebrow mb-5">What is general insurance?</div>
                 <h2 className="pb-6">
-                  Cover for what you <span className="italic-serif">can't predict.</span>
+                  Cover for what you <span className="">can't predict.</span>
                 </h2>
                 <p className="text-[17px] leading-[1.72] text-[var(--fg-muted)] mb-8">
                   General insurance (also called non-life insurance) protects your assets, health and liabilities against unexpected events — accidents, illness, theft, fire, floods and travel emergencies.
@@ -93,7 +93,7 @@ export default function GeneralPage() {
           <div className="container">
             <SectionHeader
               eyebrow="Six insurance categories"
-              title={<>Complete cover, <span className="italic-serif">category by category.</span></>}
+              title={<>Complete cover, <span className="">category by category.</span></>}
               intro="Every type of non-life risk your family or business faces — under one broker relationship. One call, six categories."
               align="split"
             />
@@ -103,7 +103,7 @@ export default function GeneralPage() {
                   <div className="p-7 bg-[var(--bg-elev)] border border-[var(--rule)] rounded-2xl h-full flex flex-col gap-5">
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="font-[var(--font-display)] text-[40px] italic text-[var(--brand-2)] leading-none">
+                        <span className="font-[var(--font-display)] text-[40px] text-[var(--brand-2)] leading-none">
                           {ins.n}
                         </span>
                         <span
@@ -136,7 +136,7 @@ export default function GeneralPage() {
           <div className="container">
             <SectionHeader
               eyebrow="Motor insurance"
-              title={<>Third-party vs comprehensive — <span className="italic-serif">know the difference.</span></>}
+              title={<>Third-party vs comprehensive — <span className="">know the difference.</span></>}
               align="split"
             />
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -153,11 +153,11 @@ export default function GeneralPage() {
         </section>
 
         {/* ── CALCULATOR ── */}
-        <section className="section bg-[var(--paper-2)] border-t border-b border-[var(--rule)]">
+        {/* <section className="section bg-[var(--paper-2)] border-t border-b border-[var(--rule)]">
           <div className="container">
             <SectionHeader
               eyebrow="Financial planning behind your insurance"
-              title={<>Know how much <span className="italic-serif">cover you need.</span></>}
+              title={<>Know how much <span className="">cover you need.</span></>}
               intro="Use our goal and retirement calculators to understand the financial gap your insurance needs to fill — then size your cover accordingly."
               align="split"
             />
@@ -165,7 +165,7 @@ export default function GeneralPage() {
               <CalculatorSuite initial="goal" />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ── HOW IT WORKS ── */}
         <ServiceProcess steps={PROCESS} />
@@ -176,7 +176,7 @@ export default function GeneralPage() {
             <StickyLead title="Get a same-day quote">
               <div className="eyebrow mb-6">Why broker vs buying direct</div>
               <h2 className="pb-8">
-                You pay the same premium. <span className="italic-serif">We add the advice.</span>
+                You pay the same premium. <span className="">We add the advice.</span>
               </h2>
               <div className="flex flex-col gap-6 text-[16px] leading-[1.7] text-[var(--fg-muted)]">
                 <div>

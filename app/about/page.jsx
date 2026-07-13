@@ -46,7 +46,7 @@ export default function AboutPage() {
               {/* Story text */}
               <div className="lg:pt-4">
                 <div className="eyebrow mb-5">Our story</div>
-                <h2 className="mb-6">From <span className="italic-serif">two ledgers</span> to four offices.</h2>
+                <h2 className="mb-6">From <span className="">two ledgers</span> to four offices.</h2>
                 <div className="flex flex-col gap-5 text-[16px] leading-[1.72]" style={{ color: "var(--fg-muted)" }}>
                   <p>Pingale Financial Services began in 1993 in a small office above a chemist in Pune. Vasant Pingale, then a recently-retired bank manager, decided his neighbours deserved better financial advice than the city offered.</p>
                   <p>Over three decades it has grown — slowly, deliberately — into a 42-person practice serving 8,400 families across Pune, Mumbai and Bengaluru, with sister advisors in Dubai and Singapore for NRI clients.</p>
@@ -75,7 +75,7 @@ export default function AboutPage() {
 
         <BenefitsGrid
           eyebrow="What we believe"
-          title={<>Six convictions, <span className="italic-serif">held loosely.</span></>}
+          title={<>Six convictions, <span className="">held loosely.</span></>}
           items={CONVICTIONS}
         />
 
@@ -84,7 +84,7 @@ export default function AboutPage() {
           <div className="container">
             <SectionHeader
               eyebrow="Our people"
-              title={<>The desks <span className="italic-serif">behind the plan.</span></>}
+              title={<>The desks <span className="">behind the plan.</span></>}
               align="split"
             />
             <div className="grid grid-cols-1 gap-8 team-grid sm:grid-cols-2 lg:grid-cols-4">

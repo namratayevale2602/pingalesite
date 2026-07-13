@@ -11,7 +11,7 @@ export default function MiniFAQ({ items }) {
       <div className="container">
         <SectionHeader
           eyebrow="Frequently asked"
-          title={<>Common questions, <span className="italic-serif">honestly answered.</span></>}
+          title={<>Common questions, <span className="">honestly answered.</span></>}
           align="split"
         />
         <div className="max-w-[880px]">

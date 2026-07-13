@@ -8,7 +8,7 @@ export default function CalcPreview() {
       <div className="container">
         <SectionHeader
           eyebrow="Plan Your Corpus"
-          title={<>Free calculators. <span className="italic-serif">Real numbers.</span></>}
+          title={<>Free calculators. <span className="">Real numbers.</span></>}
           intro="Five tools covering future wealth, retirement, SIP+SWP, home loan recovery, and goal planning. No sign-up. Adjust the sliders and see results instantly."
           align="split"
           actions={<Link href="/calculators" className="btn btn-primary">Open full suite <span>→</span></Link>}

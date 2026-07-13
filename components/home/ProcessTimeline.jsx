@@ -40,7 +40,7 @@ export default function ProcessTimeline() {
       <div className="container">
         <SectionHeader
           eyebrow="How we work"
-          title={<>Five steps to <span className="italic-serif">clarity.</span></>}
+          title={<>Five steps to <span className="">clarity.</span></>}
           intro="We've refined this process across 33 years and 5,500 families. Each step has a clear deliverable — you always know what comes next."
           align="split"
         />
